@@ -10,6 +10,7 @@ const contactFormSchema = z.object({
   email: z.string().email(),
   phone: z.string().optional(),
   description: z.string(),
+  service: z.string().optional(),
 });
 
 // Helper para crear una pausa

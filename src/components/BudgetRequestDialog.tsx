@@ -30,7 +30,14 @@ const step3Schema = z.object({
   description: z.string().min(10, "La descripción debe tener al menos 10 caracteres."),
 });
 
-const fullSchema = step1Schema.merge(step2Schema).merge(step3Schema);
+const fullSchema = z.object({
+    service: z.string(),
+    name: z.string(),
+    email: z.string().email(),
+    phone: z.string().optional(),
+    description: z.string(),
+});
+
 
 type FullFormData = z.infer<typeof fullSchema>;
 
@@ -55,7 +62,7 @@ export function BudgetRequestDialog({ open, onOpenChange }: { open: boolean; onO
       if (step === 2) {
         return zodResolver(step2Schema)(data, context, options);
       }
-      return zodResolver(fullSchema)(data, context, options);
+      return zodResolver(step3Schema)(data, context, options);
     },
     defaultValues: {
       service: '',
@@ -83,8 +90,10 @@ export function BudgetRequestDialog({ open, onOpenChange }: { open: boolean; onO
 
   const handleBack = () => setStep((prev) => prev - 1);
 
-  const onSubmit = async (data: FullFormData) => {
-    const result = await saveContact(data);
+  const onSubmit = async (data: Partial<FullFormData>) => {
+    const allData = methods.getValues();
+    const result = await saveContact(allData);
+
     if (result.success) {
       toast({
         title: '¡Solicitud enviada!',
