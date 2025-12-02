@@ -20,15 +20,18 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
   const { name, email, phone, description } = validatedData;
 
   const logoUrl = "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Flogo%2FVestalar_Logotipo_original_cmyk.png?alt=media&token=cbf7fd0c-3d53-42d0-9f33-d46a497bbbc8";
-  const fromEmailAuthorized = 'marketing@vestalar.com';
-  const toEmail = 'marketing@vestalar.com';
-
+  
+  // === Remitentes y destinatarios ===
+  const companyEmail = 'marketing@vestalar.com';
+  // Usamos un remitente autorizado por Firebase para el correo del cliente para máxima compatibilidad
+  const authorizedFromEmail = 'noreply@vestalarservicios.firebaseapp.com';
+  
   try {
     // 1. Enviar correo de notificación a la empresa
     await addDoc(collection(db, 'mail'), {
-      to: [toEmail],
-      from: fromEmailAuthorized,
-      replyTo: email,
+      to: [companyEmail],
+      from: companyEmail, // Desde tu propio correo para la notificación interna
+      replyTo: email, // Para poder responder directamente al cliente
       message: {
         subject: `Nuevo mensaje de contacto de ${name}`,
         html: `
@@ -66,14 +69,14 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
       },
     });
 
-    // 2. Esperar 3 segundos antes de enviar el siguiente correo
+    // 2. Esperar 3 segundos antes de enviar el siguiente correo para no saturar el servidor SMTP
     await delay(3000);
 
     // 3. Enviar correo de confirmación al cliente
     await addDoc(collection(db, 'mail'), {
       to: [email],
-      from: fromEmailAuthorized, 
-      replyTo: toEmail,
+      from: authorizedFromEmail, // <- CAMBIO CLAVE: Usamos el remitente autorizado de Firebase
+      replyTo: companyEmail, // <- Para que el cliente te responda a ti
       message: {
         subject: `Hemos recibido tu solicitud de contacto - Vestalar`,
         html: `
