@@ -23,6 +23,7 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
   
   // === Remitentes y destinatarios ===
   const companyEmail = 'marketing@vestalar.com';
+  const customerFacingSender = '"Vestalar" <marketing@vestalar.com>';
   
   try {
     // 1. Enviar correo de notificación a la empresa
@@ -73,7 +74,7 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
     // 3. Enviar correo de confirmación al cliente
     await addDoc(collection(db, 'mail'), {
       to: [email],
-      from: companyEmail,
+      from: customerFacingSender,
       replyTo: companyEmail, 
       message: {
         subject: `Hemos recibido tu solicitud de contacto - Vestalar`,
