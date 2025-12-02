@@ -23,15 +23,13 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
   
   // === Remitentes y destinatarios ===
   const companyEmail = 'marketing@vestalar.com';
-  // Usamos un remitente autorizado por Firebase para el correo del cliente para máxima compatibilidad
-  const authorizedFromEmail = 'noreply@vestalarservicios.firebaseapp.com';
   
   try {
     // 1. Enviar correo de notificación a la empresa
     await addDoc(collection(db, 'mail'), {
       to: [companyEmail],
-      from: companyEmail, // Desde tu propio correo para la notificación interna
-      replyTo: email, // Para poder responder directamente al cliente
+      from: companyEmail,
+      replyTo: email,
       message: {
         subject: `Nuevo mensaje de contacto de ${name}`,
         html: `
@@ -75,8 +73,8 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
     // 3. Enviar correo de confirmación al cliente
     await addDoc(collection(db, 'mail'), {
       to: [email],
-      from: authorizedFromEmail, // <- CAMBIO CLAVE: Usamos el remitente autorizado de Firebase
-      replyTo: companyEmail, // <- Para que el cliente te responda a ti
+      from: companyEmail, // <- Usamos el remitente que sí está autorizado
+      replyTo: companyEmail, 
       message: {
         subject: `Hemos recibido tu solicitud de contacto - Vestalar`,
         html: `
