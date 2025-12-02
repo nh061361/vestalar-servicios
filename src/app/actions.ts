@@ -65,7 +65,7 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
       },
     });
 
-    // 2. Esperar 2 segundos antes de enviar el siguiente correo
+    // 2. Esperar 2 segundos antes de enviar el siguiente correo para evitar timeouts del SMTP
     await delay(2000);
 
     // 3. Enviar correo de confirmación al cliente
