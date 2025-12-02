@@ -12,6 +12,9 @@ const contactFormSchema = z.object({
   description: z.string(),
 });
 
+// Helper para crear una pausa
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
   const validatedData = contactFormSchema.parse(formData);
 
@@ -62,7 +65,10 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
       },
     });
 
-    // 2. Enviar correo de confirmación al cliente
+    // 2. Esperar 2 segundos antes de enviar el siguiente correo
+    await delay(2000);
+
+    // 3. Enviar correo de confirmación al cliente
     await addDoc(collection(db, 'mail'), {
       to: [validatedData.email],
       from: fromEmailAuthorized, 
