@@ -1,0 +1,106 @@
+{
+  "placeholderImages": [
+    {
+      "id": "main-logo",
+      "description": "Vestalar company logo.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Flogo%2FVestalar_Logotipo_original_cmyk.png?alt=media&token=cbf7fd0c-3d53-42d0-9f33-d46a497bbbc8",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "footer-logo",
+      "description": "Vestalar company logo (negative version for dark backgrounds).",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Flogo%2FVestalar_Logotipo_negativo_cmyk.png?alt=media&token=c575a6dd-0242-4519-9233-10bd5206f2bf",
+      "imageHint": "company logo negative"
+    },
+    {
+      "id": "kitchen-renovation-2",
+      "description": "A stylish kitchen with a dark color scheme.",
+      "imageUrl": "https://images.unsplash.com/photo-1475584681345-8503b2f13841?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXJrJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQzMzc2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dark kitchen"
+    },
+    {
+      "id": "kitchen-renovation-3",
+      "description": "A minimalist kitchen with wooden accents.",
+      "imageUrl": "https://images.unsplash.com/photo-1600684388091-627109f3cd60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQyMjUyODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist kitchen"
+    },
+    {
+      "id": "bathroom-renovation-1",
+      "description": "A stylish and clean bathroom.",
+      "imageUrl": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQyODgyMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern bathroom"
+    },
+    {
+      "id": "bathroom-renovation-2",
+      "description": "A bathroom with a freestanding tub and large window.",
+      "imageUrl": "https://images.unsplash.com/photo-1572742482459-e04d6cfdd6f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQzMzQ1NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury bathroom"
+    },
+    {
+      "id": "bathroom-renovation-3",
+      "description": "A small, modern bathroom with clever use of space.",
+      "imageUrl": "https://images.unsplash.com/photo-1734599505084-d10978f0b13d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c21hbGwlMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQzMzc2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "small bathroom"
+    },
+    {
+      "id": "full-renovation-1",
+      "description": "An open concept living room and kitchen area.",
+      "imageUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGl2aW5nJTIwcm9vbXxlbnwwfHx8fDE3NjQzMTc2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "living room"
+    },
+    {
+      "id": "full-renovation-2",
+      "description": "A renovated bedroom with a cozy atmosphere.",
+      "imageUrl": "https://images.unsplash.com/photo-1616418928117-4e6d19be2df1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb3p5JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjQyOTY5NjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cozy bedroom"
+    },
+    {
+      "id": "full-renovation-3",
+      "description": "An exterior view of a house after a complete renovation.",
+      "imageUrl": "https://images.unsplash.com/photo-1606402179428-a57976d71fa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxob3VzZSUyMGV4dGVyaW9yfGVufDB8fHx8MTc2NDMzMDcyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "house exterior"
+    },
+    {
+      "id": "faq-warranty",
+      "description": "Two people signing a contract over architectural blueprints.",
+      "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb250cmFjdCUyMHNpZ25pbmd8ZW58MHx8fHwxNzY1Mzk5MzQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "contract signing"
+    },
+    {
+      "id": "faq-time",
+      "description": "An interior of a room under construction, with tools and materials.",
+      "imageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc2NTM5OTM4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction site"
+    },
+    {
+      "id": "faq-zone",
+      "description": "A beautiful shot of Madrid's skyline at dusk.",
+      "imageUrl": "https://images.unsplash.com/photo-1578305987196-6238b3484c98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWRyaWQlMjBza3lsaW5lJTIwZHVza3xlbnwwfHx8fDE3NjUzOTk0MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "madrid skyline"
+    },
+    {
+      "id": "faq-budget",
+      "description": "An architect working on blueprints at a desk with a laptop.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092446348-7d7d3630c25a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3QlMjBkcmlua2luZyUyMGNvZmZlZXxlbnwwfHx8fDE3NjUzOTk0NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "architect desk"
+    },
+    {
+      "id": "hero-background",
+      "description": "A bright and modern living room interior.",
+      "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaXZpbmclMjByb29tJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY1Nzk0MDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "living room interior"
+    },
+    {
+      "id": "kitchen-renovation-1",
+      "description": "A modern and bright kitchen after renovation.",
+      "imageUrl": "https://images.unsplash.com/photo-1592506119503-c0b18879bd5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NDMwNjI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern kitchen"
+    },
+    {
+      "id": "about-us-hero",
+      "description": "A team of architects and construction workers collaborating on a project.",
+      "imageUrl": "https://images.unsplash.com/photo-1549641775-72d82996d36e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTQyMDkyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction team"
+    }
+  ]
+}

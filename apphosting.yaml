@@ -1,0 +1,7 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  # This setting is not needed for most apps.
+  # Firebase will automatically scale the number of instances.
+  {}
