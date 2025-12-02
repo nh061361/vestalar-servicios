@@ -67,13 +67,13 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
       },
     });
 
-    // 2. Esperar 3 segundos antes de enviar el siguiente correo para no saturar el servidor SMTP
-    await delay(3000);
+    // 2. Esperar 2 segundos antes de enviar el siguiente correo para no saturar el servidor SMTP
+    await delay(2000);
 
     // 3. Enviar correo de confirmación al cliente
     await addDoc(collection(db, 'mail'), {
       to: [email],
-      from: companyEmail, // <- Usamos el remitente que sí está autorizado
+      from: companyEmail,
       replyTo: companyEmail, 
       message: {
         subject: `Hemos recibido tu solicitud de contacto - Vestalar`,
