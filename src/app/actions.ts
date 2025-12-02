@@ -67,8 +67,8 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
       },
     });
 
-    // 2. Esperar 2 segundos antes de enviar el siguiente correo para no saturar el servidor SMTP
-    await delay(2000);
+    // 2. Esperar 1 segundo antes de enviar el siguiente correo para no saturar el servidor SMTP
+    await delay(1000);
 
     // 3. Enviar correo de confirmación al cliente
     await addDoc(collection(db, 'mail'), {
