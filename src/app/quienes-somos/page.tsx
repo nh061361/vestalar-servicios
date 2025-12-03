@@ -3,11 +3,13 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin, Award, Users, Handshake, Leaf, Rocket, Heart } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 
 export default function AboutUsPage() {
@@ -23,6 +25,50 @@ export default function AboutUsPage() {
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
   const aboutUsHero = PlaceHolderImages.find(p => p.id === 'about-us-hero');
+
+  const values = [
+    {
+      icon: Award,
+      title: "Calidad y Experiencia",
+      description: "Más de 20 años de experiencia y un compromiso inquebrantable con los acabados de primera calidad."
+    },
+    {
+      icon: Users,
+      title: "Satisfacción del Cliente",
+      description: "Tu tranquilidad es nuestra prioridad. Te acompañamos en cada paso del proceso, de principio a fin."
+    },
+    {
+      icon: Handshake,
+      title: "Confianza y Transparencia",
+      description: "Comunicación clara y presupuestos detallados. Construimos relaciones basadas en la honestidad."
+    },
+    {
+      icon: Leaf,
+      title: "Compromiso Local (Km 0)",
+      description: "Apostamos por proveedores de proximidad para impulsar la economía local y reducir la huella ambiental."
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: "Pablo García",
+      role: "Fundador y Jefe de Proyecto",
+      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+      description: "Con más de 20 años de experiencia, Pablo supervisa cada proyecto para garantizar la máxima calidad y la satisfacción del cliente."
+    },
+    {
+      name: "Sofía Martínez",
+      role: "Diseñadora de Interiores",
+      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
+      description: "Sofía transforma tus ideas en espacios funcionales y estéticos, cuidando cada detalle del diseño."
+    },
+    {
+      name: "Javier Alonso",
+      role: "Jefe de Obra",
+      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
+      description: "Javier coordina a los equipos en el terreno, asegurando que los plazos y la calidad de ejecución se cumplan a la perfección."
+    }
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -90,13 +136,12 @@ export default function AboutUsPage() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[50vh] w-full overflow-hidden flex items-center justify-center">
+        <section className="relative h-[50vh] w-full">
           {aboutUsHero && <Image
             src={aboutUsHero.imageUrl}
             alt={aboutUsHero.description}
-            width={1080}
-            height={720}
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            fill
+            className="object-cover"
             data-ai-hint={aboutUsHero.imageHint}
             priority
           />}
@@ -106,25 +151,91 @@ export default function AboutUsPage() {
           </div>
         </section>
 
+        <section className="py-12 md:py-24 bg-secondary">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <h2 className="text-3xl font-bold mb-4">Nuestra Esencia</h2>
+            <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
+                Somos un equipo de profesionales que ama lo que hace. Nos encanta renovar hogares y negocios, cuidando cada detalle como si fuera para nosotros. Queremos que disfrutes del proceso y te sientas acompañado en todo momento.
+            </p>
+          </div>
+        </section>
+
         <section className="py-12 md:py-24 bg-background">
-          <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-            <div className="prose lg:prose-xl mx-auto text-foreground">
-              <h2 className="text-3xl font-bold mb-8 text-center">Quiénes somos</h2>
-                <p>
-                    Somos un equipo de profesionales con más de veinte años de experiencia. Nos encanta renovar hogares y negocios, cuidando cada detalle como si fuera nuestra propia casa. Usamos materiales de proximidad (km 0) para darle vida a tus proyectos, apoyar la economía local y reducir la huella ambiental. Nuestro objetivo es que disfrutes del proceso y te sientas acompañado en todo momento.
-                </p>
-                <p>
-                    Queremos ser la empresa de reformas que todos recomiendan cuando alguien busca un cambio de verdad; apostamos por reformas sostenibles: trabajamos con proveedores cercanos que impulsan la economía y la biodiversidad local, innovamos en técnicas y materiales, y pensamos en un futuro donde las obras respeten el entorno y mejoren la vida de las personas. Nos vemos liderando el camino hacia un sector de reformas más responsable y creativo.
-                </p>
-                <p>
-                    Valoramos la experiencia y el buen hacer, priorizamos la satisfacción del cliente, creemos en la transparencia y la confianza, buscamos siempre la máxima calidad y cuidamos nuestro compromiso con lo local, porque elegir materiales de km 0 reduce emisiones y residuos y apoya a la economía local. Nos mueve la innovación, el trabajo en equipo y la responsabilidad social: queremos devolver a la comunidad lo que recibimos, apoyando el empleo local y protegiendo la cultura y la biodiversidad de nuestro entorno.
-                </p>
-              <div className="text-center mt-12">
-                <Button size="lg" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto Con Nosotros</Button>
+            <div className="container mx-auto px-4 md:px-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {values.map((value, index) => (
+                        <div key={index} className="text-center flex flex-col items-center">
+                            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4">
+                                <value.icon className="w-8 h-8" />
+                            </div>
+                            <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                            <p className="text-muted-foreground">{value.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+        
+        <section className="py-12 md:py-24 bg-secondary">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
+                      <Heart className="w-5 h-5"/>
+                      <span>Nuestra Misión</span>
+                  </div>
+                  <h3 className="text-2xl font-bold">Crear Espacios que Inspiran</h3>
+                  <p className="text-muted-foreground">
+                      Nuestro objetivo es simple: transformar tus espacios para mejorar tu calidad de vida. Usamos materiales de proximidad (km 0) para darle vida a tus proyectos, apoyar la economía local y reducir la huella ambiental.
+                  </p>
+              </div>
+              <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
+                      <Rocket className="w-5 h-5"/>
+                      <span>Nuestra Visión</span>
+                  </div>
+                  <h3 className="text-2xl font-bold">Liderar la Reforma Sostenible</h3>
+                  <p className="text-muted-foreground">
+                      Aspiramos a ser la empresa que todos recomiendan. Innovamos en técnicas y materiales para construir un futuro donde las obras respeten el entorno y mejoren la vida de las personas.
+                  </p>
               </div>
             </div>
           </div>
         </section>
+
+        <section className="py-12 md:py-24 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+              <h2 className="text-3xl font-bold text-center mb-12">Conoce al Equipo</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {teamMembers.map((member, index) => (
+                      <Card key={index} className="text-center border-0 shadow-none">
+                          <CardContent className="flex flex-col items-center pt-6">
+                              <Avatar className="w-32 h-32 mb-4 border-4 border-primary/20">
+                                  <AvatarImage src={member.avatar} alt={member.name} />
+                                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
+                              </Avatar>
+                              <h3 className="text-xl font-bold">{member.name}</h3>
+                              <p className="text-primary font-medium mb-2">{member.role}</p>
+                              <p className="text-muted-foreground text-sm">{member.description}</p>
+                          </CardContent>
+                      </Card>
+                  ))}
+              </div>
+          </div>
+        </section>
+
+        <section className="py-12 md:py-24 text-center bg-secondary">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-3xl font-bold mb-4">¿Listo para empezar tu proyecto?</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+              Hagamos realidad la reforma de tus sueños. Contacta con nuestro equipo de expertos y recibe un presupuesto a medida sin compromiso.
+            </p>
+            <Button size="lg" onClick={() => setIsBudgetModalOpen(true)}>
+              Pide Tu Presupuesto Ahora
+            </Button>
+          </div>
+        </section>
+
       </main>
 
       <footer className="bg-accent text-accent-foreground py-12">
