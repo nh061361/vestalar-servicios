@@ -34,7 +34,7 @@ export default function AboutUsPage() {
     {
       icon: Award,
       title: "Calidad y Experiencia",
-      description: "Más de 20 años de experiencia y un compromiso inquebrantable con los acabados de primera calidad."
+      description: "Nuestra experiencia se traduce en un compromiso inquebrantable con los acabados de primera calidad."
     },
     {
       icon: Users,
