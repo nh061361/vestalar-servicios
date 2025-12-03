@@ -3,12 +3,11 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin, Award, Users, Handshake, Leaf, Rocket, Heart } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
 
 export default function ProjectsPage() {
@@ -24,24 +23,6 @@ export default function ProjectsPage() {
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
   const projectImages = PlaceHolderImages.filter(p => p.id.startsWith('project-'));
-
-  const companyInfo = [
-    {
-      icon: Heart,
-      title: "Nuestra Misión",
-      description: "Crear espacios que inspiran. Valoramos la experiencia, la satisfacción del cliente, la transparencia y la calidad, con un fuerte compromiso local (km 0) para apoyar nuestra comunidad."
-    },
-    {
-      icon: Rocket,
-      title: "Nuestra Visión",
-      description: "Ser la empresa de reformas que todos recomiendan, liderando el camino hacia un sector más responsable y creativo con técnicas y materiales sostenibles."
-    },
-    {
-      icon: Award,
-      title: "Nuestros Valores",
-      description: "Innovación, trabajo en equipo y responsabilidad social. Devolvemos a la comunidad lo que recibimos, apoyando el empleo local y protegiendo la cultura y biodiversidad de nuestro entorno."
-    },
-  ]
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -115,42 +96,20 @@ export default function ProjectsPage() {
       <main className="flex-1">
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="grid lg:grid-cols-3 gap-12">
-                    {/* Columna Izquierda - Mision, Vision, Valores */}
-                    <div className="lg:col-span-1 space-y-8">
-                        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Nuestra Filosofía y Proyectos</h1>
-                        {companyInfo.map((item, index) => (
-                            <Card key={index}>
-                                <CardHeader>
-                                    <div className="flex items-center gap-4">
-                                        <item.icon className="w-6 h-6 text-primary"/>
-                                        <CardTitle>{item.title}</CardTitle>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">{item.description}</p>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
-
-                    {/* Columna Derecha - Galería de Proyectos */}
-                    <div className="lg:col-span-2">
-                        <div className="columns-2 md:columns-3 gap-4">
-                            {projectImages.map((image, index) => (
-                                <div key={index} className="mb-4 break-inside-avoid">
-                                    <Image
-                                        src={image.imageUrl}
-                                        alt={image.description}
-                                        width={600}
-                                        height={800}
-                                        className="w-full h-auto object-cover rounded-lg shadow-md"
-                                        data-ai-hint={image.imageHint}
-                                    />
-                                </div>
-                            ))}
+                <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-12">Nuestros Proyectos</h1>
+                <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                    {projectImages.map((image) => (
+                        <div key={image.id} className="break-inside-avoid">
+                            <Image
+                                src={image.imageUrl}
+                                alt={image.description}
+                                width={600}
+                                height={800}
+                                className="w-full h-auto object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                                data-ai-hint={image.imageHint}
+                            />
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>
