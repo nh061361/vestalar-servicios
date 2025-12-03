@@ -101,6 +101,60 @@
       "description": "A team of architects and construction workers collaborating on a project.",
       "imageUrl": "https://images.unsplash.com/photo-1549641775-72d82996d36e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTQyMDkyOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "construction team"
+    },
+    {
+      "id": "project-1",
+      "description": "Bright modern kitchen with wooden bar",
+      "imageUrl": "https://images.unsplash.com/photo-1592506119503-c0b18879bd5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NDc1ODg2MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern kitchen"
+    },
+    {
+      "id": "project-2",
+      "description": "Minimalist living room with glass partition",
+      "imageUrl": "https://images.unsplash.com/photo-1632830025328-cce71800b9ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtaW5pbWFsaXN0JTIwbGl2aW5ncm9vbXxlbnwwfHx8fDE3NjQ3ODQ2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist livingroom"
+    },
+    {
+      "id": "project-3",
+      "description": "Cozy bedroom with yellow accents",
+      "imageUrl": "https://images.unsplash.com/photo-1703783010857-9bd7a7b97c50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb3p5JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjQ3MjkxNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cozy bedroom"
+    },
+    {
+      "id": "project-4",
+      "description": "Spacious open plan living and dining area",
+      "imageUrl": "https://images.unsplash.com/photo-1742867114109-c09040395c09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvcGVuJTIwbGl2aW5nfGVufDB8fHx8MTc2NDc4NDYwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "open living"
+    },
+    {
+      "id": "project-5",
+      "description": "Modern kitchen with dark cabinets and glass doors",
+      "imageUrl": "https://images.unsplash.com/photo-1580642320204-a8e77935cc7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkYXJrJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQ3ODQ2MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dark kitchen"
+    },
+    {
+      "id": "project-6",
+      "description": "Bright dining area with wooden table",
+      "imageUrl": "https://images.unsplash.com/photo-1713184359231-832519897def?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaW5pbmclMjBhcmVhfGVufDB8fHx8MTc2NDc4NDYwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dining area"
+    },
+    {
+      "id": "project-7",
+      "description": "Retail store interior with modern design",
+      "imageUrl": "https://images.unsplash.com/photo-1758448501002-8c7bb7a7d9ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXRhaWwlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjQ3ODQ2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retail interior"
+    },
+    {
+      "id": "project-8",
+      "description": "Living room with large cream sofa",
+      "imageUrl": "https://images.unsplash.com/photo-1554995207-c18c203602cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsaXZpbmclMjByb29tfGVufDB8fHx8MTc2NDcwODk2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "living room"
+    },
+    {
+      "id": "project-9",
+      "description": "Minimalist bedroom with integrated wardrobes",
+      "imageUrl": "https://images.unsplash.com/photo-1741308478100-85c440e1b4bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjQ3MzA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist bedroom"
     }
   ]
 }

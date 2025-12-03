@@ -10,6 +10,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import type { ImagePlaceholder } from '@/lib/placeholder-images';
 
 
 export default function AboutUsPage() {
@@ -89,6 +90,7 @@ export default function AboutUsPage() {
           <nav className="hidden md:flex gap-6 items-center">
             <Button variant="ghost" asChild><a href="/#services">Servicios</a></Button>
             <Button variant="ghost" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
+            <Button variant="ghost" asChild><a href="/proyectos">Proyectos</a></Button>
             <Button variant="ghost" asChild><a href="/#reviews">Opiniones</a></Button>
             <Button variant="ghost" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
             <Button variant="default" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
@@ -119,6 +121,9 @@ export default function AboutUsPage() {
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button>
+                    </SheetClose>
+                    <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
@@ -140,8 +145,8 @@ export default function AboutUsPage() {
           {aboutUsHero && <Image
             src={aboutUsHero.imageUrl}
             alt={aboutUsHero.description}
-            width={1080}
-            height={720}
+            width={1920}
+            height={1080}
             className="w-full h-full object-cover"
             data-ai-hint={aboutUsHero.imageHint}
             priority
@@ -260,6 +265,7 @@ export default function AboutUsPage() {
             <ul className="space-y-2">
               <li><a href="/#services" className="hover:underline">Servicios de Reformas</a></li>
               <li><a href="/quienes-somos" className="hover:underline">Quiénes somos</a></li>
+              <li><a href="/proyectos" className="hover:underline">Proyectos</a></li>
               <li><a href="/#reviews" className="hover:underline">Opiniones</a></li>
               <li><a href="/#faq" className="hover:underline">Preguntas Frecuentes</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setIsBudgetModalOpen(true); }} className="hover:underline">Contacto y Presupuesto</a></li>
@@ -292,5 +298,3 @@ export default function AboutUsPage() {
     </div>
   );
 }
-
-    
