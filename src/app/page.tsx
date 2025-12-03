@@ -385,11 +385,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div>
-                <Card className="shadow-lg">
-                    <CardContent className="p-6 md:p-8">
-                        <ContactForm />
-                    </CardContent>
-                </Card>
+                <ContactForm />
               </div>
             </div>
           </div>
@@ -450,5 +446,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-    
