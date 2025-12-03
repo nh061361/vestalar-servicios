@@ -8,7 +8,7 @@ import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 
@@ -125,7 +125,7 @@ export default function AboutUsPage() {
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
+                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto Con Nosotros</Button>
                     </SheetClose>
                   </nav>
                 </SheetContent>
@@ -140,8 +140,9 @@ export default function AboutUsPage() {
           {aboutUsHero && <Image
             src={aboutUsHero.imageUrl}
             alt={aboutUsHero.description}
-            fill
-            className="object-cover"
+            width={1080}
+            height={720}
+            className="w-full h-full object-cover"
             data-ai-hint={aboutUsHero.imageHint}
             priority
           />}
@@ -155,7 +156,7 @@ export default function AboutUsPage() {
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold mb-4">Nuestra Esencia</h2>
             <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
-                Somos un equipo de profesionales que ama lo que hace. Nos encanta renovar hogares y negocios, cuidando cada detalle como si fuera para nosotros. Queremos que disfrutes del proceso y te sientas acompañado en todo momento.
+                Somos un equipo de profesionales con más de veinte años de experiencia. Nos encanta renovar hogares y negocios, cuidando cada detalle como si fuera nuestra propia casa. Usamos materiales de proximidad (km 0) para darle vida a tus proyectos, apoyar la economía local y reducir la huella ambiental. Nuestro objetivo es que disfrutes del proceso y te sientas acompañado en todo momento.
             </p>
           </div>
         </section>
@@ -186,7 +187,7 @@ export default function AboutUsPage() {
                   </div>
                   <h3 className="text-2xl font-bold">Crear Espacios que Inspiran</h3>
                   <p className="text-muted-foreground">
-                      Nuestro objetivo es simple: transformar tus espacios para mejorar tu calidad de vida. Usamos materiales de proximidad (km 0) para darle vida a tus proyectos, apoyar la economía local y reducir la huella ambiental.
+                      Valoramos la experiencia y el buen hacer, priorizamos la satisfacción del cliente, creemos en la transparencia y la confianza, buscamos siempre la máxima calidad y cuidamos nuestro compromiso con lo local, porque elegir materiales de km 0 reduce emisiones y residuos y apoya a la economía local.
                   </p>
               </div>
               <div className="space-y-4">
@@ -196,7 +197,7 @@ export default function AboutUsPage() {
                   </div>
                   <h3 className="text-2xl font-bold">Liderar la Reforma Sostenible</h3>
                   <p className="text-muted-foreground">
-                      Aspiramos a ser la empresa que todos recomiendan. Innovamos en técnicas y materiales para construir un futuro donde las obras respeten el entorno y mejoren la vida de las personas.
+                      Queremos ser la empresa de reformas que todos recomiendan. Innovamos en técnicas y materiales para construir un futuro donde las obras respeten el entorno y mejoren la vida de las personas. Nos vemos liderando el camino hacia un sector de reformas más responsable y creativo.
                   </p>
               </div>
             </div>
@@ -226,7 +227,7 @@ export default function AboutUsPage() {
 
         <section className="py-12 md:py-24 text-center bg-secondary">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-4">¿Listo para empezar tu proyecto?</h2>
+            <h2 className="text-3xl font-bold mb-4">Inicia Tu Proyecto Con Nosotros</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
               Hagamos realidad la reforma de tus sueños. Contacta con nuestro equipo de expertos y recibe un presupuesto a medida sin compromiso.
             </p>
@@ -291,5 +292,3 @@ export default function AboutUsPage() {
     </div>
   );
 }
-
-    
