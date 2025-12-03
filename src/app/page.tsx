@@ -362,8 +362,8 @@ export default function HomePage() {
 
         <section id="contact" className="py-12 md:py-24 bg-background">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
+            <div className="grid lg:grid-cols-5 gap-12 items-center">
+              <div className="lg:col-span-3 space-y-6">
                 <h2 className="text-3xl font-bold">Contacta con Nosotros</h2>
                 <p className="text-muted-foreground text-lg">
                   ¿Tienes una idea? ¿Una duda? Sea lo que sea, estamos aquí para ayudarte a hacerla realidad.
@@ -384,15 +384,17 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <Card>
-                <CardHeader>
-                    <CardTitle>Rellena el formulario</CardTitle>
-                    <CardDescription>Nos pondremos en contacto contigo lo antes posible.</CardDescription>
-                </CardHeader>
-                <CardContent className="p-4 md:p-6">
-                    <ContactForm />
-                </CardContent>
-              </Card>
+              <div className="lg:col-span-2">
+                <Card>
+                  <CardHeader>
+                      <CardTitle>Rellena el formulario</CardTitle>
+                      <CardDescription>Nos pondremos en contacto contigo lo antes posible.</CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-4 md:p-6">
+                      <ContactForm />
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
