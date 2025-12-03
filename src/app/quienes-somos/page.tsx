@@ -146,7 +146,7 @@ export default function AboutUsPage() {
             data-ai-hint={aboutUsHero.imageHint}
             priority
           />}
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
             <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
           </div>
@@ -292,3 +292,5 @@ export default function AboutUsPage() {
     </div>
   );
 }
+
+    
