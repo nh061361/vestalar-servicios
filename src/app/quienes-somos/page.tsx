@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
@@ -91,16 +90,17 @@ export default function AboutUsPage() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[50vh] w-full overflow-hidden">
+        <section className="relative h-[50vh] w-full overflow-hidden flex items-center justify-center">
           {aboutUsHero && <Image
             src={aboutUsHero.imageUrl}
             alt={aboutUsHero.description}
-            fill
-            className="object-cover"
+            width={1080}
+            height={720}
+            className="absolute top-0 left-0 w-full h-full object-cover"
             data-ai-hint={aboutUsHero.imageHint}
             priority
           />}
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4">
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
             <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
           </div>
@@ -180,3 +180,5 @@ export default function AboutUsPage() {
     </div>
   );
 }
+
+    
