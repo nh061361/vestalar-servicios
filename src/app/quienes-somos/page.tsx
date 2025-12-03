@@ -8,8 +8,6 @@ import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
 
 
@@ -26,6 +24,11 @@ export default function AboutUsPage() {
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
   const aboutUsHero = PlaceHolderImages.find(p => p.id === 'about-us-hero');
+
+  if (!aboutUsHero) {
+      // Handle the case where the hero image is not found, maybe show a fallback or nothing
+      return <div>Loading...</div>;
+  }
 
   const values = [
     {
@@ -47,27 +50,6 @@ export default function AboutUsPage() {
       icon: Leaf,
       title: "Compromiso Local (Km 0)",
       description: "Apostamos por proveedores de proximidad para impulsar la economía local y reducir la huella ambiental."
-    }
-  ];
-
-  const teamMembers = [
-    {
-      name: "Pablo García",
-      role: "Fundador y Jefe de Proyecto",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-      description: "Con más de 20 años de experiencia, Pablo supervisa cada proyecto para garantizar la máxima calidad y la satisfacción del cliente."
-    },
-    {
-      name: "Sofía Martínez",
-      role: "Diseñadora de Interiores",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e",
-      description: "Sofía transforma tus ideas en espacios funcionales y estéticos, cuidando cada detalle del diseño."
-    },
-    {
-      name: "Javier Alonso",
-      role: "Jefe de Obra",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f",
-      description: "Javier coordina a los equipos en el terreno, asegurando que los plazos y la calidad de ejecución se cumplan a la perfección."
     }
   ];
 
@@ -142,15 +124,15 @@ export default function AboutUsPage() {
 
       <main className="flex-1">
         <section className="relative h-[50vh] w-full">
-          {aboutUsHero && <Image
+          <Image
             src={aboutUsHero.imageUrl}
             alt={aboutUsHero.description}
             width={1920}
-            height={1080}
+            height={960}
             className="w-full h-full object-cover"
             data-ai-hint={aboutUsHero.imageHint}
             priority
-          />}
+          />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
             <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
@@ -209,28 +191,7 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="py-12 md:py-24 bg-background">
-          <div className="container mx-auto px-4 md:px-6">
-              <h2 className="text-3xl font-bold text-center mb-12">Conoce al Equipo</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {teamMembers.map((member, index) => (
-                      <Card key={index} className="text-center border-0 shadow-none">
-                          <CardContent className="flex flex-col items-center pt-6">
-                              <Avatar className="w-32 h-32 mb-4 border-4 border-primary/20">
-                                  <AvatarImage src={member.avatar} alt={member.name} />
-                                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                              </Avatar>
-                              <h3 className="text-xl font-bold">{member.name}</h3>
-                              <p className="text-primary font-medium mb-2">{member.role}</p>
-                              <p className="text-muted-foreground text-sm">{member.description}</p>
-                          </CardContent>
-                      </Card>
-                  ))}
-              </div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 text-center bg-secondary">
+        <section className="py-12 md:py-24 text-center bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="text-3xl font-bold mb-4">Inicia Tu Proyecto Con Nosotros</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
