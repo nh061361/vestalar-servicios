@@ -384,9 +384,15 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div>
-                <ContactForm />
-              </div>
+              <Card>
+                <CardHeader>
+                    <CardTitle>Rellena el formulario</CardTitle>
+                    <CardDescription>Nos pondremos en contacto contigo lo antes posible.</CardDescription>
+                </CardHeader>
+                <CardContent className="p-4 md:p-6">
+                    <ContactForm />
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
