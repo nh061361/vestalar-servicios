@@ -215,7 +215,7 @@ export default function HomePage() {
             loop
             muted
             playsInline
-            className="absolute top-0 left-0 w-full h-full object-cover"
+            className="absolute top-0 left-0 min-w-full min-h-full object-cover"
           />
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Transformamos tu Hogar</h1>
