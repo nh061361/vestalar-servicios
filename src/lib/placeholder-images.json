@@ -13,6 +13,12 @@
       "imageHint": "company logo negative"
     },
     {
+      "id": "kitchen-renovation-1",
+      "description": "A modern and bright kitchen after renovation.",
+      "imageUrl": "https://images.unsplash.com/photo-1592506119503-c0b18879bd5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NDMwNjI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern kitchen"
+    },
+    {
       "id": "kitchen-renovation-2",
       "description": "A stylish kitchen with a dark color scheme.",
       "imageUrl": "https://images.unsplash.com/photo-1475584681345-8503b2f13841?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXJrJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQzMzc2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -89,12 +95,6 @@
       "description": "A bright and modern living room interior.",
       "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaXZpbmclMjByb29tJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY1Nzk0MDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "living room interior"
-    },
-    {
-      "id": "kitchen-renovation-1",
-      "description": "A modern and bright kitchen after renovation.",
-      "imageUrl": "https://images.unsplash.com/photo-1592506119503-c0b18879bd5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NDMwNjI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern kitchen"
     },
     {
       "id": "about-us-hero",
