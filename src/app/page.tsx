@@ -21,7 +21,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { useState, useEffect } from 'react';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Progress } from '@/components/ui/progress';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
@@ -176,6 +176,12 @@ export default function HomePage() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
+                  <SheetHeader className="sr-only">
+                    <SheetTitle>Menú de Navegación</SheetTitle>
+                    <SheetDescription>
+                      Navega por las diferentes secciones de la web.
+                    </SheetDescription>
+                  </SheetHeader>
                   <nav className="flex flex-col items-start gap-4 p-4 mt-8">
                      {logoImage && <Image 
                       src={logoImage.imageUrl} 
@@ -459,3 +465,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    

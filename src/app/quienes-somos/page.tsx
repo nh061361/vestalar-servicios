@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, Facebook, Instagram, Linkedin, Award, Users, Handshake, Leaf, Rocket, Heart } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
 
@@ -87,6 +87,12 @@ export default function AboutUsPage() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
+                   <SheetHeader className="sr-only">
+                    <SheetTitle>Menú de Navegación</SheetTitle>
+                    <SheetDescription>
+                      Navega por las diferentes secciones de la web.
+                    </SheetDescription>
+                  </SheetHeader>
                   <nav className="flex flex-col items-start gap-4 p-4 mt-8">
                      {logoImage && <Image 
                       src={logoImage.imageUrl} 
@@ -259,3 +265,5 @@ export default function AboutUsPage() {
     </div>
   );
 }
+
+    
