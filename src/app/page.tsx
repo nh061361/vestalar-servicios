@@ -186,7 +186,7 @@ export default function HomePage() {
                       className="object-contain mb-4"
                     />}
                     <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="#services">Servicios de Reformas</a></Button>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/#services">Servicios de Reformas</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
@@ -195,10 +195,10 @@ export default function HomePage() {
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="#reviews">Opiniones</a></Button>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="#faq">Preguntas Frecuentes</a></Button>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
