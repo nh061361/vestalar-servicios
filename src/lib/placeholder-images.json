@@ -104,27 +104,27 @@
     },
     {
       "id": "project-1",
-      "description": "Bright modern kitchen with wooden bar",
-      "imageUrl": "https://images.unsplash.com/photo-1592506119503-c0b18879bd5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NDc1ODg2MHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern kitchen"
+      "description": "Modern bathroom with walk-in shower.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fcameron-smith-WFaLFAyKp5g-unsplash.jpg?alt=media&token=d7f78242-a158-48a0-a9da-42e54556834c",
+      "imageHint": "modern bathroom"
     },
     {
       "id": "project-2",
-      "description": "Minimalist living room with glass partition",
-      "imageUrl": "https://images.unsplash.com/photo-1632830025328-cce71800b9ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtaW5pbWFsaXN0JTIwbGl2aW5ncm9vbXxlbnwwfHx8fDE3NjQ3ODQ2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "minimalist livingroom"
+      "description": "Kitchen detail shot with hanging utensils.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fcharlesdeluvio-RfIm_uMMoxI-unsplash.jpg?alt=media&token=f8b56a48-f557-4a0f-98ad-b297c61ffb59",
+      "imageHint": "kitchen detail"
     },
     {
       "id": "project-3",
-      "description": "Cozy bedroom with yellow accents",
-      "imageUrl": "https://images.unsplash.com/photo-1703783010857-9bd7a7b97c50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjb3p5JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjQ3MjkxNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cozy bedroom"
+      "description": "A room undergoing renovation with exposed brick.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimmo-renovation-6js0JRlbKJ4-unsplash.jpg?alt=media&token=ecf4f8c4-9368-4f7e-bcc8-ef4cd4feb031",
+      "imageHint": "room renovation"
     },
     {
       "id": "project-4",
-      "description": "Spacious open plan living and dining area",
-      "imageUrl": "https://images.unsplash.com/photo-1742867114109-c09040395c09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvcGVuJTIwbGl2aW5nfGVufDB8fHx8MTc2NDc4NDYwNXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "open living"
+      "description": "Modern kitchen with white cabinets and wooden floor.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsteffen-lemmerzahl-pBZBbCqyW8M-unsplash.jpg?alt=media&token=8ecacb3a-b61c-4034-9174-4a80ff7f0f1c",
+      "imageHint": "modern kitchen"
     },
     {
       "id": "project-5",
