@@ -35,7 +35,6 @@ export default function ProjectsPage() {
               alt="Vestalar Logo - Empresa de Reformas en Zaragoza" 
               width={115} 
               height={38} 
-              style={{ width: '115px', height: 'auto' }}
               className="object-contain"
               priority
             />}
@@ -70,7 +69,6 @@ export default function ProjectsPage() {
                       alt="Vestalar Logo" 
                       width={115} 
                       height={38} 
-                      style={{ width: '115px', height: 'auto' }}
                       className="object-contain mb-4"
                     />}
                     <SheetClose asChild>
@@ -130,7 +128,6 @@ export default function ProjectsPage() {
               alt="Vestalar Logo Negativo - Empresa de reformas" 
               width={115} 
               height={38} 
-              style={{ width: '115px', height: 'auto' }}
               className="object-contain"
             />}
             <p className="text-sm">
