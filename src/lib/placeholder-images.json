@@ -99,7 +99,7 @@
     {
       "id": "about-us-hero",
       "description": "A team of architects and construction workers collaborating on a project.",
-      "imageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjB0ZWFtfGVufDB8fHx8MTc2NTQyMDkyOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fabout-us-hero.jpg?alt=media&token=e9102434-6331-4ce3-a267-0c7104f67c30",
       "imageHint": "construction team"
     },
     {
@@ -129,49 +129,49 @@
     {
       "id": "project-5",
       "description": "Modern kitchen with dark cabinets and glass doors",
-      "imageUrl": "https://images.unsplash.com/photo-1580642320204-a8e77935cc7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkYXJrJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NjQ3ODQ2MDU8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-5.jpg?alt=media&token=df4f6104-5178-433a-9694-84c1e4c7f078",
       "imageHint": "dark kitchen"
     },
     {
       "id": "project-6",
       "description": "Bright dining area with wooden table",
-      "imageUrl": "https://images.unsplash.com/photo-1713184359231-832519897def?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaW5pbmclMjBhcmVhfGVufDB8fHx8MTc2NDc4NDYwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-6.jpg?alt=media&token=3b865e94-31f4-41d3-a55e-f83134376c1a",
       "imageHint": "dining area"
     },
     {
       "id": "project-7",
       "description": "Retail store interior with modern design",
-      "imageUrl": "https://images.unsplash.com/photo-1758448501002-8c7bb7a7d9ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXRhaWwlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjQ3ODQ2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-7.jpg?alt=media&token=16a97a06-5381-4835-9011-85573429307c",
       "imageHint": "retail interior"
     },
     {
       "id": "project-8",
       "description": "Living room with large cream sofa",
-      "imageUrl": "https://images.unsplash.com/photo-1554995207-c18c203602cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsaXZpbmclMjByb29tfGVufDB8fHx8MTc2NDcwODk2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-8.jpg?alt=media&token=1853a479-7973-4537-8854-84517316719b",
       "imageHint": "living room"
     },
     {
       "id": "project-9",
       "description": "Minimalist bedroom with integrated wardrobes",
-      "imageUrl": "https://images.unsplash.com/photo-1741308478100-85c440e1b4bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwYmVkcm9vbXxlbnwwfHx8fDE3NjQ3MzA0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-9.jpg?alt=media&token=e183758b-05a2-4a37-b673-45eb487a0c64",
       "imageHint": "minimalist bedroom"
     },
     {
       "id": "project-10",
       "description": "Modern white bedroom with integrated wardrobes",
-      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aGl0ZSUyMGJlZHJvb218ZW58MHx8fHwxNzY2MDQ1NjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-10.jpg?alt=media&token=f0f1882d-c20e-436e-953e-a131b7520e5c",
       "imageHint": "white bedroom"
     },
     {
       "id": "project-11",
       "description": "Living room with a large L-shaped sofa",
-      "imageUrl": "https://images.unsplash.com/photo-1558991194-ac2869941a50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaXZpbmclMjByb29tJTIwc29mYXxlbnwwfHx8fDE3NjYwNDU2ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-11.jpg?alt=media&token=a080faf1-3349-411a-8b89-1317130a8c2f",
       "imageHint": "living room sofa"
     },
     {
       "id": "project-12",
       "description": "Modern kitchen with breakfast bar and wooden stools",
-      "imageUrl": "https://images.unsplash.com/photo-1580922158670-68533b3a69a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NjA0NTczMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-12.jpg?alt=media&token=035e4d2b-18f1-4770-9833-2895f590f058",
       "imageHint": "modern kitchen"
     }
   ]
