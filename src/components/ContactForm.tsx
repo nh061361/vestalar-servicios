@@ -127,8 +127,7 @@ export function ContactForm() {
                     <Button 
                         key={index}
                         type="button" 
-                        variant="outline" 
-                        size="sm"
+                        variant="outline"
                         onClick={() => handleSuggestionClick(suggestion)}
                         className="text-sm h-auto whitespace-normal"
                     >
