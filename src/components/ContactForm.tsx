@@ -130,7 +130,7 @@ export function ContactForm() {
                         variant="outline" 
                         size="sm"
                         onClick={() => handleSuggestionClick(suggestion)}
-                        className="text-xs"
+                        className="text-xs h-auto whitespace-normal"
                     >
                         {suggestion}
                     </Button>
