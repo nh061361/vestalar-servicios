@@ -159,19 +159,19 @@
     {
       "id": "project-10",
       "description": "Modern white bedroom with integrated wardrobes",
-      "imageUrl": "https://images.unsplash.com/photo-1715497210212-04ad45187e1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMGJsdXJ8ZW58MHx8fHwxNzY2MDQyOTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3aGl0ZSUyMGJlZHJvb218ZW58MHx8fHwxNzY2MDQ1NjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "white bedroom"
     },
     {
       "id": "project-11",
       "description": "Living room with a large L-shaped sofa",
-      "imageUrl": "https://images.unsplash.com/photo-1720371302213-334a10685600?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXJnZSUyMGJlZHxlbnwwfHx8fDE3NjYwNDI5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1558991194-ac2869941a50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaXZpbmclMjByb29tJTIwc29mYXxlbnwwfHx8fDE3NjYwNDU2ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "living room sofa"
     },
     {
       "id": "project-12",
       "description": "Modern kitchen with breakfast bar and wooden stools",
-      "imageUrl": "https://images.unsplash.com/photo-1617806118233-54e493b64238?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NjA0MzA2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1580922158670-68533b3a69a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8fDE3NjYwNDU3MzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern kitchen"
     }
   ]
