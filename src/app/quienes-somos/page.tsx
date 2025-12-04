@@ -5,10 +5,12 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Menu, Facebook, Instagram, Linkedin, Award, Users, Handshake, Leaf, Rocket, Heart } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from "embla-carousel-autoplay";
 
 
 export default function AboutUsPage() {
@@ -23,9 +25,19 @@ export default function AboutUsPage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
-  const aboutUsHero = PlaceHolderImages.find(p => p.id === 'about-us-hero');
+  
+  const heroImages = [
+    'about-us-hero',
+    'project-1',
+    'project-2',
+    'full-renovation-1',
+    'project-8'
+  ]
+  .map(id => PlaceHolderImages.find(p => p.id === id))
+  .filter((p): p is ImagePlaceholder => !!p);
 
-  if (!aboutUsHero) {
+
+  if (!heroImages.length) {
       // Handle the case where the hero image is not found, maybe show a fallback or nothing
       return <div>Loading...</div>;
   }
@@ -52,6 +64,10 @@ export default function AboutUsPage() {
       description: "Apostamos por proveedores de proximidad para impulsar la economía local y reducir la huella ambiental."
     }
   ];
+  
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
+  );
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -129,16 +145,29 @@ export default function AboutUsPage() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[50vh] w-full">
-          <Image
-            src={aboutUsHero.imageUrl}
-            alt={aboutUsHero.description}
-            width={1920}
-            height={960}
-            className="w-full h-full object-cover"
-            data-ai-hint={aboutUsHero.imageHint}
-            priority
-          />
+        <section className="relative h-[50vh] w-full overflow-hidden">
+           <Carousel
+            plugins={[plugin.current]}
+            className="w-full h-full"
+            opts={{
+              loop: true,
+            }}
+          >
+            <CarouselContent className="-ml-0 h-full">
+              {heroImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-0 h-full">
+                  <Image
+                    src={image.imageUrl}
+                    alt={image.description}
+                    fill
+                    className="w-full h-full object-cover"
+                    data-ai-hint={image.imageHint}
+                    priority={index === 0}
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
             <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
