@@ -372,7 +372,7 @@ export default function HomePage() {
 
         <section id="contact" className="py-12 md:py-24 bg-background">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="grid lg:grid-cols-5 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-3 space-y-6">
                 <h2 className="text-3xl font-bold">Contacta con Nosotros</h2>
                 <p className="text-muted-foreground text-lg">
