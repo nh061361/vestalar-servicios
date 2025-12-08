@@ -10,6 +10,22 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async headers() {
+    return [
+      {
+        source: '/_next/:path*',
+        headers: [
+          {key: 'Access-Control-Allow-Origin', value: '*'},
+          {key: 'Access-Control-Allow-Methods', value: 'GET, OPTIONS, HEAD'},
+          {
+            key: 'Access-Control-Allow-Headers',
+            value:
+              'Next-Action, Next-Router-State-Tree, Next-Router-Prefetch, RSC',
+          },
+        ],
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
