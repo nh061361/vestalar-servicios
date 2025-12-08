@@ -225,7 +225,7 @@ export default function HomePage() {
             playsInline
             className="absolute top-0 left-0 min-w-full min-h-full object-cover"
           />
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4">
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/10 p-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Transformamos tu Hogar</h1>
             <p className="mt-4 max-w-3xl text-lg md:text-xl">Expertos en Reformas Integrales en Zaragoza y toda España. Calidad y confianza para el proyecto de tus sueños. Pide tu presupuesto a medida sin compromiso.</p>
             <Button size="lg" className="mt-8" onClick={() => setIsBudgetModalOpen(true)}>Solicita Presupuesto Online</Button>
