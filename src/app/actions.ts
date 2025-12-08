@@ -37,7 +37,7 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
         html: `
           <div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 20px auto; border: 1px solid #ddd; border-radius: 10px; overflow: hidden;">
             <div style="background-color: #f4f4f4; padding: 20px; text-align: center;">
-              <img src="${logoUrl}" alt="Vestalar Logo" style="max-width: 150px;">
+              <img src="${logoUrl}" alt="Vestalar Logo" width="150" style="max-width: 150px; width: 100%; height: auto;">
             </div>
             <div style="padding: 30px;">
               <h2 style="color: #21435a; margin-top: 0;">Nuevo Mensaje desde la Web</h2>
@@ -82,7 +82,7 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
         html: `
           <div style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 20px auto; border: 1px solid #ddd; border-radius: 10px; overflow: hidden;">
             <div style="background-color: #f4f4f4; padding: 20px; text-align: center;">
-              <img src="${logoUrl}" alt="Vestalar Logo" style="max-width: 150px;">
+              <img src="${logoUrl}" alt="Vestalar Logo" width="150" style="max-width: 150px; width: 100%; height: auto;">
             </div>
             <div style="padding: 30px;">
               <h2 style="color: #21435a; margin-top: 0;">¡Gracias por contactar con Vestalar!</h2>
