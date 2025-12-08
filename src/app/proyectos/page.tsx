@@ -106,7 +106,7 @@ export default function ProjectsPage() {
                         <div key={image.id} className="break-inside-avoid">
                             <Image
                                 src={image.imageUrl}
-                                alt={image.description}
+                                alt="Imagen de proyecto de Vestalar"
                                 width={600}
                                 height={800}
                                 className="w-full h-auto object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"

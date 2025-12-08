@@ -67,36 +67,6 @@
       "imageHint": "house exterior"
     },
     {
-      "id": "faq-warranty",
-      "description": "Two people signing a contract over architectural blueprints.",
-      "imageUrl": "https://images.unsplash.com/photo-1556761175-b413da4baf72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb250cmFjdCUyMHNpZ25pbmd8ZW58MHx8fHwxNzY1Mzk5MzQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "contract signing"
-    },
-    {
-      "id": "faq-time",
-      "description": "An interior of a room under construction, with tools and materials.",
-      "imageUrl": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlfGVufDB8fHx8MTc2NTM5OTM4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "construction site"
-    },
-    {
-      "id": "faq-zone",
-      "description": "A beautiful shot of Madrid's skyline at dusk.",
-      "imageUrl": "https://images.unsplash.com/photo-1578305987196-6238b3484c98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWRyaWQlMjBza3lsaW5lJTIwZHVza3xlbnwwfHx8fDE3NjUzOTk0MzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "madrid skyline"
-    },
-    {
-      "id": "faq-budget",
-      "description": "An architect working on blueprints at a desk with a laptop.",
-      "imageUrl": "https://images.unsplash.com/photo-1581092446348-7d7d3630c25a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmNoaXRlY3QlMjBkcmlua2luZyUyMGNvZmZlZXxlbnwwfHx8fDE3NjUzOTk0NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "architect desk"
-    },
-    {
-      "id": "hero-background",
-      "description": "A bright and modern living room interior.",
-      "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaXZpbmclMjByb29tJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY1Nzk0MDIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "living room interior"
-    },
-    {
       "id": "about-us-hero",
       "description": "A team of architects and construction workers collaborating on a project.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fabout-us-hero.jpg?alt=media&token=e9102434-6331-4ce3-a267-0c7104f67c30",
