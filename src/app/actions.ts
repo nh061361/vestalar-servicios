@@ -23,8 +23,8 @@ export async function saveContact(formData: z.infer<typeof contactFormSchema>) {
   const logoUrl = "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Flogo%2FVestalar_Logotipo_original_cmyk.png?alt=media&token=cbf7fd0c-3d53-42d0-9f33-d46a497bbbc8";
   
   // === Remitentes y destinatarios ===
-  const companyEmail = 'marketing@vestalar.com';
-  const customerFacingSender = '"Vestalar" <marketing@vestalar.com>';
+  const companyEmail = 'vestalar@vestalar.com';
+  const customerFacingSender = '"Vestalar" <vestalar@vestalar.com>';
   
   try {
     // 1. Enviar correo de notificación a la empresa
