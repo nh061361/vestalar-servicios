@@ -52,7 +52,7 @@ export default function HomePage() {
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
   
-  const videoUrl = 'https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fvideo%2FVestalar%20Reformas%20video%20presentaci%C3%B3n%2001%20%20PROBANDO%20WMV.mp4?alt=media&token=b42e8cab-98af-4ce6-bd28-ba1379a3f166';
+  const videoUrl = 'https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fvideo%2Fvideo-output-FBFFC3FC-0C6A-47DF-8723-E0CEB186A344-1.mp4?alt=media&token=08bc7908-ae12-42c0-af9f-a55dc4b0dfa7';
 
   const services = [
     {
