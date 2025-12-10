@@ -51,16 +51,18 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          'flex h-20 w-20 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_11px_rgba(0,0,0,0.5)] transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
+          'flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_11px_rgba(0,0,0,0.5)] transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
            isPulsing && 'animate-pulse-whatsapp'
         )}
         aria-label="Contactar por WhatsApp"
       >
         <div className="relative flex items-center justify-center">
-          <MessageCircle className="h-12 w-12" strokeWidth={1.5} />
-          <Phone className="absolute h-5 w-5" />
+          <MessageCircle className="h-10 w-10 md:h-12 md:w-12" strokeWidth={1.5} />
+          <Phone className="absolute h-4 w-4 md:h-5 md:w-5" />
         </div>
       </a>
     </div>
   );
 }
+
+    

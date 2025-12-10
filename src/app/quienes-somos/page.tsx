@@ -85,9 +85,9 @@ export default function AboutUsPage() {
             />}
           </a>
           <nav className="hidden md:flex gap-6 items-center">
+            <Button variant="ghost" asChild><a href="/proyectos">Proyectos</a></Button>
             <Button variant="ghost" asChild><a href="/#services">Servicios</a></Button>
             <Button variant="ghost" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
-            <Button variant="ghost" asChild><a href="/proyectos">Proyectos</a></Button>
             <Button variant="ghost" asChild><a href="/#reviews">Opiniones</a></Button>
             <Button variant="ghost" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
             <Button variant="default" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
@@ -117,13 +117,13 @@ export default function AboutUsPage() {
                       className="object-contain mb-4"
                     />}
                     <SheetClose asChild>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button>
+                    </SheetClose>
+                    <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#services">Servicios</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button>
@@ -217,7 +217,7 @@ export default function AboutUsPage() {
                   </div>
                   <h3 className="text-2xl font-bold">Liderar la Reforma Sostenible</h3>
                   <p className="text-muted-foreground">
-                      Queremos ser la empresa de reformas que todos recomiendan. Innovamos en técnicas y materiales para construir un futuro donde las obras respeten el entorno y mejoren la vida de las personas. Nos vemos liderando el camino hacia un sector de reformas más responsable y creativo.
+                      Formación continua en técnicas, materiales y herramientas para construir un futuro sostenible donde la construcción respete el entorno y mejore la vida de las personas. Responsabilidad y creatividad como vehículos para recorrer este camino.
                   </p>
               </div>
             </div>
@@ -256,9 +256,9 @@ export default function AboutUsPage() {
           <div>
             <h3 className="font-bold text-lg mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
-              <li><a href="/#services" className="hover:underline">Servicios de Reformas</a></li>
-              <li><a href="/quienes-somos" className="hover:underline">Quiénes somos</a></li>
               <li><a href="/proyectos" className="hover:underline">Proyectos</a></li>
+              <li><a href="/#services" className="hover:underline">Servicios</a></li>
+              <li><a href="/quienes-somos" className="hover:underline">Quiénes somos</a></li>
               <li><a href="/#reviews" className="hover:underline">Opiniones</a></li>
               <li><a href="/#faq" className="hover:underline">Preguntas Frecuentes</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setIsBudgetModalOpen(true); }} className="hover:underline">Contacto y Presupuesto</a></li>
@@ -291,3 +291,5 @@ export default function AboutUsPage() {
     </div>
   );
 }
+
+    
