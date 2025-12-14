@@ -9,9 +9,6 @@ import { useState, useEffect, useRef } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import Autoplay from "embla-carousel-autoplay";
-
 
 export default function AboutUsPage() {
   const [isClient, setIsClient] = useState(false);
@@ -26,10 +23,10 @@ export default function AboutUsPage() {
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
   
-  const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('project-'));
+  const heroImage = PlaceHolderImages.find(p => p.id === 'about-us-hero');
 
 
-  if (!heroImages.length) {
+  if (!heroImage) {
       // Handle the case where the hero image is not found, maybe show a fallback or nothing
       return <div>Loading...</div>;
   }
@@ -56,10 +53,6 @@ export default function AboutUsPage() {
       description: "Apostamos por proveedores de proximidad para impulsar la economía local y reducir la huella ambiental."
     }
   ];
-  
-  const plugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true })
-  );
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -138,28 +131,14 @@ export default function AboutUsPage() {
 
       <main className="flex-1">
         <section className="relative h-[50vh] w-full overflow-hidden">
-           <Carousel
-            plugins={[plugin.current]}
-            className="w-full h-full"
-            opts={{
-              loop: true,
-            }}
-          >
-            <CarouselContent className="-ml-0 h-full">
-              {heroImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-0 h-full">
-                  <Image
-                    src={image.imageUrl}
-                    alt={image.description}
-                    fill
-                    className="w-full h-full object-cover"
-                    data-ai-hint={image.imageHint}
-                    priority={index === 0}
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            className="w-full h-full object-cover"
+            data-ai-hint={heroImage.imageHint}
+            priority
+          />
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
             <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
@@ -286,5 +265,3 @@ export default function AboutUsPage() {
     </div>
   );
 }
-
-    
