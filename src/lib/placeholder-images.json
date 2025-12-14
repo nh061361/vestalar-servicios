@@ -157,6 +157,24 @@
       "imageHint": "before after renovation"
     },
     {
+      "id": "project-16",
+      "description": "Living room with christmas decoration.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpremium_photo-1681589434334-254a9a9f4a61.png?alt=media&token=70ee161e-ca0d-4ccf-ae3e-6db302505511",
+      "imageHint": "decorated living room"
+    },
+    {
+      "id": "project-17",
+      "description": "A bright kitchen with white cabinets.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fphoto-1674649207745-f4667b978783.png?alt=media&token=b208b9a0-c2f7-4a4c-92e2-72cc6c17ac99",
+      "imageHint": "bright kitchen"
+    },
+    {
+      "id": "project-18",
+      "description": "A living room with a fireplace.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
+      "imageHint": "living room fireplace"
+    },
+    {
       "id": "project-4",
       "description": "Modern kitchen with white cabinets and wooden floor.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsteffen-lemmerzahl-pBZBbCqyW8M-unsplash.jpg?alt=media&token=8ecacb3a-b61c-4034-9174-4a80ff7f0f1c",
