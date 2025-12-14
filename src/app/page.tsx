@@ -138,15 +138,15 @@ export default function HomePage() {
   ];
 
   const ratingDistribution = [
-    { rating: 5, percentage: 85 },
-    { rating: 4, percentage: 10 },
-    { rating: 3, percentage: 5 },
+    { rating: 5, percentage: 80 },
+    { rating: 4, percentage: 20 },
+    { rating: 3, percentage: 0 },
     { rating: 2, percentage: 0 },
     { rating: 1, percentage: 0 },
   ];
   
-  const totalReviews = 48;
-  const averageRating = 4.9;
+  const totalReviews = 5;
+  const averageRating = 4.8;
 
 
   return (
