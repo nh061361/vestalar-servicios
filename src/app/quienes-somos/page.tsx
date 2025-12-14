@@ -26,15 +26,7 @@ export default function AboutUsPage() {
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
   
-  const heroImages = [
-    'about-us-hero',
-    'project-1',
-    'project-2',
-    'full-renovation-1',
-    'project-8'
-  ]
-  .map(id => PlaceHolderImages.find(p => p.id === id))
-  .filter((p): p is ImagePlaceholder => !!p);
+  const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('project-'));
 
 
   if (!heroImages.length) {
