@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 export default function ProjectsPage() {
   const [isClient, setIsClient] = useState(false);
@@ -26,6 +27,22 @@ export default function ProjectsPage() {
   const projectImages = PlaceHolderImages.filter(p => 
     p.id.startsWith('project-')
   );
+
+  const galleryLayout = [
+    "col-span-2 row-span-2", // project-13
+    "",                      // project-14
+    "col-span-1 row-span-2", // project-15
+    "",                      // project-16
+    "",                      // project-17
+    "col-span-2 row-span-1", // project-18
+    "",                      // project-19
+    "col-span-1 row-span-2", // project-20
+    "",                      // project-21
+    "",                      // project-22
+    "col-span-2 row-span-1", // project-23
+    "",                      // project-24
+  ];
+
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -106,17 +123,19 @@ export default function ProjectsPage() {
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
-                <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-                    {projectImages.map((image) => (
-                        <div key={image.id} className="group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 break-inside-avoid">
+                <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[300px] gap-4">
+                    {projectImages.map((image, index) => (
+                        <div key={image.id} className={cn(
+                          "group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300",
+                          galleryLayout[index % galleryLayout.length] || ""
+                          )}>
                             <Image
                                 src={image.imageUrl}
                                 alt={image.description || "Imagen de proyecto de Vestalar"}
-                                width={500}
-                                height={image.id === 'project-12' ? 750 : 500}
-                                className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105"
+                                fill
+                                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={image.imageHint}
-                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                         </div>
                     ))}
