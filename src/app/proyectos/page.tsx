@@ -39,6 +39,7 @@ export default function ProjectsPage() {
               width={115} 
               height={38} 
               className="object-contain"
+              style={{ width: 'auto', height: 'auto' }}
               priority
             />}
           </a>
@@ -73,6 +74,7 @@ export default function ProjectsPage() {
                       width={115} 
                       height={38} 
                       className="object-contain mb-4"
+                      style={{ width: 'auto', height: 'auto' }}
                     />}
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button>
@@ -106,7 +108,7 @@ export default function ProjectsPage() {
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {projectImages.map((image) => (
-                        <div key={image.id} className="group relative block w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div key={image.id} className="group relative block w-full aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                             <Image
                                 src={image.imageUrl}
                                 alt={image.description || "Imagen de proyecto de Vestalar"}
@@ -133,6 +135,7 @@ export default function ProjectsPage() {
               width={115} 
               height={38} 
               className="object-contain"
+              style={{ width: 'auto', height: 'auto' }}
             />}
             <p className="text-sm">
               Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios en toda España para crear el hogar de tus sueños.

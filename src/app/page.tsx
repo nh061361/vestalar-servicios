@@ -154,6 +154,7 @@ export default function HomePage() {
               width={115} 
               height={38} 
               className="object-contain"
+              style={{ width: 'auto', height: 'auto' }}
               priority
             />}
           </a>
@@ -187,6 +188,7 @@ export default function HomePage() {
                       alt="Vestalar Logo" 
                       width={115} 
                       height={38}
+                      style={{ width: 'auto', height: 'auto' }}
                       className="object-contain mb-4"
                     />}
                     <SheetClose asChild>
@@ -417,6 +419,7 @@ export default function HomePage() {
               alt="Vestalar Logo Negativo - Empresa de reformas" 
               width={115} 
               height={38}
+              style={{ width: 'auto', height: 'auto' }}
               className="object-contain"
             />}
             <p className="text-sm">

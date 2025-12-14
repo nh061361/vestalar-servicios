@@ -35,6 +35,7 @@ export default function CookiePolicyPage() {
               width={115} 
               height={38} 
               className="object-contain"
+              style={{ width: 'auto', height: 'auto' }}
               priority
             />}
           </a>
@@ -69,6 +70,7 @@ export default function CookiePolicyPage() {
                       width={115} 
                       height={38} 
                       className="object-contain mb-4"
+                      style={{ width: 'auto', height: 'auto' }}
                     />}
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button>
@@ -154,6 +156,7 @@ export default function CookiePolicyPage() {
               width={115} 
               height={38} 
               className="object-contain"
+              style={{ width: 'auto', height: 'auto' }}
             />}
             <p className="text-sm">
               Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios en toda España para crear el hogar de tus sueños.
