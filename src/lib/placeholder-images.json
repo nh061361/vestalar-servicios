@@ -74,57 +74,33 @@
     },
     {
       "id": "project-1",
-      "description": "Salón espacioso tras una reforma integral en una casa.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FFoto%201%20reformas%20integrales%20-%20Casa%20Jaca%20-%20(1).jpg?alt=media&token=3ce254df-da91-4fc5-acb9-406dd99d3d30",
-      "imageHint": "living room renovation"
-    },
-    {
-      "id": "project-2",
       "description": "Living room with christmas decoration.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpremium_photo-1681589434334-254a9a9f4a61.png?alt=media&token=70ee161e-ca0d-4ccf-ae3e-6db302505511",
       "imageHint": "decorated living room"
     },
     {
-      "id": "project-3",
+      "id": "project-2",
       "description": "A bright kitchen with white cabinets.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fphoto-1674649207745-f4667b978783.png?alt=media&token=b208b9a0-c2f7-4a4c-92e2-72cc6c17ac99",
       "imageHint": "bright kitchen"
     },
     {
-      "id": "project-4",
+      "id": "project-3",
       "description": "A living room with a fireplace.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
       "imageHint": "living room fireplace"
     },
     {
-      "id": "project-5",
+      "id": "project-4",
       "description": "Room under renovation with tools and materials.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimmo-renovation--oBPH6PsX8A-unsplash.jpg?alt=media&token=70a6ebc2-8058-46fd-8932-63ab82e3967d",
       "imageHint": "room renovation"
     },
     {
-      "id": "project-6",
+      "id": "project-5",
       "description": "Modern bathroom with a large mirror and plant.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimagen_ba%C3%B1o.png?alt=media&token=ad395f98-d511-4299-9ed0-31113172e2ac",
       "imageHint": "modern bathroom"
-    },
-    {
-      "id": "project-7",
-      "description": "Modern kitchen with wood floor.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsteffen-lemmerzahl-pBZBbCqyW8M-unsplash.jpg?alt=media&token=8ecacb3a-b61c-4034-9174-4a80ff7f0f1c",
-      "imageHint": "modern kitchen"
-    },
-    {
-      "id": "project-8",
-      "description": "Comparativa de antes y después de una reforma.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FFoto%20Zabaleta%20antes%20despues.jpeg?alt=media&token=c587f213-652b-4bae-b120-19c7fb5fd922",
-      "imageHint": "before after renovation"
-    },
-    {
-      "id": "project-9",
-      "description": "Primer plano de un azulejo de diseño fantasía.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FFoto%20azulejo%20fantasia%20de%20cerca%20(1).jpg?alt=media&token=82a90568-a1d3-4b37-9178-7cdde9c35c59",
-      "imageHint": "fantasy tile"
     }
   ]
 }
