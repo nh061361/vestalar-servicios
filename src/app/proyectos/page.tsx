@@ -29,18 +29,18 @@ export default function ProjectsPage() {
   );
 
   const galleryLayout = [
-    "col-span-2 row-span-2", // project-13
-    "",                      // project-14
-    "col-span-1 row-span-2", // project-15
-    "",                      // project-16
-    "",                      // project-17
-    "col-span-2 row-span-1", // project-18
-    "",                      // project-19
-    "col-span-1 row-span-2", // project-20
-    "",                      // project-21
-    "",                      // project-22
-    "col-span-2 row-span-1", // project-23
-    "",                      // project-24
+    "col-span-2 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-2",
+    "col-span-1 row-span-1",
+    "col-span-2 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-2 row-span-2",
+    "col-span-1 row-span-1",
   ];
 
 
@@ -123,10 +123,10 @@ export default function ProjectsPage() {
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
-                <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[300px] gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4">
                     {projectImages.map((image, index) => (
                         <div key={image.id} className={cn(
-                          "group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300",
+                          "group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300",
                           galleryLayout[index % galleryLayout.length] || ""
                           )}>
                             <Image
