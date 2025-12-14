@@ -68,9 +68,9 @@
     },
     {
       "id": "about-us-hero",
-      "description": "A team of architects and construction workers collaborating on a project.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fabout-us-hero.jpg?alt=media&token=e9102434-6331-4ce3-a267-0c7104f67c30",
-      "imageHint": "construction team"
+      "description": "A construction blueprint with tools, representing the planning and expertise of Vestalar.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FGemini_Generated_Image_pa3ej6pa3ej6pa3e.png?alt=media&token=abcd7046-9956-4b61-82f9-717d0269270d",
+      "imageHint": "construction blueprint"
     },
     {
       "id": "project-1",
