@@ -74,9 +74,9 @@
     },
     {
       "id": "project-1",
-      "description": "Living room with christmas decoration.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpremium_photo-1681589434334-254a9a9f4a61.png?alt=media&token=70ee161e-ca0d-4ccf-ae3e-6db302505511",
-      "imageHint": "decorated living room"
+      "description": "Foto 1 reformas integrales - Casa Jaca - (1).jpg",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FFoto%201%20reformas%20integrales%20-%20Casa%20Jaca%20-%20(1).jpg?alt=media&token=3ce254df-da91-4fc5-acb9-406dd99d3d30",
+      "imageHint": "house reform"
     },
     {
       "id": "project-2",
@@ -101,6 +101,30 @@
       "description": "Modern bathroom with a large mirror and plant.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimagen_ba%C3%B1o.png?alt=media&token=ad395f98-d511-4299-9ed0-31113172e2ac",
       "imageHint": "modern bathroom"
+    },
+    {
+      "id": "project-6",
+      "description": "Before and after of a room renovation.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FFoto%20Zabaleta%20antes%20despues.jpeg?alt=media&token=c587f213-652b-4bae-b120-19c7fb5fd922",
+      "imageHint": "renovation before after"
+    },
+    {
+      "id": "project-7",
+      "description": "Close-up of a fantasy tile.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FFoto%20azulejo%20fantasia%20de%20cerca%20(1).jpg?alt=media&token=82a90568-a1d3-4b37-9178-7cdde9c35c59",
+      "imageHint": "fantasy tile"
+    },
+    {
+      "id": "project-8",
+      "description": "A modern kitchen with wooden chairs.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fcameron-smith-WFaLFAyKp5g-unsplash.jpg?alt=media&token=d7f78242-a158-48a0-a9da-42e54556834c",
+      "imageHint": "modern kitchen"
+    },
+    {
+      "id": "project-9",
+      "description": "Room under renovation with exposed bricks.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimmo-renovation-6js0JRlbKJ4-unsplash.jpg?alt=media&token=ecf4f8c4-9368-4f7e-bcc8-ef4cd4feb031",
+      "imageHint": "room renovation"
     }
   ]
 }
