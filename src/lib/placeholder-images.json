@@ -175,6 +175,18 @@
       "imageHint": "living room fireplace"
     },
     {
+      "id": "project-19",
+      "description": "Room under renovation with tools and materials.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimmo-renovation--oBPH6PsX8A-unsplash.jpg?alt=media&token=70a6ebc2-8058-46fd-8932-63ab82e3967d",
+      "imageHint": "room renovation"
+    },
+    {
+      "id": "project-20",
+      "description": "Modern bathroom with a large mirror and plant.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimagen_ba%C3%B1o.png?alt=media&token=ad395f98-d511-4299-9ed0-31113172e2ac",
+      "imageHint": "modern bathroom"
+    },
+    {
       "id": "project-4",
       "description": "Modern kitchen with white cabinets and wooden floor.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsteffen-lemmerzahl-pBZBbCqyW8M-unsplash.jpg?alt=media&token=8ecacb3a-b61c-4034-9174-4a80ff7f0f1c",
