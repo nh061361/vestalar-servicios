@@ -100,16 +100,16 @@ export default function ProjectsPage() {
       <main className="flex-1">
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
-                <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-12">Nuestros Proyectos</h1>
-                <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {projectImages.map((image) => (
-                        <div key={image.id} className="break-inside-avoid">
+                        <div key={image.id} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 group">
                             <Image
                                 src={image.imageUrl}
                                 alt="Imagen de proyecto de Vestalar"
                                 width={600}
                                 height={800}
-                                className="w-full h-auto object-cover rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={image.imageHint}
                             />
                         </div>
@@ -173,5 +173,3 @@ export default function ProjectsPage() {
     </div>
   );
 }
-
-    
