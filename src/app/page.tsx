@@ -133,7 +133,7 @@ export default function HomePage() {
       name: "Laura Ortega",
       rating: 5,
       review: "Muy buena experiencia. Me cambiaron la bañera por un plato de ducha y todo fue muy bien. Trabajan de forma ordenada, cumplen con lo que dicen y el resultado ha quedado tal y como esperaba. Además, fueron limpios y cumplieron los plazos durante la obra. Dentro de unos meses nos meteremos con la cocina y lo dejaré de nuevo en sus manos.",
-      avatar: ""
+      avatar: "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20opiniones%2Funnamed%20(4).png?alt=media&token=13699e3e-b823-42a4-9bc2-a7bf07a7317a"
     }
   ];
 
@@ -332,7 +332,7 @@ export default function HomePage() {
                                                 <div className="flex items-center gap-4 mb-4">
                                                     <Avatar>
                                                         <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                                                        <AvatarFallback className={cn(testimonial.name === 'Laura Ortega' && 'bg-green-600 text-white')}>
+                                                        <AvatarFallback>
                                                           {testimonial.name.charAt(0)}
                                                         </AvatarFallback>
                                                     </Avatar>
@@ -474,3 +474,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
