@@ -47,10 +47,10 @@ export default function ProjectsPage() {
           </a>
           <nav className="hidden md:flex gap-6 items-center">
             <Button variant="ghost" asChild><a href="/proyectos">Proyectos</a></Button>
-            <Button variant="ghost" asChild><a href="/#services">Servicios</a></Button>
+            <Button variant="ghost" asChild><a href="#services">Servicios</a></Button>
             <Button variant="ghost" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
-            <Button variant="ghost" asChild><a href="/#reviews">Opiniones</a></Button>
-            <Button variant="ghost" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
+            <Button variant="ghost" asChild><a href="#reviews">Opiniones</a></Button>
+            <Button variant="ghost" asChild><a href="#faq">Preguntas Frecuentes</a></Button>
             <Button variant="default" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
           </nav>
           <div className="md:hidden">
@@ -107,7 +107,7 @@ export default function ProjectsPage() {
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {projectImages.map((image) => (
                         <div key={image.id} className="group relative block w-full aspect-w-3 aspect-h-4 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                             <Image
@@ -116,7 +116,7 @@ export default function ProjectsPage() {
                                 fill
                                 className="object-cover transform transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={image.imageHint}
-                                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                             />
                         </div>
                     ))}
