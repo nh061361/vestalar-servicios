@@ -108,31 +108,31 @@ export default function HomePage() {
       name: "Sergio Montaner",
       rating: 5,
       review: "Tenía miedo de meterme en una obra grande, pero la experiencia ha sido mucho más fácil gracias a Jose y su equipo. Me ayudaron en la elección de materiales y siempre respetaron mi presupuesto. ¡Muy recomendables!",
-      avatar: "https://i.pravatar.cc/150?u=sergio-montaner"
+      avatar: "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20opiniones%2Funnamed.png?alt=media&token=0e8b1b20-be62-4aa7-a3ef-da070cb82c95"
     },
     {
       name: "Javier Zabaleta",
       rating: 5,
       review: "Profesionalidad y atención al detalle. La reforma de mi cocina ha quedado espectacular. Cumplieron los plazos y el resultado final superó mis expectativas. ¡Contaré con ellos para futuras reformas sin dudarlo!",
-      avatar: "https://i.pravatar.cc/150?u=javier-zabaleta"
+      avatar: "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20opiniones%2Funnamed%20(1).png?alt=media&token=616f8d6a-2146-44ef-8f7d-f33e32f5bb25"
     },
     {
       name: "Macarena Mora",
       rating: 4,
       review: "Buen trabajo en la reforma integral de mi piso en Zaragoza. Hubo algunos pequeños retrasos, pero el equipo siempre fue comunicativo y resolutivo. La calidad de los acabados es excelente. Volvería a contratarlos.",
-      avatar: "https://i.pravatar.cc/150?u=macarena-mora"
+      avatar: "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20opiniones%2Funnamed%20(2).png?alt=media&token=0e59407b-f553-4bdf-82e9-172f1486c319"
     },
      {
       name: "Rafael Obon",
       rating: 5,
       review: "¡Mi baño parece otro! Me asesoraron genial con el diseño para aprovechar el espacio al máximo. Son un equipo muy limpio y organizado. Sin duda, la mejor empresa de reformas con la que he trabajado.",
-      avatar: "https://i.pravatar.cc/150?u=rafael-obon"
+      avatar: "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20opiniones%2Funnamed%20(3).png?alt=media&token=f2286c83-f645-40ad-b7eb-c3e674a4071b"
     },
     {
       name: "Laura Ortega",
       rating: 5,
       review: "Muy buena experiencia. Me cambiaron la bañera por un plato de ducha y todo fue muy bien. Trabajan de forma ordenada, cumplen con lo que dicen y el resultado ha quedado tal y como esperaba. Además, fueron limpios y cumplieron los plazos durante la obra. Dentro de unos meses nos meteremos con la cocina y lo dejaré de nuevo en sus manos.",
-      avatar: "https://i.pravatar.cc/150?u=laura-ortega"
+      avatar: ""
     }
   ];
 
