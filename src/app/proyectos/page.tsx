@@ -106,12 +106,12 @@ export default function ProjectsPage() {
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {projectImages.map((image) => (
-                        <div key={image.id} className="group relative block w-full aspect-w-4 aspect-h-5 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div key={image.id} className="group relative block w-full aspect-w-1 aspect-h-1 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                             <Image
                                 src={image.imageUrl}
                                 alt={image.description || "Imagen de proyecto de Vestalar"}
-                                layout="fill"
-                                objectFit="cover"
+                                fill
+                                style={{ objectFit: 'cover' }}
                                 className="transform transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={image.imageHint}
                                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
