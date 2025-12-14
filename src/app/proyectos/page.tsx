@@ -22,7 +22,13 @@ export default function ProjectsPage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
-  const projectImages = PlaceHolderImages.filter(p => p.id.startsWith('project-'));
+  
+  const projectImages = PlaceHolderImages.filter(p => 
+    p.id.startsWith('project-') || 
+    p.id.startsWith('kitchen-renovation-') ||
+    p.id.startsWith('bathroom-renovation-') ||
+    p.id.startsWith('full-renovation-')
+  );
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -103,7 +109,7 @@ export default function ProjectsPage() {
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {projectImages.map((image) => (
-                        <div key={image.id} className="group relative block w-full aspect-[3/4] overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div key={image.id} className="group relative block w-full aspect-w-3 aspect-h-4 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                             <Image
                                 src={image.imageUrl}
                                 alt={image.description || "Imagen de proyecto de Vestalar"}
@@ -173,3 +179,5 @@ export default function ProjectsPage() {
     </div>
   );
 }
+
+    
