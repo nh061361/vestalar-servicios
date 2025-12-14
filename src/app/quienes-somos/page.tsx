@@ -74,6 +74,7 @@ export default function AboutUsPage() {
             <Button variant="ghost" asChild><a href="/proyectos">Proyectos</a></Button>
             <Button variant="ghost" asChild><a href="/#services">Servicios</a></Button>
             <Button variant="ghost" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
+            <Button variant="ghost" asChild><a href="/blog">Blog</a></Button>
             <Button variant="ghost" asChild><a href="/#reviews">Opiniones</a></Button>
             <Button variant="ghost" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
             <Button variant="default" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
@@ -111,6 +112,9 @@ export default function AboutUsPage() {
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/blog">Blog</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button>
@@ -233,6 +237,7 @@ export default function AboutUsPage() {
               <li><a href="/proyectos" className="hover:underline">Proyectos</a></li>
               <li><a href="/#services" className="hover:underline">Servicios</a></li>
               <li><a href="/quienes-somos" className="hover:underline">Quiénes somos</a></li>
+              <li><a href="/blog" className="hover:underline">Blog</a></li>
               <li><a href="/#reviews" className="hover:underline">Opiniones</a></li>
               <li><a href="/#faq" className="hover:underline">Preguntas Frecuentes</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setIsBudgetModalOpen(true); }} className="hover:underline">Contacto y Presupuesto</a></li>

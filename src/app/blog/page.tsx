@@ -2,15 +2,17 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { blogPosts } from '@/lib/blog-posts';
 
-export default function CookiePolicyPage() {
+export default function BlogPage() {
   const [isClient, setIsClient] = useState(false);
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
   
@@ -73,27 +75,13 @@ export default function CookiePolicyPage() {
                       className="object-contain mb-4"
                       style={{ width: 'auto', height: 'auto' }}
                     />}
-                    <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/#services">Servicios</a></Button>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/blog">Blog</a></Button>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
-                    </SheetClose>
-                    <SheetClose asChild>
-                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto</Button>
-                    </SheetClose>
+                    <SheetClose asChild><Button variant="ghost" className="w-full justify-start" asChild><a href="/proyectos">Proyectos</a></Button></SheetClose>
+                    <SheetClose asChild><Button variant="ghost" className="w-full justify-start" asChild><a href="/#services">Servicios</a></Button></SheetClose>
+                    <SheetClose asChild><Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button></SheetClose>
+                    <SheetClose asChild><Button variant="ghost" className="w-full justify-start" asChild><a href="/blog">Blog</a></Button></SheetClose>
+                    <SheetClose asChild><Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button></SheetClose>
+                    <SheetClose asChild><Button variant="ghost" className="w-full justify-start" asChild><a href="/#faq">Preguntas Frecuentes</a></Button></SheetClose>
+                    <SheetClose asChild><Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button></SheetClose>
                   </nav>
                 </SheetContent>
               </Sheet>
@@ -104,49 +92,40 @@ export default function CookiePolicyPage() {
 
       <main className="flex-1">
         <section className="py-12 md:py-20">
-            <div className="container mx-auto px-4 md:px-6 max-w-4xl prose lg:prose-xl">
-                <h1>Política de Cookies</h1>
-                <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-
-                <h2>¿Qué son las cookies?</h2>
-                <p>
-                    Una cookie es un pequeño fichero de texto que un sitio web almacena en el navegador del usuario. Las cookies facilitan el uso y la navegación por una página web y son esenciales para el funcionamiento de internet, aportando innumerables ventajas en la prestación de servicios interactivos.
+            <div className="container mx-auto px-4 md:px-6">
+                <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-4">Nuestro Blog</h1>
+                <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
+                  Consejos, tendencias e inspiración para tus proyectos de reforma. Descubre ideas y soluciones de la mano de nuestros expertos.
                 </p>
-
-                <h2>¿Qué tipos de cookies utilizamos?</h2>
-                <p>En nuestro sitio web, utilizamos los siguientes tipos de cookies:</p>
-                <ul>
-                    <li>
-                        <strong>Cookies técnicas o funcionales:</strong> Son aquellas que te permiten navegar a través de nuestra web y utilizar las diferentes opciones o servicios que tiene. Por ejemplo, utilizamos una cookie para recordar tu consentimiento sobre el uso de cookies. Sin esta cookie, tendrías que aceptar las cookies cada vez que nos visites.
-                    </li>
-                     <li>
-                        <strong>Cookies de análisis o medición:</strong> A través de herramientas de terceros como Google Analytics, utilizamos cookies para analizar el comportamiento de los usuarios de forma anónima, incluyendo el número de visitantes a la web, de dónde proceden y las páginas que visitaron. Esta información nos ayuda a mejorar nuestro sitio web y nuestros servicios.
-                    </li>
-                </ul>
-
-                <h2>Consentimiento</h2>
-                <p>
-                    Al hacer clic en "Aceptar" en nuestro banner de cookies, estás aceptando el uso de las cookies en los términos y condiciones contenidos en esta Política de Cookies.
-                </p>
-
-                <h2>Cómo modificar la configuración de las cookies</h2>
-                <p>
-                    Puedes restringir, bloquear o borrar las cookies de este sitio web o cualquier otra página web, utilizando tu navegador. En cada navegador la operativa es diferente, la función de 'Ayuda' te mostrará cómo hacerlo.
-                </p>
-                <ul>
-                    <li><strong>Internet Explorer:</strong> <a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer">windows.microsoft.com</a></li>
-                    <li><strong>Google Chrome:</strong> <a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer">support.google.com</a></li>
-                    <li><strong>Firefox:</strong> <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">support.mozilla.org</a></li>
-                    <li><strong>Safari:</strong> <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">support.apple.com</a></li>
-                </ul>
-                <p>
-                    Ten en cuenta que si deshabilitas las cookies, es posible que algunas funcionalidades de la web no funcionen correctamente.
-                </p>
-                
-                <h2>Contacto</h2>
-                <p>
-                    Si tienes alguna duda sobre esta política de cookies, puedes contactar con nosotros en <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
-                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {blogPosts.map((post) => (
+                        <Card key={post.slug} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                            <Link href={`/blog/${post.slug}`}>
+                                <Image
+                                    src={post.imageUrl}
+                                    alt={post.title}
+                                    width={600}
+                                    height={400}
+                                    className="w-full h-48 object-cover"
+                                />
+                            </Link>
+                            <CardHeader>
+                                <CardTitle className="text-xl">
+                                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                                </CardTitle>
+                                <p className="text-sm text-muted-foreground">{new Date(post.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                            </CardHeader>
+                            <CardContent className="flex-grow">
+                                <CardDescription>{post.excerpt}</CardDescription>
+                            </CardContent>
+                            <div className="p-6 pt-0">
+                                <Button asChild variant="link" className="p-0">
+                                    <Link href={`/blog/${post.slug}`}>Leer más →</Link>
+                                </Button>
+                            </div>
+                        </Card>
+                    ))}
+                </div>
             </div>
         </section>
       </main>
@@ -173,7 +152,7 @@ export default function CookiePolicyPage() {
               <li><a href="/proyectos" className="hover:underline">Proyectos</a></li>
               <li><a href="/#services" className="hover:underline">Servicios</a></li>
               <li><a href="/quienes-somos" className="hover:underline">Quiénes somos</a></li>
-               <li><a href="/blog" className="hover:underline">Blog</a></li>
+              <li><a href="/blog" className="hover:underline">Blog</a></li>
               <li><a href="/#reviews" className="hover:underline">Opiniones</a></li>
               <li><a href="/#faq" className="hover:underline">Preguntas Frecuentes</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setIsBudgetModalOpen(true); }} className="hover:underline">Contacto y Presupuesto</a></li>
@@ -206,5 +185,3 @@ export default function CookiePolicyPage() {
     </div>
   );
 }
-
-    

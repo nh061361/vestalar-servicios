@@ -29,18 +29,20 @@ export default function ProjectsPage() {
   );
 
   const galleryLayout = [
-    "col-span-2 row-span-2",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-2",
-    "col-span-1 row-span-1",
-    "col-span-2 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-1 row-span-1",
-    "col-span-2 row-span-2",
-    "col-span-1 row-span-1",
+    'col-span-1 row-span-1',
+    'col-span-2 row-span-2',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-2',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-1',
+    'col-span-2 row-span-1',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-2',
+    'col-span-1 row-span-1',
+    'col-span-2 row-span-2',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-1',
   ];
 
 
@@ -64,6 +66,7 @@ export default function ProjectsPage() {
             <Button variant="ghost" asChild><a href="/proyectos">Proyectos</a></Button>
             <Button variant="ghost" asChild><a href="/#services">Servicios</a></Button>
             <Button variant="ghost" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
+            <Button variant="ghost" asChild><a href="/blog">Blog</a></Button>
             <Button variant="ghost" asChild><a href="/#reviews">Opiniones</a></Button>
             <Button variant="ghost" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
             <Button variant="default" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
@@ -103,6 +106,9 @@ export default function ProjectsPage() {
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/blog">Blog</a></Button>
+                    </SheetClose>
+                    <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
@@ -123,11 +129,11 @@ export default function ProjectsPage() {
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
-                <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4">
+                 <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4">
                     {projectImages.map((image, index) => (
                         <div key={image.id} className={cn(
                           "group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300",
-                          galleryLayout[index % galleryLayout.length] || ""
+                          galleryLayout[index % galleryLayout.length] || "col-span-1 row-span-1"
                           )}>
                             <Image
                                 src={image.imageUrl}
@@ -167,6 +173,7 @@ export default function ProjectsPage() {
               <li><a href="/proyectos" className="hover:underline">Proyectos</a></li>
               <li><a href="/#services" className="hover:underline">Servicios</a></li>
               <li><a href="/quienes-somos" className="hover:underline">Quiénes somos</a></li>
+              <li><a href="/blog" className="hover:underline">Blog</a></li>
               <li><a href="/#reviews" className="hover:underline">Opiniones</a></li>
               <li><a href="/#faq" className="hover:underline">Preguntas Frecuentes</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setIsBudgetModalOpen(true); }} className="hover:underline">Contacto y Presupuesto</a></li>
@@ -199,3 +206,4 @@ export default function ProjectsPage() {
     </div>
   );
 }
+

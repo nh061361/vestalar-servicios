@@ -169,6 +169,7 @@ export default function HomePage() {
             <Button variant="ghost" asChild><a href="/proyectos">Proyectos</a></Button>
             <Button variant="ghost" asChild><a href="#services">Servicios</a></Button>
             <Button variant="ghost" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
+            <Button variant="ghost" asChild><a href="/blog">Blog</a></Button>
             <Button variant="ghost" asChild><a href="#reviews">Opiniones</a></Button>
             <Button variant="ghost" asChild><a href="#faq">Preguntas Frecuentes</a></Button>
             <Button variant="default" onClick={() => setIsBudgetModalOpen(true)}>Pide Presupuesto</Button>
@@ -206,6 +207,9 @@ export default function HomePage() {
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/quienes-somos">Quiénes somos</a></Button>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Button variant="ghost" className="w-full justify-start" asChild><a href="/blog">Blog</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#reviews">Opiniones</a></Button>
@@ -331,7 +335,7 @@ export default function HomePage() {
                                             <div>
                                                 <div className="flex items-center gap-4 mb-4">
                                                     <Avatar>
-                                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                                                        <AvatarImage src={testimonial.avatar} alt={testimonial.name} className="object-cover" />
                                                         <AvatarFallback>
                                                           {testimonial.name.charAt(0)}
                                                         </AvatarFallback>
@@ -442,6 +446,7 @@ export default function HomePage() {
               <li><a href="/proyectos" className="hover:underline">Proyectos</a></li>
               <li><a href="/#services" className="hover:underline">Servicios</a></li>
               <li><a href="/quienes-somos" className="hover:underline">Quiénes somos</a></li>
+              <li><a href="/blog" className="hover:underline">Blog</a></li>
               <li><a href="/#reviews" className="hover:underline">Opiniones</a></li>
               <li><a href="/#faq" className="hover:underline">Preguntas Frecuentes</a></li>
               <li><a href="#" onClick={(e) => { e.preventDefault(); setIsBudgetModalOpen(true); }} className="hover:underline">Contacto y Presupuesto</a></li>
