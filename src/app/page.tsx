@@ -108,31 +108,31 @@ export default function HomePage() {
       name: "Sergio Montaner",
       rating: 5,
       review: "Tenía miedo de meterme en una obra grande, pero la experiencia ha sido mucho más fácil gracias a Jose y su equipo. Me ayudaron en la elección de materiales y siempre respetaron mi presupuesto. ¡Muy recomendables!",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704d"
+      avatar: "https://i.pravatar.cc/150?u=sergio-montaner"
     },
     {
       name: "Javier Zabaleta",
       rating: 5,
       review: "Profesionalidad y atención al detalle. La reforma de mi cocina ha quedado espectacular. Cumplieron los plazos y el resultado final superó mis expectativas. ¡Contaré con ellos para futuras reformas sin dudarlo!",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704e"
+      avatar: "https://i.pravatar.cc/150?u=javier-zabaleta"
     },
     {
       name: "Macarena Mora",
       rating: 4,
       review: "Buen trabajo en la reforma integral de mi piso en Zaragoza. Hubo algunos pequeños retrasos, pero el equipo siempre fue comunicativo y resolutivo. La calidad de los acabados es excelente. Volvería a contratarlos.",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704f"
+      avatar: "https://i.pravatar.cc/150?u=macarena-mora"
     },
      {
       name: "Rafael Obon",
       rating: 5,
       review: "¡Mi baño parece otro! Me asesoraron genial con el diseño para aprovechar el espacio al máximo. Son un equipo muy limpio y organizado. Sin duda, la mejor empresa de reformas con la que he trabajado.",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704a"
+      avatar: "https://i.pravatar.cc/150?u=rafael-obon"
     },
     {
       name: "Laura Ortega",
       rating: 5,
       review: "Muy buena experiencia. Me cambiaron la bañera por un plato de ducha y todo fue muy bien. Trabajan de forma ordenada, cumplen con lo que dicen y el resultado ha quedado tal y como esperaba. Además, fueron limpios y cumplieron los plazos durante la obra. Dentro de unos meses nos meteremos con la cocina y lo dejaré de nuevo en sus manos.",
-      avatar: "https://i.pravatar.cc/150?u=a042581f4e29026704b"
+      avatar: "https://i.pravatar.cc/150?u=laura-ortega"
     }
   ];
 
