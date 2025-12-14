@@ -26,6 +26,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Progress } from '@/components/ui/progress';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import { ContactForm } from '@/components/ContactForm';
+import { cn } from '@/lib/utils';
 
 
 const GoogleIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -331,7 +332,9 @@ export default function HomePage() {
                                                 <div className="flex items-center gap-4 mb-4">
                                                     <Avatar>
                                                         <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
-                                                        <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                                                        <AvatarFallback className={cn(testimonial.name === 'Laura Ortega' && 'bg-green-600 text-white')}>
+                                                          {testimonial.name.charAt(0)}
+                                                        </AvatarFallback>
                                                     </Avatar>
                                                     <div>
                                                         <p className="font-semibold">{testimonial.name}</p>
