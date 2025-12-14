@@ -130,7 +130,7 @@ export default function AboutUsPage() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[50vh] w-full overflow-hidden">
+        <section className="relative h-[70vh] w-full overflow-hidden">
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
