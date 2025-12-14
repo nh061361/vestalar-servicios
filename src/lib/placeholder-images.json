@@ -79,72 +79,6 @@
       "imageHint": "living room renovation"
     },
     {
-      "id": "project-1",
-      "description": "Modern bathroom with walk-in shower.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fcameron-smith-WFaLFAyKp5g-unsplash.jpg?alt=media&token=d7f78242-a158-48a0-a9da-42e54556834c",
-      "imageHint": "modern bathroom"
-    },
-    {
-      "id": "project-2",
-      "description": "Kitchen detail shot with hanging utensils.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fcharlesdeluvio-RfIm_uMMoxI-unsplash.jpg?alt=media&token=f8b56a48-f557-4a0f-98ad-b297c61ffb59",
-      "imageHint": "kitchen detail"
-    },
-    {
-      "id": "project-3",
-      "description": "A room undergoing renovation with exposed brick.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimmo-renovation-6js0JRlbKJ4-unsplash.jpg?alt=media&token=ecf4f8c4-9368-4f7e-bcc8-ef4cd4feb031",
-      "imageHint": "room renovation"
-    },
-    {
-      "id": "project-5",
-      "description": "Modern kitchen with dark cabinets and glass doors",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-5.jpg?alt=media&token=df4f6104-5178-433a-9694-84c1e4c7f078",
-      "imageHint": "dark kitchen"
-    },
-    {
-      "id": "project-6",
-      "description": "Bright dining area with wooden table",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-6.jpg?alt=media&token=3b865e94-31f4-41d3-a55e-f83134376c1a",
-      "imageHint": "dining area"
-    },
-    {
-      "id": "project-7",
-      "description": "Retail store interior with modern design",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-7.jpg?alt=media&token=16a97a06-5381-4835-9011-85573429307c",
-      "imageHint": "retail interior"
-    },
-    {
-      "id": "project-8",
-      "description": "Living room with large cream sofa",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-8.jpg?alt=media&token=1853a479-7973-4537-8854-84517316719b",
-      "imageHint": "living room"
-    },
-    {
-      "id": "project-9",
-      "description": "Minimalist bedroom with integrated wardrobes",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-9.jpg?alt=media&token=e183758b-05a2-4a37-b673-45eb487a0c64",
-      "imageHint": "minimalist bedroom"
-    },
-    {
-      "id": "project-10",
-      "description": "Modern white bedroom with integrated wardrobes",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-10.jpg?alt=media&token=f0f1882d-c20e-436e-953e-a131b7520e5c",
-      "imageHint": "white bedroom"
-    },
-    {
-      "id": "project-11",
-      "description": "Living room with a large L-shaped sofa",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-11.jpg?alt=media&token=a080faf1-3349-411a-8b89-1317130a8c2f",
-      "imageHint": "living room sofa"
-    },
-    {
-      "id": "project-12",
-      "description": "Modern kitchen with breakfast bar and wooden stools",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fproject-12.jpg?alt=media&token=035e4d2b-18f1-4770-9833-2895f590f058",
-      "imageHint": "modern kitchen"
-    },
-    {
       "id": "project-13",
       "description": "Primer plano de un azulejo de diseño fantasía.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FFoto%20azulejo%20fantasia%20de%20cerca%20(1).jpg?alt=media&token=82a90568-a1d3-4b37-9178-7cdde9c35c59",
@@ -185,12 +119,6 @@
       "description": "Modern bathroom with a large mirror and plant.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimagen_ba%C3%B1o.png?alt=media&token=ad395f98-d511-4299-9ed0-31113172e2ac",
       "imageHint": "modern bathroom"
-    },
-    {
-      "id": "project-4",
-      "description": "Modern kitchen with white cabinets and wooden floor.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsteffen-lemmerzahl-pBZBbCqyW8M-unsplash.jpg?alt=media&token=8ecacb3a-b61c-4034-9174-4a80ff7f0f1c",
-      "imageHint": "modern kitchen"
     }
   ]
 }
