@@ -309,10 +309,6 @@ export default function HomePage() {
                                 </div>
                             ))}
                         </div>
-                        <Button variant="outline" className="w-full mt-6">
-                            <GoogleIcon className="w-5 h-5 mr-2" />
-                            Ver todas las opiniones
-                        </Button>
                     </CardContent>
                 </Card>
 
