@@ -92,7 +92,7 @@ export default function HomePage() {
     },
     {
       question: "¿Qué garantía ofrecemos?",
-      answer: "Todos nuestros trabajos están respaldados por una garantía completa que cubre tanto los materiales de primeras marcas como la mano de obra. Nuestro compromiso es tu total satisfacción y la calidad a largo plazo."
+      answer: "Ofrecemos una garantía de 6 meses en la mano de obra de nuestras reformas y una garantía de hasta 2 años en los materiales utilizados, según las especificaciones del fabricante."
     },
     {
       question: "¿Cuándo recibiré mi presupuesto?",
@@ -473,5 +473,7 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
 
     
