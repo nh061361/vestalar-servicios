@@ -9,6 +9,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import Autoplay from "embla-carousel-autoplay";
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
 export default function AboutUsPage() {
   const [isClient, setIsClient] = useState(false);
@@ -28,7 +30,7 @@ export default function AboutUsPage() {
 
   if (!heroImage) {
       // Handle the case where the hero image is not found, maybe show a fallback or nothing
-      return <div>Loading...</div>;
+      return <div>Cargando...</div>;
   }
 
   const values = [
@@ -227,7 +229,7 @@ export default function AboutUsPage() {
               style={{ width: 'auto', height: 'auto' }}
             />}
             <p className="text-sm">
-              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios en toda España para crear el hogar de tus sueños.
+              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios para crear el hogar de tus sueños.
             </p>
           </div>
 
@@ -247,7 +249,6 @@ export default function AboutUsPage() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contacto</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2"><span>Servicio en toda España</span></li>
               <li className="flex items-center gap-2"><span>+34 976 076 982</span></li>
               <li className="flex items-center gap-2"><span>vestalar@vestalar.com</span></li>
             </ul>

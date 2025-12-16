@@ -130,7 +130,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               style={{ width: 'auto', height: 'auto' }}
             />}
             <p className="text-sm">
-              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios en toda España para crear el hogar de tus sueños.
+              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios para crear el hogar de tus sueños.
             </p>
           </div>
 
@@ -150,7 +150,6 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <div>
             <h3 className="font-bold text-lg mb-4">Contacto</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2"><span>Servicio en toda España</span></li>
               <li className="flex items-center gap-2"><span>+34 976 076 982</span></li>
               <li className="flex items-center gap-2"><span>vestalar@vestalar.com</span></li>
             </ul>

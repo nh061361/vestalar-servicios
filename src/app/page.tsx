@@ -58,7 +58,7 @@ export default function HomePage() {
   const services = [
     {
       title: 'Reformas de Cocinas',
-      description: 'Diseño y renovación de cocinas funcionales, modernas y acogedoras. Pide presupuesto para la reforma de tu cocina, trabajamos en toda España.',
+      description: 'Diseño y renovación de cocinas funcionales, modernas y acogedoras. Pide presupuesto para la reforma de tu cocina.',
       icon: Utensils,
       imageIds: ['kitchen-renovation-1', 'kitchen-renovation-2', 'kitchen-renovation-3'],
     },
@@ -240,7 +240,7 @@ export default function HomePage() {
           />
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/10 p-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Transformamos tu Hogar</h1>
-            <p className="mt-4 max-w-3xl text-lg md:text-xl">Expertos en Reformas Integrales en Zaragoza y toda España. Calidad y confianza para el proyecto de tus sueños. Pide tu presupuesto a medida sin compromiso.</p>
+            <p className="mt-4 max-w-3xl text-lg md:text-xl">Expertos en Reformas Integrales en Zaragoza. Calidad y confianza para el proyecto de tus sueños. Pide tu presupuesto a medida sin compromiso.</p>
             <Button size="lg" className="mt-8" onClick={() => setIsBudgetModalOpen(true)}>Solicita Presupuesto Online</Button>
           </div>
         </section>
@@ -403,7 +403,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="w-6 h-6 text-primary" />
-                    <span className="text-lg">Servicio en toda España (con base en Zaragoza)</span>
+                    <span className="text-lg">Con base en Zaragoza</span>
                   </div>
                 </div>
               </div>
@@ -436,7 +436,7 @@ export default function HomePage() {
               className="object-contain"
             />}
             <p className="text-sm">
-              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios en toda España para crear el hogar de tus sueños.
+              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios para crear el hogar de tus sueños.
             </p>
           </div>
 
@@ -456,7 +456,6 @@ export default function HomePage() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contacto</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2"><span>Servicio en toda España</span></li>
               <li className="flex items-center gap-2"><span>+34 976 076 982</span></li>
               <li className="flex items-center gap-2"><span>vestalar@vestalar.com</span></li>
             </ul>
