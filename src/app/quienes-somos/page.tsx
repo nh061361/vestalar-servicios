@@ -66,7 +66,7 @@ export default function AboutUsPage() {
               src={logoImage.imageUrl} 
               alt="Vestalar Logo - Empresa de Reformas en Zaragoza" 
               width={115} 
-              height={38} 
+              height={38}
               className="object-contain"
               priority
             />}
@@ -100,7 +100,7 @@ export default function AboutUsPage() {
                       src={logoImage.imageUrl} 
                       alt="Vestalar Logo" 
                       width={115} 
-                      height={38} 
+                      height={38}
                       className="object-contain mb-4"
                     />}
                     <SheetClose asChild>
@@ -218,7 +218,7 @@ export default function AboutUsPage() {
               src={footerLogoImage.imageUrl} 
               alt="Vestalar Logo Negativo - Empresa de reformas" 
               width={115} 
-              height={38} 
+              height={38}
               className="object-contain"
             />}
             <p className="text-sm">
@@ -257,9 +257,12 @@ export default function AboutUsPage() {
         </div>
         <div className="container mx-auto mt-8 pt-6 border-t border-accent-foreground/20 text-center text-sm">
           <p>© {new Date().getFullYear()} Vestalar Servicios. Todos los derechos reservados.</p>
+          <p className="mt-2 text-xs text-accent-foreground/80"><a href="/politica-de-cookies" className="hover:underline">Política de Cookies</a></p>
         </div>
       </footer>
       
     </div>
   );
 }
+
+    

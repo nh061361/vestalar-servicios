@@ -33,7 +33,7 @@ export default function CookiePolicyPage() {
               src={logoImage.imageUrl} 
               alt="Vestalar Logo - Empresa de Reformas en Zaragoza" 
               width={115} 
-              height={38} 
+              height={38}
               className="object-contain"
               priority
             />}
@@ -67,7 +67,7 @@ export default function CookiePolicyPage() {
                       src={logoImage.imageUrl} 
                       alt="Vestalar Logo" 
                       width={115} 
-                      height={38} 
+                      height={38}
                       className="object-contain mb-4"
                     />}
                     <SheetClose asChild>
@@ -102,44 +102,85 @@ export default function CookiePolicyPage() {
                 <h1>Política de Cookies</h1>
                 <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
-                <h2>¿Qué son las cookies?</h2>
+                <h2>1. ¿Qué son las cookies?</h2>
                 <p>
                     Una cookie es un pequeño fichero de texto que un sitio web almacena en el navegador del usuario. Las cookies facilitan el uso y la navegación por una página web y son esenciales para el funcionamiento de internet, aportando innumerables ventajas en la prestación de servicios interactivos.
                 </p>
 
-                <h2>¿Qué tipos de cookies utilizamos?</h2>
-                <p>En nuestro sitio web, utilizamos los siguientes tipos de cookies:</p>
+                <h2>2. ¿Qué tipos de cookies utilizamos?</h2>
+                <p>Este sitio web utiliza cookies propias y de terceros con diferentes finalidades:</p>
+                
+                <h3>Cookies Técnicas (Esenciales)</h3>
+                <p>
+                    Son aquellas imprescindibles para el correcto funcionamiento de la web. Permiten la navegación y la utilización de sus diferentes opciones o servicios. Sin ellas, ciertas partes de la web podrían no funcionar correctamente.
+                </p>
                 <ul>
                     <li>
-                        <strong>Cookies técnicas o funcionales:</strong> Son aquellas que te permiten navegar a través de nuestra web y utilizar las diferentes opciones o servicios que tiene. Por ejemplo, utilizamos una cookie para recordar tu consentimiento sobre el uso de cookies. Sin esta cookie, tendrías que aceptar las cookies cada vez que nos visites.
-                    </li>
-                     <li>
-                        <strong>Cookies de análisis o medición:</strong> A través de herramientas de terceros como Google Analytics, utilizamos cookies para analizar el comportamiento de los usuarios de forma anónima, incluyendo el número de visitantes a la web, de dónde proceden y las páginas que visitaron. Esta información nos ayuda a mejorar nuestro sitio web y nuestros servicios.
+                        <strong>cookie_consent:</strong>
+                        <ul>
+                            <li><strong>Propósito:</strong> Almacena la preferencia del usuario sobre el consentimiento de cookies.</li>
+                            <li><strong>Duración:</strong> 1 año.</li>
+                            <li><strong>Tipo:</strong> Propia.</li>
+                        </ul>
                     </li>
                 </ul>
 
-                <h2>Consentimiento</h2>
+                <h3>Cookies de Análisis o Medición</h3>
                 <p>
-                    Al hacer clic en "Aceptar" en nuestro banner de cookies, estás aceptando el uso de las cookies en los términos y condiciones contenidos en esta Política de Cookies.
+                    Nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que le ofrecemos. Estas cookies solo se instalarán si usted las acepta explícitamente.
+                </p>
+                 <ul>
+                    <li>
+                        <strong>_ga (Google Analytics):</strong>
+                        <ul>
+                            <li><strong>Propósito:</strong> Se usa para distinguir a los usuarios.</li>
+                            <li><strong>Duración:</strong> 2 años.</li>
+                            <li><strong>Tipo:</strong> Tercero (Google).</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>_gid (Google Analytics):</strong>
+                         <ul>
+                            <li><strong>Propósito:</strong> Se usa para distinguir a los usuarios.</li>
+                            <li><strong>Duración:</strong> 24 horas.</li>
+                            <li><strong>Tipo:</strong> Tercero (Google).</li>
+                        </ul>
+                    </li>
+                     <li>
+                        <strong>_gat (Google Analytics):</strong>
+                         <ul>
+                            <li><strong>Propósito:</strong> Se usa para limitar el porcentaje de solicitudes.</li>
+                            <li><strong>Duración:</strong> 1 minuto.</li>
+                            <li><strong>Tipo:</strong> Tercero (Google).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2>3. Consentimiento y Gestión de Cookies</h2>
+                <p>
+                   Al visitar nuestro sitio web por primera vez, se le mostrará un banner donde podrá aceptar o rechazar el uso de cookies no esenciales. Las cookies técnicas se instalarán siempre, ya que son necesarias para el funcionamiento de la web.
+                </p>
+                <p>
+                   Puede cambiar sus preferencias o retirar su consentimiento en cualquier momento.
                 </p>
 
-                <h2>Cómo modificar la configuración de las cookies</h2>
+                <h2>4. Cómo deshabilitar las cookies en su navegador</h2>
                 <p>
-                    Puedes restringir, bloquear o borrar las cookies de este sitio web o cualquier otra página web, utilizando tu navegador. En cada navegador la operativa es diferente, la función de 'Ayuda' te mostrará cómo hacerlo.
+                    Además de gestionar su consentimiento en nuestro banner, puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador. A continuación, le proporcionamos los enlaces de ayuda de los principales navegadores:
                 </p>
                 <ul>
-                    <li><strong>Internet Explorer:</strong> <a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer">windows.microsoft.com</a></li>
                     <li><strong>Google Chrome:</strong> <a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer">support.google.com</a></li>
-                    <li><strong>Firefox:</strong> <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">support.mozilla.org</a></li>
+                    <li><strong>Mozilla Firefox:</strong> <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">support.mozilla.org</a></li>
+                    <li><strong>Internet Explorer:</strong> <a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer">windows.microsoft.com</a></li>
                     <li><strong>Safari:</strong> <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">support.apple.com</a></li>
                 </ul>
                 <p>
-                    Ten en cuenta que si deshabilitas las cookies, es posible que algunas funcionalidades de la web no funcionen correctamente.
+                    Tenga en cuenta que si deshabilita todas las cookies, es posible que algunas funcionalidades o apartados de nuestro sitio web no funcionen correctamente.
                 </p>
                 
-                <h2>Contacto</h2>
+                <h2>5. Contacto</h2>
                 <p>
-                    Si tienes alguna duda sobre esta política de cookies, puedes contactar con nosotros en <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
+                    Si tiene alguna pregunta sobre nuestra Política de Cookies, puede contactarnos a través del correo electrónico: <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
                 </p>
             </div>
         </section>
@@ -152,7 +193,7 @@ export default function CookiePolicyPage() {
               src={footerLogoImage.imageUrl} 
               alt="Vestalar Logo Negativo - Empresa de reformas" 
               width={115} 
-              height={38} 
+              height={38}
               className="object-contain"
             />}
             <p className="text-sm">
@@ -191,9 +232,12 @@ export default function CookiePolicyPage() {
         </div>
         <div className="container mx-auto mt-8 pt-6 border-t border-accent-foreground/20 text-center text-sm">
           <p>© {new Date().getFullYear()} Vestalar Servicios. Todos los derechos reservados.</p>
+          <p className="mt-2 text-xs text-accent-foreground/80"><a href="/politica-de-cookies" className="hover:underline">Política de Cookies</a></p>
         </div>
       </footer>
       
     </div>
   );
 }
+
+    
