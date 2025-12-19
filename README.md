@@ -1,3 +1,4 @@
+"deploy": "firebase deploy --only hosting"
 # Firebase Studio
 
 This is a NextJS starter in Firebase Studio.
