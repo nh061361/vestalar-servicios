@@ -125,6 +125,24 @@
       "description": "Room under renovation with exposed bricks.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimmo-renovation-6js0JRlbKJ4-unsplash.jpg?alt=media&token=ecf4f8c4-9368-4f7e-bcc8-ef4cd4feb031",
       "imageHint": "room renovation"
+    },
+    {
+      "id": "project-10",
+      "description": "A stylish kitchen with dark cabinets and a dining area.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(1).jpg?alt=media&token=8c8f9fb2-9d6e-4c35-af9d-2172f740abb9",
+      "imageHint": "dark kitchen"
+    },
+    {
+      "id": "project-11",
+      "description": "A modern kitchen with a large island and ample light.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(2).jpg?alt=media&token=d3b6bb70-e2f8-4ec6-9ffa-193d7e8a3c7b",
+      "imageHint": "modern kitchen"
+    },
+    {
+      "id": "project-12",
+      "description": "A modern bathroom with a wooden vanity and a round mirror.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(3).jpg?alt=media&token=f9e28c9a-24e8-42a0-9a9c-18effecf0bfd",
+      "imageHint": "modern bathroom"
     }
   ]
 }
