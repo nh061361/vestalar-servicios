@@ -3,16 +3,14 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin, Award, Users, Handshake, Leaf, Rocket, Heart } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
-import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
-export default function AboutUsPage() {
+export default function LegalNoticePage() {
   const [isClient, setIsClient] = useState(false);
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
   
@@ -24,37 +22,6 @@ export default function AboutUsPage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
-  
-  const heroImage = PlaceHolderImages.find(p => p.id === 'about-us-hero');
-
-
-  if (!heroImage) {
-      // Handle the case where the hero image is not found, maybe show a fallback or nothing
-      return <div>Cargando...</div>;
-  }
-
-  const values = [
-    {
-      icon: Award,
-      title: "Calidad y Experiencia",
-      description: "Nuestra experiencia se traduce en un compromiso inquebrantable con los acabados de primera calidad."
-    },
-    {
-      icon: Users,
-      title: "Satisfacción del Cliente",
-      description: "Tu tranquilidad es nuestra prioridad. Te acompañamos en cada paso del proceso, de principio a fin."
-    },
-    {
-      icon: Handshake,
-      title: "Confianza y Transparencia",
-      description: "Comunicación clara y presupuestos detallados. Construimos relaciones basadas en la honestidad."
-    },
-    {
-      icon: Leaf,
-      title: "Compromiso Local (Km 0)",
-      description: "Apostamos por proveedores de proximidad para impulsar la economía local y reducir la huella ambiental."
-    }
-  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -89,7 +56,7 @@ export default function AboutUsPage() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
-                   <SheetHeader className="sr-only">
+                  <SheetHeader className="sr-only">
                     <SheetTitle>Menú de Navegación</SheetTitle>
                     <SheetDescription>
                       Navega por las diferentes secciones de la web.
@@ -119,7 +86,7 @@ export default function AboutUsPage() {
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto Con Nosotros</Button>
+                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto</Button>
                     </SheetClose>
                   </nav>
                 </SheetContent>
@@ -130,85 +97,64 @@ export default function AboutUsPage() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[70vh] w-full overflow-hidden">
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="w-full h-full object-cover"
-            data-ai-hint={heroImage.imageHint}
-            priority
-          />
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
-            <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
-          </div>
-        </section>
+        <section className="py-12 md:py-20">
+            <div className="container mx-auto px-4 md:px-6 max-w-4xl prose lg:prose-xl">
+                <h1>Aviso Legal</h1>
+                <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
-        <section className="py-12 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold mb-4">Nuestra Esencia</h2>
-            <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
-                Somos un equipo de profesionales con más de veinte años de experiencia. Nos encanta renovar hogares y negocios, cuidando cada detalle como si fuera nuestra propia casa. Usamos materiales de proximidad (km 0) para darle vida a tus proyectos, apoyar la economía local y reducir la huella ambiental. Nuestro objetivo es que disfrutes del proceso y te sientas acompañado en todo momento.
-            </p>
-          </div>
-        </section>
+                <h2>1. Ley de los Servicios de la Sociedad de la Información (LSSI)</h2>
+                <p>
+                    Vestalar Servicios (en adelante, “EL RESPONSABLE”), pone a disposición de los usuarios el presente documento, con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), así como informar a todos los usuarios del sitio web respecto a cuáles son las condiciones de uso.
+                </p>
+                <p>
+                    Toda persona que acceda a este sitio web asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí dispuestas, así como a cualquier otra disposición legal que fuera de aplicación. EL RESPONSABLE se reserva el derecho de modificar cualquier tipo de información que pudiera aparecer en el sitio web, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas obligaciones, entendiéndose como suficiente con la publicación en el sitio web.
+                </p>
 
-        <section className="py-12 md:py-24 bg-background">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {values.map((value, index) => (
-                        <div key={index} className="text-center flex flex-col items-center">
-                            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4">
-                                <value.icon className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                            <p className="text-muted-foreground">{value.description}</p>
-                        </div>
-                    ))}
-                </div>
+                <h2>2. Datos Identificativos</h2>
+                <p>
+                    Este sitio web es propiedad de **Vestalar Servicios**, con NIF **[Rellenar con el NIF]**, domicilio fiscal en **[Rellenar con la dirección fiscal completa, incluyendo código postal y ciudad]**, y correo electrónico de contacto <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
+                </p>
+                
+                <h2>3. Objeto</h2>
+                <p>
+                    A través de este sitio web, ofrecemos a los usuarios la posibilidad de acceder a la información sobre nuestros servicios de reformas, solicitar presupuestos y contactar con nosotros.
+                </p>
+
+                <h2>4. Privacidad y Tratamiento de Datos</h2>
+                <p>
+                    Cuando para el acceso a determinados contenidos o servicios sea necesario facilitar datos de carácter personal, los usuarios garantizarán su veracidad, exactitud, autenticidad y vigencia. EL RESPONSABLE dará a dichos datos el tratamiento automatizado que corresponda en función de su naturaleza o finalidad, en los términos indicados en la sección de <a href="/politica-de-privacidad">Política de Privacidad</a>.
+                </p>
+
+                <h2>5. Propiedad Industrial e Intelectual</h2>
+                <p>
+                    El usuario reconoce y acepta que todos los contenidos que se muestran en este sitio web (diseños, textos, imágenes, logos, iconos, software, nombres comerciales, marcas) están sujetos a derechos de Propiedad Intelectual. Todas las marcas, nombres comerciales o signos distintivos, y todos los derechos de propiedad industrial e intelectual sobre los contenidos son propiedad exclusiva del RESPONSABLE y/o de terceros.
+                </p>
+                <p>
+                    El usuario se compromete a no reproducir, copiar, distribuir, poner a disposición o de cualquier otra forma comunicar públicamente, transformar o modificar tales contenidos. El acceso al sitio web no implica renuncia, transmisión, licencia o cesión total ni parcial de dichos derechos, salvo que se establezca expresamente lo contrario.
+                </p>
+                
+                <h2>6. Obligaciones y Responsabilidades del Usuario</h2>
+                <p>El usuario se compromete a:</p>
+                <ul>
+                    <li>Hacer un uso adecuado y lícito del sitio web, de conformidad con la legislación aplicable, la moral y el orden público.</li>
+                    <li>Proveerse de todos los medios y requerimientos técnicos que se precisen para acceder al sitio web.</li>
+                    <li>Facilitar información veraz al cumplimentar sus datos en los formularios y mantenerlos actualizados. El usuario será el único responsable de las manifestaciones falsas o inexactas que realice.</li>
+                </ul>
+                
+                <h2>7. Exclusión de Responsabilidades</h2>
+                <p>
+                    EL RESPONSABLE no garantiza el acceso continuado ni la correcta visualización de los elementos e informaciones contenidas en la web, que puedan verse impedidos o interrumpidos por factores fuera de su control. No se hace responsable de las decisiones que pudieran adoptarse como consecuencia del acceso a los contenidos o informaciones ofrecidas.
+                </p>
+                <p>
+                    EL RESPONSABLE no será responsable de los perjuicios que se pudieran derivar, entre otros, de: interferencias, interrupciones, virus informáticos, o desconexiones; abuso indebido del sitio web; o errores de seguridad producidos por un mal funcionamiento del navegador.
+                </p>
+                
+                <h2>8. Ley Aplicable y Jurisdicción</h2>
+                <p>
+                    Las presentes Condiciones Generales de Uso, así como el uso del sitio web, se regirán por la legislación española. Para la resolución de cualquier controversia, las partes se someterán a los Juzgados y Tribunales del domicilio social del RESPONSABLE del sitio web.
+                </p>
             </div>
         </section>
-        
-        <section className="py-12 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                      <Heart className="w-5 h-5"/>
-                      <span>Nuestra Misión</span>
-                  </div>
-                  <h3 className="text-2xl font-bold">Crear Espacios que Inspiran</h3>
-                  <p className="text-muted-foreground">
-                      Valoramos la experiencia y el buen hacer, priorizamos la satisfacción del cliente, creemos en la transparencia y la confianza, buscamos siempre la máxima calidad y cuidamos nuestro compromiso con lo local, porque elegir materiales de km 0 reduce emisiones y residuos y apoya a la economía local.
-                  </p>
-              </div>
-              <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                      <Rocket className="w-5 h-5"/>
-                      <span>Nuestra Visión</span>
-                  </div>
-                  <h3 className="text-2xl font-bold">Liderar la Reforma Sostenible</h3>
-                  <p className="text-muted-foreground">
-                      Formación continua en técnicas, materiales y herramientas para construir un futuro sostenible donde la construcción respete el entorno y mejore la vida de las personas. Responsabilidad y creatividad como vehículos para recorrer este camino.
-                  </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 text-center bg-background">
-          <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-4">Inicia Tu Proyecto Con Nosotros</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              Hagamos realidad la reforma de tus sueños. Contacta con nuestro equipo de expertos y recibe un presupuesto a medida sin compromiso.
-            </p>
-            <Button size="lg" onClick={() => setIsBudgetModalOpen(true)}>
-              Pide Tu Presupuesto Ahora
-            </Button>
-          </div>
-        </section>
-
       </main>
 
       <footer className="bg-accent text-accent-foreground py-12">

@@ -236,6 +236,8 @@ export default function CookiePolicyPage() {
             <a href="/politica-de-privacidad" className="hover:underline">Política de Privacidad</a>
             <span className="mx-2">|</span>
             <a href="/politica-de-cookies" className="hover:underline">Política de Cookies</a>
+            <span className="mx-2">|</span>
+            <a href="/aviso-legal" className="hover:underline">Aviso Legal</a>
           </p>
         </div>
       </footer>
@@ -243,5 +245,3 @@ export default function CookiePolicyPage() {
     </div>
   );
 }
-
-    
