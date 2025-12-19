@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -111,8 +112,16 @@ export function CookieConsent() {
           <Button variant="outline" onClick={saveSelection}>Guardar Preferencias</Button>
         </DialogFooter>
         <div className="text-center text-sm mt-4">
+            <Link href="/politica-de-privacidad" className="underline hover:text-primary">
+                Política de Privacidad
+            </Link>
+            <span className="mx-2 text-muted-foreground">|</span>
             <Link href="/politica-de-cookies" className="underline hover:text-primary">
-                Política de cookies
+                Política de Cookies
+            </Link>
+            <span className="mx-2 text-muted-foreground">|</span>
+            <Link href="/aviso-legal" className="underline hover:text-primary">
+                Aviso Legal
             </Link>
         </div>
       </DialogContent>
