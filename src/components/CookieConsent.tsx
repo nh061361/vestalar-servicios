@@ -3,62 +3,119 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
+import { Switch } from '@/components/ui/switch';
+import { Label } from '@/components/ui/label';
 
 export function CookieConsent() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [preferences, setPreferences] = useState({
+    analytics: false,
+  });
 
   useEffect(() => {
     try {
       const consentStatus = localStorage.getItem('cookie_consent_status');
       if (!consentStatus) {
-        setIsVisible(true);
+        setShowModal(true);
+      } else {
+        const storedPrefs = JSON.parse(localStorage.getItem('cookie_preferences') || '{}');
+        if (storedPrefs.analytics) {
+          // Here you would initialize analytics if consent was previously given
+          // e.g., load Google Analytics script
+        }
       }
     } catch (error) {
-        console.error("Could not access localStorage:", error);
+      console.error("Could not access localStorage:", error);
     }
   }, []);
 
-  const handleConsent = (accepted: boolean) => {
+  const handleSavePreferences = (acceptedPrefs: { analytics: boolean }) => {
     try {
-        const status = accepted ? 'accepted' : 'rejected';
-        localStorage.setItem('cookie_consent_status', status);
-        setIsVisible(false);
-        // If you were loading analytics scripts based on consent,
-        // you might reload the page or trigger an event here.
-        // For example: window.location.reload(); 
+      const status = acceptedPrefs.analytics ? 'accepted' : 'rejected';
+      localStorage.setItem('cookie_consent_status', status);
+      localStorage.setItem('cookie_preferences', JSON.stringify(acceptedPrefs));
+      
+      if (acceptedPrefs.analytics) {
+        // Here is where you would trigger the analytics script loading
+        console.log('Analytics accepted. Loading scripts...');
+        // In a real scenario, you'd call a function here to inject the GA script
+      }
+      
+      setShowModal(false);
+       // window.location.reload(); // Optional: reload to apply changes
     } catch (error) {
-        console.error("Could not write to localStorage:", error);
-        setIsVisible(false); // Hide banner even if localStorage fails
+      console.error("Could not write to localStorage:", error);
+      setShowModal(false);
     }
   };
 
-  if (!isVisible) {
+  const acceptAll = () => {
+    const allPrefs = { analytics: true };
+    setPreferences(allPrefs);
+    handleSavePreferences(allPrefs);
+  };
+
+  const rejectAll = () => {
+    const noPrefs = { analytics: false };
+    setPreferences(noPrefs);
+    handleSavePreferences(noPrefs);
+  };
+  
+  const saveSelection = () => {
+    handleSavePreferences(preferences);
+  }
+
+  if (!showModal) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 animate-in slide-in-from-bottom-5">
-      <div className="container mx-auto">
-        <div className="bg-background border shadow-2xl rounded-lg p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex-1 text-sm text-foreground text-center md:text-left">
-             <h3 className="font-semibold mb-1">Tu privacidad es importante</h3>
-             <p>
-                Utilizamos cookies para mejorar tu experiencia y analizar el tráfico. Al hacer clic en "Aceptar", consientes el uso de cookies de análisis. Puedes leer más en nuestra{' '}
-                <Link href="/politica-de-cookies" className="underline hover:text-primary">
-                Política de Cookies
-                </Link>.
-             </p>
+    <Dialog open={showModal} onOpenChange={setShowModal}>
+      <DialogContent className="max-w-lg" onInteractOutside={(e) => e.preventDefault()}>
+        <DialogHeader>
+          <DialogTitle className="text-2xl">Gestionar consentimiento</DialogTitle>
+          <DialogDescription className="text-base py-2">
+            Para ofrecer las mejores experiencias, utilizamos tecnologías como las cookies para
+            almacenar y/o acceder a la información del dispositivo. El consentimiento de estas
+            tecnologías nos permitirá procesar datos como el comportamiento de navegación. No
+            consentir o retirar el consentimiento, puede afectar negativamente a ciertas
+            características y funciones.
+          </DialogDescription>
+        </DialogHeader>
+
+        <div className="py-4 space-y-4">
+          <div className="flex items-center justify-between p-3 border rounded-lg">
+            <div>
+              <h4 className="font-semibold">Funcional</h4>
+              <p className="text-sm text-muted-foreground">Necesarias para el funcionamiento de la web.</p>
+            </div>
+            <p className="text-sm font-medium text-green-600">Siempre activo</p>
           </div>
-          <div className="flex-shrink-0 flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-            <Button onClick={() => handleConsent(true)} className="w-full sm:w-auto">
-                Aceptar
-            </Button>
-            <Button onClick={() => handleConsent(false)} variant="outline" className="w-full sm:w-auto">
-                Rechazar
-            </Button>
+          <div className="flex items-center justify-between p-3 border rounded-lg">
+            <div>
+              <h4 className="font-semibold">Estadísticas</h4>
+              <p className="text-sm text-muted-foreground">Nos ayudan a entender cómo interactúan los visitantes.</p>
+            </div>
+            <Switch
+              id="analytics-cookie"
+              checked={preferences.analytics}
+              onCheckedChange={(checked) => setPreferences(prev => ({...prev, analytics: checked}))}
+            />
           </div>
         </div>
-      </div>
-    </div>
+
+        <DialogFooter className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          <Button onClick={acceptAll}>Aceptar</Button>
+          <Button variant="outline" onClick={rejectAll}>Denegar</Button>
+          <Button variant="outline" onClick={saveSelection}>Guardar Preferencias</Button>
+        </DialogFooter>
+        <div className="text-center text-sm mt-4">
+            <Link href="/politica-de-cookies" className="underline hover:text-primary">
+                Política de cookies
+            </Link>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }
