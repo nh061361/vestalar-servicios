@@ -3,12 +3,12 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin, Cookie, BarChart2 } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
 export default function CookiePolicyPage() {
   const [isClient, setIsClient] = useState(false);
@@ -22,6 +22,27 @@ export default function CookiePolicyPage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
+
+  const cookieTypes = [
+    {
+      icon: Cookie,
+      title: "Cookies Técnicas (Esenciales)",
+      description: "Son aquellas imprescindibles para el correcto funcionamiento de la web. Permiten la navegación y la utilización de sus diferentes opciones o servicios. Sin ellas, ciertas partes de la web podrían no funcionar correctamente.",
+      cookies: [
+        { name: "cookie_consent", purpose: "Almacena la preferencia del usuario sobre el consentimiento de cookies.", duration: "1 año", type: "Propia" }
+      ]
+    },
+    {
+      icon: BarChart2,
+      title: "Cookies de Análisis o Medición",
+      description: "Nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que le ofrecemos. Estas cookies solo se instalarán si usted las acepta explícitamente.",
+      cookies: [
+        { name: "_ga (Google Analytics)", purpose: "Se usa para distinguir a los usuarios.", duration: "2 años", type: "Tercero (Google)" },
+        { name: "_gid (Google Analytics)", purpose: "Se usa para distinguir a los usuarios.", duration: "24 horas", type: "Tercero (Google)" },
+        { name: "_gat (Google Analytics)", purpose: "Se usa para limitar el porcentaje de solicitudes.", duration: "1 minuto", type: "Tercero (Google)" }
+      ]
+    }
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -97,91 +118,55 @@ export default function CookiePolicyPage() {
       </header>
 
       <main className="flex-1">
-        <section className="py-12 md:py-20">
-            <div className="container mx-auto px-4 md:px-6 max-w-4xl prose lg:prose-xl">
-                <h1>Política de Cookies</h1>
-                <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-
-                <h2>1. ¿Qué son las cookies?</h2>
-                <p>
-                    Una cookie es un pequeño fichero de texto que un sitio web almacena en el navegador del usuario. Las cookies facilitan el uso y la navegación por una página web y son esenciales para el funcionamiento de internet, aportando innumerables ventajas en la prestación de servicios interactivos.
-                </p>
-
-                <h2>2. ¿Qué tipos de cookies utilizamos?</h2>
-                <p>Este sitio web utiliza cookies propias y de terceros con diferentes finalidades:</p>
+        <section className="py-12 md:py-20 bg-secondary">
+            <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                <div className="text-center mb-12">
+                    <h1 className="text-3xl md:text-4xl font-bold">Política de Cookies</h1>
+                    <p className="mt-4 text-lg text-muted-foreground">Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                </div>
                 
-                <h3>Cookies Técnicas (Esenciales)</h3>
-                <p>
-                    Son aquellas imprescindibles para el correcto funcionamiento de la web. Permiten la navegación y la utilización de sus diferentes opciones o servicios. Sin ellas, ciertas partes de la web podrían no funcionar correctamente.
-                </p>
-                <ul>
-                    <li>
-                        <strong>cookie_consent:</strong>
-                        <ul>
-                            <li><strong>Propósito:</strong> Almacena la preferencia del usuario sobre el consentimiento de cookies.</li>
-                            <li><strong>Duración:</strong> 1 año.</li>
-                            <li><strong>Tipo:</strong> Propia.</li>
-                        </ul>
-                    </li>
-                </ul>
+                <div className="space-y-8">
+                    {cookieTypes.map((type, index) => (
+                        <Card key={index} className="overflow-hidden">
+                            <CardHeader className="flex flex-row items-center gap-4 bg-muted/50 p-6">
+                                <type.icon className="h-6 w-6 text-primary" />
+                                <CardTitle className="m-0 text-lg">{type.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6">
+                                <p className="text-muted-foreground mb-6">{type.description}</p>
+                                <div className="space-y-4">
+                                    {type.cookies.map((cookie, cIndex) => (
+                                        <div key={cIndex} className="p-4 border rounded-lg">
+                                            <h4 className="font-semibold">{cookie.name}</h4>
+                                            <p className="text-sm text-muted-foreground mt-1"><strong>Propósito:</strong> {cookie.purpose}</p>
+                                            <div className="flex justify-between text-xs mt-2 text-muted-foreground">
+                                                <span><strong>Duración:</strong> {cookie.duration}</span>
+                                                <span><strong>Tipo:</strong> {cookie.type}</span>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    ))}
 
-                <h3>Cookies de Análisis o Medición</h3>
-                <p>
-                    Nos permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen del servicio ofertado. Para ello se analiza su navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que le ofrecemos. Estas cookies solo se instalarán si usted las acepta explícitamente.
-                </p>
-                 <ul>
-                    <li>
-                        <strong>_ga (Google Analytics):</strong>
-                        <ul>
-                            <li><strong>Propósito:</strong> Se usa para distinguir a los usuarios.</li>
-                            <li><strong>Duración:</strong> 2 años.</li>
-                            <li><strong>Tipo:</strong> Tercero (Google).</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>_gid (Google Analytics):</strong>
-                         <ul>
-                            <li><strong>Propósito:</strong> Se usa para distinguir a los usuarios.</li>
-                            <li><strong>Duración:</strong> 24 horas.</li>
-                            <li><strong>Tipo:</strong> Tercero (Google).</li>
-                        </ul>
-                    </li>
-                     <li>
-                        <strong>_gat (Google Analytics):</strong>
-                         <ul>
-                            <li><strong>Propósito:</strong> Se usa para limitar el porcentaje de solicitudes.</li>
-                            <li><strong>Duración:</strong> 1 minuto.</li>
-                            <li><strong>Tipo:</strong> Tercero (Google).</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h2>3. Consentimiento y Gestión de Cookies</h2>
-                <p>
-                   Al visitar nuestro sitio web por primera vez, se le mostrará un banner donde podrá aceptar o rechazar el uso de cookies no esenciales. Las cookies técnicas se instalarán siempre, ya que son necesarias para el funcionamiento de la web.
-                </p>
-                <p>
-                   Puede cambiar sus preferencias o retirar su consentimiento en cualquier momento.
-                </p>
-
-                <h2>4. Cómo deshabilitar las cookies en su navegador</h2>
-                <p>
-                    Además de gestionar su consentimiento en nuestro banner, puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador. A continuación, le proporcionamos los enlaces de ayuda de los principales navegadores:
-                </p>
-                <ul>
-                    <li><strong>Google Chrome:</strong> <a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer">support.google.com</a></li>
-                    <li><strong>Mozilla Firefox:</strong> <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">support.mozilla.org</a></li>
-                    <li><strong>Internet Explorer:</strong> <a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer">windows.microsoft.com</a></li>
-                    <li><strong>Safari:</strong> <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">support.apple.com</a></li>
-                </ul>
-                <p>
-                    Tenga en cuenta que si deshabilita todas las cookies, es posible que algunas funcionalidades o apartados de nuestro sitio web no funcionen correctamente.
-                </p>
-                
-                <h2>5. Contacto</h2>
-                <p>
-                    Si tiene alguna pregunta sobre nuestra Política de Cookies, puede contactarnos a través del correo electrónico: <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
-                </p>
+                    <Card>
+                       <CardHeader>
+                           <CardTitle className="text-lg">Gestión y Deshabilitación de Cookies</CardTitle>
+                       </CardHeader>
+                       <CardContent className="space-y-4 text-muted-foreground">
+                           <p>Al visitar nuestro sitio web por primera vez, se le mostrará un banner donde podrá aceptar, rechazar o configurar el uso de cookies no esenciales.</p>
+                           <p>Además, puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador. A continuación, le proporcionamos los enlaces de ayuda de los principales navegadores:</p>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Google Chrome:</strong> <a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ver instrucciones</a></li>
+                                <li><strong>Mozilla Firefox:</strong> <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ver instrucciones</a></li>
+                                <li><strong>Internet Explorer:</strong> <a href="https://support.microsoft.com/es-es/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ver instrucciones</a></li>
+                                <li><strong>Safari:</strong> <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Ver instrucciones</a></li>
+                            </ul>
+                            <p>Si tiene alguna pregunta sobre nuestra Política de Cookies, puede contactarnos a través del correo electrónico: <a href="mailto:vestalar@vestalar.com" className="text-primary hover:underline">vestalar@vestalar.com</a>.</p>
+                       </CardContent>
+                    </Card>
+                </div>
             </div>
         </section>
       </main>
@@ -247,3 +232,5 @@ export default function CookiePolicyPage() {
     </div>
   );
 }
+
+    

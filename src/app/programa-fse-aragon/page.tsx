@@ -131,14 +131,14 @@ export default function FseProgramPage() {
                 <div className="grid gap-8 mt-12">
                   {grants.map((grant, index) => (
                     <Card key={index} className="overflow-hidden">
-                      <CardHeader className="flex flex-row items-start bg-muted/50 gap-4 p-6">
-                          <div className="flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary">
-                              <Award className="h-6 w-6" />
+                      <CardHeader className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-muted/50 p-6">
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary">
+                                <Award className="h-5 w-5" />
+                            </div>
+                            <CardTitle className="m-0 text-lg">{grant.concept}</CardTitle>
                           </div>
-                          <div>
-                            <CardTitle className="text-primary text-3xl font-bold">{grant.amount}</CardTitle>
-                            <p className="text-md font-semibold text-foreground mt-1">{grant.concept}</p>
-                          </div>
+                          <p className="font-semibold text-foreground text-lg md:text-xl shrink-0">{grant.amount}</p>
                       </CardHeader>
                       <CardContent className="p-6 text-muted-foreground text-sm">
                         <p>{grant.details}</p>
@@ -218,3 +218,5 @@ export default function FseProgramPage() {
     </div>
   );
 }
+
+    

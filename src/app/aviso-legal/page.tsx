@@ -3,12 +3,12 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin, FileText, User, Lock, Copyright, Scale } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function LegalNoticePage() {
   const [isClient, setIsClient] = useState(false);
@@ -22,6 +22,47 @@ export default function LegalNoticePage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
+  
+  const legalSections = [
+    {
+      icon: FileText,
+      title: "1. Ley de los Servicios de la Sociedad de la Información (LSSI)",
+      content: [
+        "Vestalar Servicios (en adelante, “EL RESPONSABLE”), pone a disposición de los usuarios el presente documento, con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), así como informar a todos los usuarios del sitio web respecto a cuáles son las condiciones de uso.",
+        "Toda persona que acceda a este sitio web asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí dispuestas, así como a cualquier otra disposición legal que fuera de aplicación. EL RESPONSABLE se reserva el derecho de modificar cualquier tipo de información que pudiera aparecer en el sitio web, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas obligaciones, entendiéndose como suficiente con la publicación en el sitio web."
+      ]
+    },
+    {
+      icon: User,
+      title: "2. Datos Identificativos",
+      content: [
+        "Este sitio web es propiedad de **Vestalar Servicios**, con NIF **[Rellenar con el NIF]**, domicilio fiscal en **[Rellenar con la dirección fiscal completa, incluyendo código postal y ciudad]**, y correo electrónico de contacto <a href='mailto:vestalar@vestalar.com' class='text-primary hover:underline'>vestalar@vestalar.com</a>."
+      ]
+    },
+    {
+      icon: Lock,
+      title: "4. Privacidad y Tratamiento de Datos",
+      content: [
+        "Cuando para el acceso a determinados contenidos o servicios sea necesario facilitar datos de carácter personal, los usuarios garantizarán su veracidad, exactitud, autenticidad y vigencia. EL RESPONSABLE dará a dichos datos el tratamiento automatizado que corresponda en función de su naturaleza o finalidad, en los términos indicados en la sección de <a href='/politica-de-privacidad' class='text-primary hover:underline'>Política de Privacidad</a>."
+      ]
+    },
+    {
+      icon: Copyright,
+      title: "5. Propiedad Industrial e Intelectual",
+      content: [
+        "El usuario reconoce y acepta que todos los contenidos que se muestran en este sitio web (diseños, textos, imágenes, logos, iconos, software, nombres comerciales, marcas) están sujetos a derechos de Propiedad Intelectual. Todas las marcas, nombres comerciales o signos distintivos, y todos los derechos de propiedad industrial e intelectual sobre los contenidos son propiedad exclusiva del RESPONSABLE y/o de terceros.",
+        "El usuario se compromete a no reproducir, copiar, distribuir, poner a disposición o de cualquier otra forma comunicar públicamente, transformar o modificar tales contenidos. El acceso al sitio web no implica renuncia, transmisión, licencia o cesión total ni parcial de dichos derechos, salvo que se establezca expresamente lo contrario."
+      ]
+    },
+    {
+      icon: Scale,
+      title: "8. Ley Aplicable y Jurisdicción",
+      content: [
+        "Las presentes Condiciones Generales de Uso, así como el uso del sitio web, se regirán por la legislación española. Para la resolución de cualquier controversia, las partes se someterán a los Juzgados y Tribunales del domicilio social del RESPONSABLE del sitio web."
+      ]
+    }
+  ];
+
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -97,62 +138,28 @@ export default function LegalNoticePage() {
       </header>
 
       <main className="flex-1">
-        <section className="py-12 md:py-20">
-            <div className="container mx-auto px-4 md:px-6 max-w-4xl prose lg:prose-xl">
-                <h1>Aviso Legal</h1>
-                <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-
-                <h2>1. Ley de los Servicios de la Sociedad de la Información (LSSI)</h2>
-                <p>
-                    Vestalar Servicios (en adelante, “EL RESPONSABLE”), pone a disposición de los usuarios el presente documento, con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), así como informar a todos los usuarios del sitio web respecto a cuáles son las condiciones de uso.
-                </p>
-                <p>
-                    Toda persona que acceda a este sitio web asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí dispuestas, así como a cualquier otra disposición legal que fuera de aplicación. EL RESPONSABLE se reserva el derecho de modificar cualquier tipo de información que pudiera aparecer en el sitio web, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas obligaciones, entendiéndose como suficiente con la publicación en el sitio web.
-                </p>
-
-                <h2>2. Datos Identificativos</h2>
-                <p>
-                    Este sitio web es propiedad de **Vestalar Servicios**, con NIF **[Rellenar con el NIF]**, domicilio fiscal en **[Rellenar con la dirección fiscal completa, incluyendo código postal y ciudad]**, y correo electrónico de contacto <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
-                </p>
+        <section className="py-12 md:py-20 bg-secondary">
+            <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                 <div className="text-center mb-12">
+                    <h1 className="text-3xl md:text-4xl font-bold">Aviso Legal</h1>
+                    <p className="mt-4 text-lg text-muted-foreground">Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                </div>
                 
-                <h2>3. Objeto</h2>
-                <p>
-                    A través de este sitio web, ofrecemos a los usuarios la posibilidad de acceder a la información sobre nuestros servicios de reformas, solicitar presupuestos y contactar con nosotros.
-                </p>
-
-                <h2>4. Privacidad y Tratamiento de Datos</h2>
-                <p>
-                    Cuando para el acceso a determinados contenidos o servicios sea necesario facilitar datos de carácter personal, los usuarios garantizarán su veracidad, exactitud, autenticidad y vigencia. EL RESPONSABLE dará a dichos datos el tratamiento automatizado que corresponda en función de su naturaleza o finalidad, en los términos indicados en la sección de <a href="/politica-de-privacidad">Política de Privacidad</a>.
-                </p>
-
-                <h2>5. Propiedad Industrial e Intelectual</h2>
-                <p>
-                    El usuario reconoce y acepta que todos los contenidos que se muestran en este sitio web (diseños, textos, imágenes, logos, iconos, software, nombres comerciales, marcas) están sujetos a derechos de Propiedad Intelectual. Todas las marcas, nombres comerciales o signos distintivos, y todos los derechos de propiedad industrial e intelectual sobre los contenidos son propiedad exclusiva del RESPONSABLE y/o de terceros.
-                </p>
-                <p>
-                    El usuario se compromete a no reproducir, copiar, distribuir, poner a disposición o de cualquier otra forma comunicar públicamente, transformar o modificar tales contenidos. El acceso al sitio web no implica renuncia, transmisión, licencia o cesión total ni parcial de dichos derechos, salvo que se establezca expresamente lo contrario.
-                </p>
-                
-                <h2>6. Obligaciones y Responsabilidades del Usuario</h2>
-                <p>El usuario se compromete a:</p>
-                <ul>
-                    <li>Hacer un uso adecuado y lícito del sitio web, de conformidad con la legislación aplicable, la moral y el orden público.</li>
-                    <li>Proveerse de todos los medios y requerimientos técnicos que se precisen para acceder al sitio web.</li>
-                    <li>Facilitar información veraz al cumplimentar sus datos en los formularios y mantenerlos actualizados. El usuario será el único responsable de las manifestaciones falsas o inexactas que realice.</li>
-                </ul>
-                
-                <h2>7. Exclusión de Responsabilidades</h2>
-                <p>
-                    EL RESPONSABLE no garantiza el acceso continuado ni la correcta visualización de los elementos e informaciones contenidas en la web, que puedan verse impedidos o interrumpidos por factores fuera de su control. No se hace responsable de las decisiones que pudieran adoptarse como consecuencia del acceso a los contenidos o informaciones ofrecidas.
-                </p>
-                <p>
-                    EL RESPONSABLE no será responsable de los perjuicios que se pudieran derivar, entre otros, de: interferencias, interrupciones, virus informáticos, o desconexiones; abuso indebido del sitio web; o errores de seguridad producidos por un mal funcionamiento del navegador.
-                </p>
-                
-                <h2>8. Ley Aplicable y Jurisdicción</h2>
-                <p>
-                    Las presentes Condiciones Generales de Uso, así como el uso del sitio web, se regirán por la legislación española. Para la resolución de cualquier controversia, las partes se someterán a los Juzgados y Tribunales del domicilio social del RESPONSABLE del sitio web.
-                </p>
+                <div className="space-y-6">
+                    {legalSections.map((section, index) => (
+                        <Card key={index} className="overflow-hidden">
+                            <CardHeader className="flex flex-row items-center gap-4 bg-muted/50 p-6">
+                                <section.icon className="h-6 w-6 text-primary" />
+                                <CardTitle className="m-0 text-lg">{section.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6 text-muted-foreground space-y-4">
+                                {section.content.map((paragraph, pIndex) => (
+                                    <p key={pIndex} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                                ))}
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
             </div>
         </section>
       </main>
@@ -218,3 +225,5 @@ export default function LegalNoticePage() {
     </div>
   );
 }
+
+    

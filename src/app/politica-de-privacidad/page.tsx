@@ -3,12 +3,13 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin, User, Database, Shield, Share2, Clock, CheckSquare } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
 import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
 
 export default function PrivacyPolicyPage() {
   const [isClient, setIsClient] = useState(false);
@@ -22,6 +23,40 @@ export default function PrivacyPolicyPage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
+  
+  const privacySections = [
+    {
+      icon: User,
+      title: "1. Responsable del Tratamiento",
+      content: "El responsable del tratamiento de los datos personales recabados a través de este sitio web es **Vestalar Servicios**, con domicilio en Zaragoza, España. Puedes contactarnos a través del correo electrónico: <a href='mailto:vestalar@vestalar.com' class='text-primary hover:underline'>vestalar@vestalar.com</a>."
+    },
+    {
+      icon: Database,
+      title: "2. Datos Recabados y Finalidad",
+      content: "Recogemos los datos que nos proporcionas en nuestros formularios (nombre, email, teléfono y descripción del proyecto) con la única finalidad de gestionar tu solicitud, atender tus consultas y enviarte la información o presupuesto que nos pidas."
+    },
+    {
+      icon: Shield,
+      title: "3. Legitimación para el Tratamiento",
+      content: "La base legal para el tratamiento de tus datos es tu **consentimiento explícito**, que nos otorgas al marcar la casilla de aceptación de la política de privacidad antes de enviar cualquier formulario."
+    },
+    {
+      icon: Share2,
+      title: "4. Cesión de Datos a Terceros",
+      content: "Tus datos personales no serán cedidos a terceros, salvo que exista una obligación legal. Utilizamos proveedores de servicios (como el de correo electrónico) que actúan como encargados del tratamiento, con quienes hemos firmado los correspondientes contratos para garantizar que cumplen con la normativa."
+    },
+    {
+      icon: Clock,
+      title: "5. Plazo de Conservación",
+      content: "Tus datos se conservarán durante el tiempo estrictamente necesario para cumplir con la finalidad para la que fueron recabados y para determinar las posibles responsabilidades que se pudieran derivar."
+    },
+    {
+      icon: CheckSquare,
+      title: "6. Tus Derechos",
+      content: "Tienes derecho a acceder, rectificar, suprimir tus datos, así como otros derechos como la limitación del tratamiento y la portabilidad. Puedes ejercerlos enviando un correo a <a href='mailto:vestalar@vestalar.com' class='text-primary hover:underline'>vestalar@vestalar.com</a>, indicando el derecho que deseas ejercer y adjuntando una copia de tu DNI."
+    }
+  ];
+
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -97,68 +132,26 @@ export default function PrivacyPolicyPage() {
       </header>
 
       <main className="flex-1">
-        <section className="py-12 md:py-20">
-            <div className="container mx-auto px-4 md:px-6 max-w-4xl prose lg:prose-xl">
-                <h1>Política de Privacidad</h1>
-                <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-
-                <h2>1. Responsable del Tratamiento de Datos</h2>
-                <p>
-                    El responsable del tratamiento de los datos personales recabados a través de este sitio web es **Vestalar Servicios** (en adelante, "Vestalar"), con domicilio en Zaragoza, España. Puedes contactarnos a través del correo electrónico: <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
-                </p>
-
-                <h2>2. ¿Qué datos personales recogemos y por qué?</h2>
-                <p>
-                    Recogemos los siguientes datos personales a través de nuestros formularios de contacto y solicitud de presupuesto:
-                </p>
-                <ul>
-                    <li>**Nombre:** Para dirigirnos a ti de forma personalizada.</li>
-                    <li>**Email:** Para responder a tus consultas y enviarte la información solicitada, como presupuestos.</li>
-                    <li>**Teléfono (opcional):** Para poder contactarte de forma más directa si es necesario para aclarar detalles sobre tu solicitud.</li>
-                    <li>**Descripción de tu proyecto:** Para entender tus necesidades y poder ofrecerte una respuesta o presupuesto ajustado.</li>
-                </ul>
-                <p>
-                    La finalidad de la recogida de estos datos es exclusivamente gestionar la relación contigo, atender tus solicitudes de información o presupuesto y comunicarnos contigo sobre los servicios que te interesan.
-                </p>
-
-                <h2>3. Legitimación para el tratamiento de tus datos</h2>
-                <p>
-                    La base legal para el tratamiento de tus datos es tu **consentimiento explícito**, que nos otorgas al marcar la casilla de aceptación de la política de privacidad antes de enviar el formulario. Sin este consentimiento, el formulario no podrá ser enviado.
-                </p>
-
-                <h2>4. ¿Con quién compartimos tus datos?</h2>
-                <p>
-                    En Vestalar, nos tomamos tu privacidad muy en serio. Tus datos personales no serán cedidos a terceros, salvo que exista una obligación legal.
-                </p>
-                <p>
-                    Utilizamos proveedores de servicios (como el de correo electrónico para la gestión de las comunicaciones) que actúan como encargados del tratamiento, con quienes hemos firmado los correspondientes contratos para garantizar que cumplen con la normativa de protección de datos.
-                </p>
-
-                <h2>5. ¿Durante cuánto tiempo conservaremos tus datos?</h2>
-                <p>
-                    Tus datos se conservarán durante el tiempo estrictamente necesario para cumplir con la finalidad para la que fueron recabados (gestionar tu consulta o presupuesto) y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad.
-                </p>
-
-                <h2>6. ¿Cuáles son tus derechos?</h2>
-                <p>
-                    Tienes derecho a obtener confirmación sobre si en Vestalar estamos tratando tus datos personales. Asimismo, tienes derecho a:
-                </p>
-                <ul>
-                    <li>**Acceder** a tus datos personales.</li>
-                    <li>Solicitar la **rectificación** de los datos inexactos.</li>
-                    <li>Solicitar su **supresión** cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos.</li>
-                    <li>Solicitar la **limitación del tratamiento** de tus datos.</li>
-                    <li>Oponerte al tratamiento de tus datos.</li>
-                    <li>Solicitar la **portabilidad** de tus datos.</li>
-                </ul>
-                <p>
-                    Puedes ejercer tus derechos enviando un correo electrónico a <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>, indicando el derecho que deseas ejercer y adjuntando una copia de tu DNI o documento identificativo.
-                </p>
-
-                <h2>7. Cambios en la Política de Privacidad</h2>
-                <p>
-                    Vestalar se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales. Cualquier modificación será debidamente publicada en este sitio web.
-                </p>
+        <section className="py-12 md:py-20 bg-secondary">
+            <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                 <div className="text-center mb-12">
+                    <h1 className="text-3xl md:text-4xl font-bold">Política de Privacidad</h1>
+                    <p className="mt-4 text-lg text-muted-foreground">Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                </div>
+                
+                <div className="space-y-6">
+                    {privacySections.map((section, index) => (
+                        <Card key={index} className="overflow-hidden">
+                            <CardHeader className="flex flex-row items-center gap-4 bg-muted/50 p-6">
+                                <section.icon className="h-6 w-6 text-primary" />
+                                <CardTitle className="m-0 text-lg">{section.title}</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-6 text-muted-foreground">
+                                <p dangerouslySetInnerHTML={{ __html: section.content }} />
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
             </div>
         </section>
       </main>
@@ -224,3 +217,5 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+
+    
