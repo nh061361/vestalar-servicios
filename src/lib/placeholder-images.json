@@ -31,22 +31,16 @@
       "imageHint": "minimalist kitchen"
     },
     {
-      "id": "bathroom-renovation-1",
-      "description": "A stylish and clean bathroom.",
-      "imageUrl": "https://images.unsplash.com/photo-1604709177595-ee9c2d80f3a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQ2OTk1OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "id": "bathroom-renovation-new-1",
+      "description": "A sleek, modern bathroom with a walk-in shower and large tiles.",
+      "imageUrl": "https://images.unsplash.com/photo-1540518614846-7eded433c457?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjY1MDQzMjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern bathroom"
     },
     {
-      "id": "bathroom-renovation-2",
-      "description": "A bathroom with a freestanding tub and large window.",
-      "imageUrl": "https://images.unsplash.com/photo-1572742482459-e04d6cfdd6f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsdXh1cnklMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQzMzQ1NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "luxury bathroom"
-    },
-    {
-      "id": "bathroom-renovation-3",
-      "description": "A modern bathroom with shower and elegant tiles.",
-      "imageUrl": "https://images.unsplash.com/photo-1604709177595-ee9c2d80f3a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQ2OTk1OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern bathroom"
+      "id": "bathroom-renovation-new-2",
+      "description": "A luxurious bathroom with a freestanding tub and elegant fixtures.",
+      "imageUrl": "https://images.unsplash.com/photo-1620626011761-996317b8d101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsb3V4ZS1iYXRocm9vbXxlbnwwfHx8fDE3NjY1MDQ0MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxe bathroom"
     },
     {
       "id": "full-renovation-1",
@@ -140,12 +134,6 @@
     },
     {
       "id": "project-3",
-      "description": "A living room with a fireplace.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
-      "imageHint": "living room fireplace"
-    },
-    {
-      "id": "bathroom-living-room",
       "description": "A living room with a fireplace.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
       "imageHint": "living room fireplace"
