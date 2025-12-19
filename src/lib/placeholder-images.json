@@ -137,6 +137,12 @@
       "description": "Elegant bathroom with a sleek design.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsanibell-bv-IPyaYDuC39g-unsplash.jpg?alt=media&token=449dec06-2766-482b-b5e5-4065ffb165ae",
       "imageHint": "elegant bathroom"
+    },
+    {
+      "id": "bathroom-renovation-3",
+      "description": "A bright bathroom with a freestanding bathtub and a plant.",
+      "imageUrl": "https://images.unsplash.com/photo-1623894125109-b3890a84e037?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiYXRocyUyMHBsYW50c3xlbnwwfHx8fDE3NjQ0MzU4MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bright bathroom"
     }
   ]
 }
