@@ -28,24 +28,6 @@ export default function ProjectsPage() {
     p.id.startsWith('project-')
   );
 
-  const galleryLayout = [
-    'col-span-1 row-span-1',
-    'col-span-2 row-span-2',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-2',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-2 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-2',
-    'col-span-1 row-span-1',
-    'col-span-2 row-span-2',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-    'col-span-1 row-span-1',
-  ];
-
-
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <BudgetRequestDialog open={isBudgetModalOpen} onOpenChange={setIsBudgetModalOpen} />
@@ -123,19 +105,16 @@ export default function ProjectsPage() {
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
-                 <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[250px] gap-4">
+                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {projectImages.map((image, index) => (
-                        <div key={image.id} className={cn(
-                          "group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300",
-                          galleryLayout[index % galleryLayout.length] || "col-span-1 row-span-1"
-                          )}>
+                        <div key={image.id} className="group relative aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                             <Image
                                 src={image.imageUrl}
                                 alt={image.description || "Imagen de proyecto de Vestalar"}
                                 fill
                                 className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
                                 data-ai-hint={image.imageHint}
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                             />
                         </div>
                     ))}
