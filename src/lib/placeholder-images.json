@@ -137,6 +137,12 @@
       "description": "Elegant bathroom with a sleek design.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsanibell-bv-IPyaYDuC39g-unsplash.jpg?alt=media&token=449dec06-2766-482b-b5e5-4065ffb165ae",
       "imageHint": "elegant bathroom"
+    },
+    {
+      "id": "bathroom-renovation-3",
+      "description": "Elegant bathroom with dark tiles and a freestanding bathtub.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpoint3d-commercial-imaging-ltd-Qs3qFwayf60-unsplash.jpg?alt=media&token=0d3fd755-daa8-4701-ad22-bae1fb7178f0",
+      "imageHint": "dark bathroom"
     }
   ]
 }
