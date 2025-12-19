@@ -14,7 +14,7 @@
     },
     {
       "id": "kitchen-renovation-1",
-      "description": "A modern kitchen with an island and stylish lighting.",
+      "description": "A modern kitchen with a large island and ample light.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(2).jpg?alt=media&token=d3b6bb70-e2f8-4ec6-9ffa-193d7e8a3c7b",
       "imageHint": "modern kitchen"
     },
@@ -33,7 +33,7 @@
     {
       "id": "bathroom-renovation-1",
       "description": "A stylish and clean bathroom.",
-      "imageUrl": "https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(3).jpg?alt=media&token=f9e28c9a-24e8-42a0-9a9c-18effecf0bfd",
       "imageHint": "modern bathroom"
     },
     {
