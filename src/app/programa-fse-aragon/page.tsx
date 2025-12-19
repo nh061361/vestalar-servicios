@@ -3,16 +3,13 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin, Award, Users, Handshake, Leaf, Rocket, Heart } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
-import type { ImagePlaceholder } from '@/lib/placeholder-images';
-import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
-export default function AboutUsPage() {
+export default function FseProgramPage() {
   const [isClient, setIsClient] = useState(false);
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
   
@@ -24,37 +21,6 @@ export default function AboutUsPage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
-  
-  const heroImage = PlaceHolderImages.find(p => p.id === 'about-us-hero');
-
-
-  if (!heroImage) {
-      // Handle the case where the hero image is not found, maybe show a fallback or nothing
-      return <div>Cargando...</div>;
-  }
-
-  const values = [
-    {
-      icon: Award,
-      title: "Calidad y Experiencia",
-      description: "Nuestra experiencia se traduce en un compromiso inquebrantable con los acabados de primera calidad."
-    },
-    {
-      icon: Users,
-      title: "Satisfacción del Cliente",
-      description: "Tu tranquilidad es nuestra prioridad. Te acompañamos en cada paso del proceso, de principio a fin."
-    },
-    {
-      icon: Handshake,
-      title: "Confianza y Transparencia",
-      description: "Comunicación clara y presupuestos detallados. Construimos relaciones basadas en la honestidad."
-    },
-    {
-      icon: Leaf,
-      title: "Compromiso Local (Km 0)",
-      description: "Apostamos por proveedores de proximidad para impulsar la economía local y reducir la huella ambiental."
-    }
-  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -89,7 +55,7 @@ export default function AboutUsPage() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
-                   <SheetHeader className="sr-only">
+                  <SheetHeader className="sr-only">
                     <SheetTitle>Menú de Navegación</SheetTitle>
                     <SheetDescription>
                       Navega por las diferentes secciones de la web.
@@ -119,7 +85,7 @@ export default function AboutUsPage() {
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto Con Nosotros</Button>
+                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto</Button>
                     </SheetClose>
                   </nav>
                 </SheetContent>
@@ -130,85 +96,25 @@ export default function AboutUsPage() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[70vh] w-full overflow-hidden">
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="w-full h-full object-cover"
-            data-ai-hint={heroImage.imageHint}
-            priority
-          />
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
-            <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold mb-4">Nuestra Esencia</h2>
-            <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
-                Somos un equipo de profesionales con más de veinte años de experiencia. Nos encanta renovar hogares y negocios, cuidando cada detalle como si fuera nuestra propia casa. Usamos materiales de proximidad (km 0) para darle vida a tus proyectos, apoyar la economía local y reducir la huella ambiental. Nuestro objetivo es que disfrutes del proceso y te sientas acompañado en todo momento.
-            </p>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 bg-background">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {values.map((value, index) => (
-                        <div key={index} className="text-center flex flex-col items-center">
-                            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4">
-                                <value.icon className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                            <p className="text-muted-foreground">{value.description}</p>
-                        </div>
-                    ))}
+        <section className="py-12 md:py-20">
+            <div className="container mx-auto px-4 md:px-6 max-w-4xl prose lg:prose-xl">
+                <h1>Programa FSE+ Aragón</h1>
+                
+                <div className="my-8 flex flex-wrap items-center justify-center gap-8 border-y py-8">
+                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FGOBIERNO-DE-ARAGON-Horizontal-Color-Positivo-300x74.png?alt=media&token=8d273f98-e67c-473d-8153-90d0e6593a8c" alt="Logo Gobierno de Aragón" width={200} height={49} className="object-contain"/>
+                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FMarca-Aragon-en-Europa-positvo-color-300x74.png?alt=media&token=2623a31c-6d51-4122-8692-72352fd8c79c" alt="Logo Aragón en Europa" width={200} height={49} className="object-contain"/>
+                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FUE-FSE-horizontal-color-300x75.png?alt=media&token=e9d564f0-4966-419b-af2b-e10915f79a96" alt="Logo Fondo Social Europeo Plus" width={200} height={50} className="object-contain"/>
                 </div>
+
+                <p><strong>Vestalar Servicios</strong> ha sido beneficiara de la cantidad de <strong>5940€</strong>, en concepto de subvención al establecimiento como trabajador autónomo. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus.</p>
+
+                <p>A su vez, ha sido beneficiaria con la cantidad total de <strong>960€</strong>, en concepto de Subvención de Cuota Cero. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus.</p>
+
+                <p>A su vez, ha sido beneficiaria con la cantidad total de <strong>4500€</strong>, en concepto de Subvención por la contratación de la primera persona trabajadora por cuenta ajena. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus.</p>
+
+                <p>El objetivo principal de estas ayudas es apoyar el autoempleo y el emprendimiento en la Comunidad Autónoma de Aragón, fomentando el establecimiento de personas desempleadas como trabajadores autónomos, favoreciendo el mantenimiento y la consolidación de su actividad económica, promoviendo el relevo generacional y la inserción laboral de familiares colaboradores.</p>
             </div>
         </section>
-        
-        <section className="py-12 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                      <Heart className="w-5 h-5"/>
-                      <span>Nuestra Misión</span>
-                  </div>
-                  <h3 className="text-2xl font-bold">Crear Espacios que Inspiran</h3>
-                  <p className="text-muted-foreground">
-                      Valoramos la experiencia y el buen hacer, priorizamos la satisfacción del cliente, creemos en la transparencia y la confianza, buscamos siempre la máxima calidad y cuidamos nuestro compromiso con lo local, porque elegir materiales de km 0 reduce emisiones y residuos y apoya a la economía local.
-                  </p>
-              </div>
-              <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                      <Rocket className="w-5 h-5"/>
-                      <span>Nuestra Visión</span>
-                  </div>
-                  <h3 className="text-2xl font-bold">Liderar la Reforma Sostenible</h3>
-                  <p className="text-muted-foreground">
-                      Formación continua en técnicas, materiales y herramientas para construir un futuro sostenible donde la construcción respete el entorno y mejore la vida de las personas. Responsabilidad y creatividad como vehículos para recorrer este camino.
-                  </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 text-center bg-background">
-          <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-4">Inicia Tu Proyecto Con Nosotros</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              Hagamos realidad la reforma de tus sueños. Contacta con nuestro equipo de expertos y recibe un presupuesto a medida sin compromiso.
-            </p>
-            <Button size="lg" onClick={() => setIsBudgetModalOpen(true)}>
-              Pide Tu Presupuesto Ahora
-            </Button>
-          </div>
-        </section>
-
       </main>
 
       <footer className="bg-accent text-accent-foreground py-12">

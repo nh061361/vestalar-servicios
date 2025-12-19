@@ -215,6 +215,8 @@ export default function PrivacyPolicyPage() {
             <a href="/politica-de-cookies" className="hover:underline">Política de Cookies</a>
             <span className="mx-2">|</span>
             <a href="/aviso-legal" className="hover:underline">Aviso Legal</a>
+             <span className="mx-2">|</span>
+            <a href="/programa-fse-aragon" className="hover:underline">Programa FSE+ Aragón</a>
           </p>
         </div>
       </footer>
