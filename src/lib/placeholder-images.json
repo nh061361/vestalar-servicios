@@ -85,12 +85,6 @@
       "imageHint": "bright kitchen"
     },
     {
-      "id": "project-3",
-      "description": "A living room with a fireplace.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
-      "imageHint": "living room fireplace"
-    },
-    {
       "id": "project-4",
       "description": "Room under renovation with tools and materials.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fimmo-renovation--oBPH6PsX8A-unsplash.jpg?alt=media&token=70a6ebc2-8058-46fd-8932-63ab82e3967d",
@@ -143,6 +137,12 @@
       "description": "A modern bathroom with a wooden vanity and a round mirror.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(3).jpg?alt=media&token=f9e28c9a-24e8-42a0-9a9c-18effecf0bfd",
       "imageHint": "modern bathroom"
+    },
+    {
+      "id": "project-3",
+      "description": "A living room with a fireplace.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
+      "imageHint": "living room fireplace"
     }
   ]
 }
