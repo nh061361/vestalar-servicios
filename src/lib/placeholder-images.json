@@ -31,12 +31,6 @@
       "imageHint": "minimalist kitchen"
     },
     {
-      "id": "bathroom-renovation-new-2",
-      "description": "A luxurious bathroom with a freestanding tub and elegant fixtures.",
-      "imageUrl": "https://images.unsplash.com/photo-1620626011761-996317b8d101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsb3V4ZS1iYXRocm9vbXxlbnwwfHx8fDE3NjY1MDQ0MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "luxe bathroom"
-    },
-    {
       "id": "full-renovation-1",
       "description": "An open concept living room and kitchen area.",
       "imageUrl": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGl2aW5nJTIwcm9vbXxlbnwwfHx8fDE3NjQzMTc2ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -109,6 +103,12 @@
       "imageHint": "room renovation"
     },
     {
+      "id": "project-3",
+      "description": "A living room with a fireplace.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
+      "imageHint": "living room fireplace"
+    },
+    {
       "id": "project-10",
       "description": "A stylish kitchen with dark cabinets and a dining area.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(1).jpg?alt=media&token=8c8f9fb2-9d6e-4c35-af9d-2172f740abb9",
@@ -127,16 +127,16 @@
       "imageHint": "modern bathroom"
     },
     {
-      "id": "project-3",
-      "description": "A living room with a fireplace.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
-      "imageHint": "living room fireplace"
+      "id": "bathroom-renovation-1",
+      "description": "Modern bathroom with stylish fixtures.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsmart-renovations-1Qvm4QDzWnA-unsplash.jpg?alt=media&token=8cddae10-e11c-42c8-849a-e48cc80301c5",
+      "imageHint": "modern bathroom"
     },
     {
-      "id": "bathroom-living-room",
-      "description": "A cozy living room with a fireplace.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
-      "imageHint": "living room fireplace"
+      "id": "bathroom-renovation-2",
+      "description": "Elegant bathroom with a sleek design.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fsanibell-bv-IPyaYDuC39g-unsplash.jpg?alt=media&token=449dec06-2766-482b-b5e5-4065ffb165ae",
+      "imageHint": "elegant bathroom"
     }
   ]
 }

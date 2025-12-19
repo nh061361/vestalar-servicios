@@ -66,7 +66,7 @@ export default function HomePage() {
       title: 'Reformas de Baños',
       description: 'Transformamos tu baño en un oasis de relajación. Soluciones innovadoras para todos los espacios. Pide presupuesto para la reforma de tu baño.',
       icon: Bath,
-      imageIds: ['bathroom-renovation-new-1', 'bathroom-renovation-new-2'],
+      imageIds: ['bathroom-renovation-1', 'bathroom-renovation-2'],
     },
     {
       title: 'Reformas Integrales',
@@ -477,3 +477,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
