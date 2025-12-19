@@ -105,26 +105,20 @@ export default function ProjectsPage() {
         <section className="py-12 md:py-20">
             <div className="container mx-auto px-4 md:px-6">
                 <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-12">Nuestros Proyectos</h1>
-                 <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-4">
+                 <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
                     {projectImages.map((image, index) => {
-                        const isLarge = (index % 5 === 0) || (index % 7 === 0);
-                        const isTall = index % 6 === 0;
                         return (
                             <div 
                                 key={image.id} 
-                                className={cn(
-                                    "group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300",
-                                    isLarge ? "col-span-2 row-span-2 aspect-video" : "aspect-square",
-                                    isTall && !isLarge ? "row-span-2 aspect-[9/16]" : ""
-                                )}
+                                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 block"
                             >
                                 <Image
                                     src={image.imageUrl}
                                     alt={image.description || "Imagen de proyecto de Vestalar"}
-                                    fill
-                                    className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-105"
+                                    width={500}
+                                    height={500}
+                                    className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105"
                                     data-ai-hint={image.imageHint}
-                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
                                 />
                             </div>
                         )
