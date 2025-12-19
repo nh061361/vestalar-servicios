@@ -28,7 +28,7 @@ export default function LegalNoticePage() {
       icon: FileText,
       title: "1. Ley de los Servicios de la Sociedad de la Información (LSSI)",
       content: [
-        "Vestalar Servicios (en adelante, “EL RESPONSABLE”), pone a disposición de los usuarios el presente documento, con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), así como informar a todos los usuarios del sitio web respecto a cuáles son las condiciones de uso.",
+        "JOSE ARRONDO TOMAS (VESTALAR) (en adelante, “EL RESPONSABLE”), pone a disposición de los usuarios el presente documento, con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), así como informar a todos los usuarios del sitio web respecto a cuáles son las condiciones de uso.",
         "Toda persona que acceda a este sitio web asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí dispuestas, así como a cualquier otra disposición legal que fuera de aplicación. EL RESPONSABLE se reserva el derecho de modificar cualquier tipo de información que pudiera aparecer en el sitio web, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas obligaciones, entendiéndose como suficiente con la publicación en el sitio web."
       ]
     },
@@ -36,7 +36,7 @@ export default function LegalNoticePage() {
       icon: User,
       title: "2. Datos Identificativos",
       content: [
-        "Este sitio web es propiedad de **Vestalar Servicios**, con NIF **[Rellenar con el NIF]**, domicilio fiscal en **[Rellenar con la dirección fiscal completa, incluyendo código postal y ciudad]**, y correo electrónico de contacto <a href='mailto:vestalar@vestalar.com' class='text-primary hover:underline'>vestalar@vestalar.com</a>."
+        "Este sitio web es propiedad de **JOSE ARRONDO TOMAS (VESTALAR)**, con NIF **47631302G**, domicilio fiscal en **C/ Julio García Condoy 13 2C, 50018 Zaragoza**, y correo electrónico de contacto <a href='mailto:vestalar@vestalar.com' class='text-primary hover:underline'>vestalar@vestalar.com</a>."
       ]
     },
     {
@@ -194,7 +194,7 @@ export default function LegalNoticePage() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contacto</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2"><span>+34 976 076 982</span></li>
+              <li className="flex items-center gap-2"><span>+34 670 933 371</span></li>
               <li className="flex items-center gap-2"><span>vestalar@vestalar.com</span></li>
             </ul>
           </div>
@@ -225,5 +225,3 @@ export default function LegalNoticePage() {
     </div>
   );
 }
-
-    
