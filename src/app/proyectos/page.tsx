@@ -191,7 +191,11 @@ export default function ProjectsPage() {
         </div>
         <div className="container mx-auto mt-8 pt-6 border-t border-accent-foreground/20 text-center text-sm">
           <p>© {new Date().getFullYear()} Vestalar Servicios. Todos los derechos reservados.</p>
-          <p className="mt-2 text-xs text-accent-foreground/80"><a href="/politica-de-cookies" className="hover:underline">Política de Cookies</a></p>
+          <p className="mt-2 text-xs text-accent-foreground/80">
+            <a href="/politica-de-privacidad" className="hover:underline">Política de Privacidad</a>
+            <span className="mx-2">|</span>
+            <a href="/politica-de-cookies" className="hover:underline">Política de Cookies</a>
+          </p>
         </div>
       </footer>
       

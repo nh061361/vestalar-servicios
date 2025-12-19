@@ -5,11 +5,13 @@ import { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import Link from 'next/link';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { saveContact } from '@/app/actions';
 import { SteppedProgress } from './SteppedProgress';
@@ -28,6 +30,9 @@ const step2Schema = z.object({
 
 const step3Schema = z.object({
   description: z.string().min(10, "La descripción debe tener al menos 10 caracteres."),
+  privacyPolicy: z.boolean().refine((val) => val === true, {
+    message: "Debes aceptar la política de privacidad para continuar.",
+  }),
 });
 
 const fullSchema = z.object({
@@ -36,6 +41,7 @@ const fullSchema = z.object({
     email: z.string().email(),
     phone: z.string().optional(),
     description: z.string(),
+    privacyPolicy: z.boolean(),
 });
 
 
@@ -70,6 +76,7 @@ export function BudgetRequestDialog({ open, onOpenChange }: { open: boolean; onO
       email: '',
       phone: '',
       description: '',
+      privacyPolicy: false,
     },
   });
 
@@ -92,7 +99,8 @@ export function BudgetRequestDialog({ open, onOpenChange }: { open: boolean; onO
 
   const onSubmit = async (data: Partial<FullFormData>) => {
     const allData = methods.getValues();
-    const result = await saveContact(allData);
+    const { privacyPolicy, ...contactData } = allData;
+    const result = await saveContact(contactData);
 
     if (result.success) {
       toast({
@@ -130,7 +138,7 @@ export function BudgetRequestDialog({ open, onOpenChange }: { open: boolean; onO
               <SteppedProgress currentStep={step} totalSteps={3} />
             </div>
 
-            <div className="min-h-[200px]">
+            <div className="min-h-[250px]">
               {step === 1 && (
                 <div>
                   <h3 className="font-semibold text-center mb-4">Paso 1: ¿Qué reforma necesitas?</h3>
@@ -216,6 +224,30 @@ export function BudgetRequestDialog({ open, onOpenChange }: { open: boolean; onO
                       </FormItem>
                     )}
                   />
+                   <FormField
+                      control={methods.control}
+                      name="privacyPolicy"
+                      render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                           <FormControl>
+                                <Checkbox
+                                checked={field.value}
+                                onCheckedChange={field.onChange}
+                                />
+                            </FormControl>
+                          <div className="space-y-1 leading-none">
+                            <FormLabel>
+                              He leído y acepto la{' '}
+                              <Link href="/politica-de-privacidad" target="_blank" className="text-primary hover:underline">
+                                política de privacidad
+                              </Link>
+                              .
+                            </FormLabel>
+                             <FormMessage />
+                          </div>
+                        </FormItem>
+                      )}
+                    />
                 </div>
               )}
             </div>
@@ -234,3 +266,5 @@ export function BudgetRequestDialog({ open, onOpenChange }: { open: boolean; onO
     </Dialog>
   );
 }
+
+    

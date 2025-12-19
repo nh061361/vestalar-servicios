@@ -3,16 +3,14 @@
 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, Facebook, Instagram, Linkedin, Award, Users, Handshake, Leaf, Rocket, Heart } from 'lucide-react';
+import { Menu, Facebook, Instagram, Linkedin } from 'lucide-react';
 import allImagesData from '@/lib/placeholder-images.json';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { BudgetRequestDialog } from '@/components/BudgetRequestDialog';
 import type { ImagePlaceholder } from '@/lib/placeholder-images';
-import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
-export default function AboutUsPage() {
+export default function PrivacyPolicyPage() {
   const [isClient, setIsClient] = useState(false);
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
   
@@ -24,37 +22,6 @@ export default function AboutUsPage() {
 
   const logoImage = PlaceHolderImages.find(p => p.id === 'main-logo');
   const footerLogoImage = PlaceHolderImages.find(p => p.id === 'footer-logo');
-  
-  const heroImage = PlaceHolderImages.find(p => p.id === 'about-us-hero');
-
-
-  if (!heroImage) {
-      // Handle the case where the hero image is not found, maybe show a fallback or nothing
-      return <div>Cargando...</div>;
-  }
-
-  const values = [
-    {
-      icon: Award,
-      title: "Calidad y Experiencia",
-      description: "Nuestra experiencia se traduce en un compromiso inquebrantable con los acabados de primera calidad."
-    },
-    {
-      icon: Users,
-      title: "Satisfacción del Cliente",
-      description: "Tu tranquilidad es nuestra prioridad. Te acompañamos en cada paso del proceso, de principio a fin."
-    },
-    {
-      icon: Handshake,
-      title: "Confianza y Transparencia",
-      description: "Comunicación clara y presupuestos detallados. Construimos relaciones basadas en la honestidad."
-    },
-    {
-      icon: Leaf,
-      title: "Compromiso Local (Km 0)",
-      description: "Apostamos por proveedores de proximidad para impulsar la economía local y reducir la huella ambiental."
-    }
-  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -89,7 +56,7 @@ export default function AboutUsPage() {
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left">
-                   <SheetHeader className="sr-only">
+                  <SheetHeader className="sr-only">
                     <SheetTitle>Menú de Navegación</SheetTitle>
                     <SheetDescription>
                       Navega por las diferentes secciones de la web.
@@ -119,7 +86,7 @@ export default function AboutUsPage() {
                       <Button variant="ghost" className="w-full justify-start" asChild><a href="/#faq">Preguntas Frecuentes</a></Button>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto Con Nosotros</Button>
+                      <Button variant="default" className="w-full justify-start" onClick={() => setIsBudgetModalOpen(true)}>Inicia Tu Proyecto</Button>
                     </SheetClose>
                   </nav>
                 </SheetContent>
@@ -130,85 +97,70 @@ export default function AboutUsPage() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[70vh] w-full overflow-hidden">
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="w-full h-full object-cover"
-            data-ai-hint={heroImage.imageHint}
-            priority
-          />
-          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center h-full text-center text-white bg-black/50 p-4 w-full">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Sobre Vestalar</h1>
-            <p className="mt-4 max-w-3xl text-lg md:text-xl">Construyendo sueños, reformando realidades.</p>
-          </div>
-        </section>
+        <section className="py-12 md:py-20">
+            <div className="container mx-auto px-4 md:px-6 max-w-4xl prose lg:prose-xl">
+                <h1>Política de Privacidad</h1>
+                <p>Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
 
-        <section className="py-12 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold mb-4">Nuestra Esencia</h2>
-            <p className="max-w-3xl mx-auto text-muted-foreground text-lg">
-                Somos un equipo de profesionales con más de veinte años de experiencia. Nos encanta renovar hogares y negocios, cuidando cada detalle como si fuera nuestra propia casa. Usamos materiales de proximidad (km 0) para darle vida a tus proyectos, apoyar la economía local y reducir la huella ambiental. Nuestro objetivo es que disfrutes del proceso y te sientas acompañado en todo momento.
-            </p>
-          </div>
-        </section>
+                <h2>1. Responsable del Tratamiento de Datos</h2>
+                <p>
+                    El responsable del tratamiento de los datos personales recabados a través de este sitio web es **Vestalar Servicios** (en adelante, "Vestalar"), con domicilio en Zaragoza, España. Puedes contactarnos a través del correo electrónico: <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>.
+                </p>
 
-        <section className="py-12 md:py-24 bg-background">
-            <div className="container mx-auto px-4 md:px-6">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {values.map((value, index) => (
-                        <div key={index} className="text-center flex flex-col items-center">
-                            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary text-primary-foreground mb-4">
-                                <value.icon className="w-8 h-8" />
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-                            <p className="text-muted-foreground">{value.description}</p>
-                        </div>
-                    ))}
-                </div>
+                <h2>2. ¿Qué datos personales recogemos y por qué?</h2>
+                <p>
+                    Recogemos los siguientes datos personales a través de nuestros formularios de contacto y solicitud de presupuesto:
+                </p>
+                <ul>
+                    <li>**Nombre:** Para dirigirnos a ti de forma personalizada.</li>
+                    <li>**Email:** Para responder a tus consultas y enviarte la información solicitada, como presupuestos.</li>
+                    <li>**Teléfono (opcional):** Para poder contactarte de forma más directa si es necesario para aclarar detalles sobre tu solicitud.</li>
+                    <li>**Descripción de tu proyecto:** Para entender tus necesidades y poder ofrecerte una respuesta o presupuesto ajustado.</li>
+                </ul>
+                <p>
+                    La finalidad de la recogida de estos datos es exclusivamente gestionar la relación contigo, atender tus solicitudes de información o presupuesto y comunicarnos contigo sobre los servicios que te interesan.
+                </p>
+
+                <h2>3. Legitimación para el tratamiento de tus datos</h2>
+                <p>
+                    La base legal para el tratamiento de tus datos es tu **consentimiento explícito**, que nos otorgas al marcar la casilla de aceptación de la política de privacidad antes de enviar el formulario. Sin este consentimiento, el formulario no podrá ser enviado.
+                </p>
+
+                <h2>4. ¿Con quién compartimos tus datos?</h2>
+                <p>
+                    En Vestalar, nos tomamos tu privacidad muy en serio. Tus datos personales no serán cedidos a terceros, salvo que exista una obligación legal.
+                </p>
+                <p>
+                    Utilizamos proveedores de servicios (como el de correo electrónico para la gestión de las comunicaciones) que actúan como encargados del tratamiento, con quienes hemos firmado los correspondientes contratos para garantizar que cumplen con la normativa de protección de datos.
+                </p>
+
+                <h2>5. ¿Durante cuánto tiempo conservaremos tus datos?</h2>
+                <p>
+                    Tus datos se conservarán durante el tiempo estrictamente necesario para cumplir con la finalidad para la que fueron recabados (gestionar tu consulta o presupuesto) y para determinar las posibles responsabilidades que se pudieran derivar de dicha finalidad.
+                </p>
+
+                <h2>6. ¿Cuáles son tus derechos?</h2>
+                <p>
+                    Tienes derecho a obtener confirmación sobre si en Vestalar estamos tratando tus datos personales. Asimismo, tienes derecho a:
+                </p>
+                <ul>
+                    <li>**Acceder** a tus datos personales.</li>
+                    <li>Solicitar la **rectificación** de los datos inexactos.</li>
+                    <li>Solicitar su **supresión** cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos.</li>
+                    <li>Solicitar la **limitación del tratamiento** de tus datos.</li>
+                    <li>Oponerte al tratamiento de tus datos.</li>
+                    <li>Solicitar la **portabilidad** de tus datos.</li>
+                </ul>
+                <p>
+                    Puedes ejercer tus derechos enviando un correo electrónico a <a href="mailto:vestalar@vestalar.com">vestalar@vestalar.com</a>, indicando el derecho que deseas ejercer y adjuntando una copia de tu DNI o documento identificativo.
+                </p>
+
+                <h2>7. Cambios en la Política de Privacidad</h2>
+                <p>
+                    Vestalar se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales. Cualquier modificación será debidamente publicada en este sitio web.
+                </p>
             </div>
         </section>
-        
-        <section className="py-12 md:py-24 bg-secondary">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                      <Heart className="w-5 h-5"/>
-                      <span>Nuestra Misión</span>
-                  </div>
-                  <h3 className="text-2xl font-bold">Crear Espacios que Inspiran</h3>
-                  <p className="text-muted-foreground">
-                      Valoramos la experiencia y el buen hacer, priorizamos la satisfacción del cliente, creemos en la transparencia y la confianza, buscamos siempre la máxima calidad y cuidamos nuestro compromiso con lo local, porque elegir materiales de km 0 reduce emisiones y residuos y apoya a la economía local.
-                  </p>
-              </div>
-              <div className="space-y-4">
-                  <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                      <Rocket className="w-5 h-5"/>
-                      <span>Nuestra Visión</span>
-                  </div>
-                  <h3 className="text-2xl font-bold">Liderar la Reforma Sostenible</h3>
-                  <p className="text-muted-foreground">
-                      Formación continua en técnicas, materiales y herramientas para construir un futuro sostenible donde la construcción respete el entorno y mejore la vida de las personas. Responsabilidad y creatividad como vehículos para recorrer este camino.
-                  </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-12 md:py-24 text-center bg-background">
-          <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-4">Inicia Tu Proyecto Con Nosotros</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-              Hagamos realidad la reforma de tus sueños. Contacta con nuestro equipo de expertos y recibe un presupuesto a medida sin compromiso.
-            </p>
-            <Button size="lg" onClick={() => setIsBudgetModalOpen(true)}>
-              Pide Tu Presupuesto Ahora
-            </Button>
-          </div>
-        </section>
-
       </main>
 
       <footer className="bg-accent text-accent-foreground py-12">

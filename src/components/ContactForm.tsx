@@ -4,10 +4,12 @@
 import { useForm, FormProvider } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import { saveContact } from '@/app/actions';
 
@@ -16,6 +18,9 @@ const contactSchema = z.object({
   email: z.string().email("Por favor, introduce un email válido."),
   phone: z.string().optional(),
   description: z.string().min(10, "La descripción debe tener al menos 10 caracteres."),
+  privacyPolicy: z.boolean().refine((val) => val === true, {
+    message: "Debes aceptar la política de privacidad para continuar.",
+  }),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -36,11 +41,13 @@ export function ContactForm() {
       email: '',
       phone: '',
       description: '',
+      privacyPolicy: false,
     },
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    const result = await saveContact(data);
+    const { privacyPolicy, ...contactData } = data;
+    const result = await saveContact(contactData);
     if (result.success) {
       toast({
         title: '¡Mensaje enviado!',
@@ -137,6 +144,31 @@ export function ContactForm() {
             </div>
         </div>
 
+        <FormField
+          control={methods.control}
+          name="privacyPolicy"
+          render={({ field }) => (
+            <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+              <FormControl>
+                <Checkbox
+                  checked={field.value}
+                  onCheckedChange={field.onChange}
+                />
+              </FormControl>
+              <div className="space-y-1 leading-none">
+                <FormLabel>
+                  He leído y acepto la{' '}
+                  <Link href="/politica-de-privacidad" target="_blank" className="text-primary hover:underline">
+                    política de privacidad
+                  </Link>
+                  .
+                </FormLabel>
+                <FormMessage />
+              </div>
+            </FormItem>
+          )}
+        />
+
         <Button type="submit" className="w-full" disabled={methods.formState.isSubmitting}>
           {methods.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
         </Button>
@@ -144,3 +176,5 @@ export function ContactForm() {
     </FormProvider>
   );
 }
+
+    
