@@ -101,9 +101,9 @@ export default function FseProgramPage() {
                 <h1>Programa FSE+ Aragón</h1>
                 
                 <div className="my-8 flex flex-wrap items-center justify-center gap-8 border-y py-8">
-                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FGOBIERNO-DE-ARAGON-Horizontal-Color-Positivo-300x74.png?alt=media&token=8d273f98-e67c-473d-8153-90d0e6593a8c" alt="Logo Gobierno de Aragón" width={200} height={49} className="object-contain"/>
-                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FMarca-Aragon-en-Europa-positvo-color-300x74.png?alt=media&token=2623a31c-6d51-4122-8692-72352fd8c79c" alt="Logo Aragón en Europa" width={200} height={49} className="object-contain"/>
-                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2FUE-FSE-horizontal-color-300x75.png?alt=media&token=e9d564f0-4966-419b-af2b-e10915f79a96" alt="Logo Fondo Social Europeo Plus" width={200} height={50} className="object-contain"/>
+                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20Programa%20FSE%2B%20Arag%C3%B3n%2Fgob.png?alt=media&token=e3e68c00-5046-4c2d-a04d-9ce71daebd7d" alt="Logo Gobierno de Aragón" width={200} height={49} className="object-contain"/>
+                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20Programa%20FSE%2B%20Arag%C3%B3n%2Ffondos.png?alt=media&token=90bab8f9-1574-44c9-804f-db06b33fea88" alt="Logo Aragón en Europa" width={200} height={49} className="object-contain"/>
+                    <Image src="https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Ffotos%20Programa%20FSE%2B%20Arag%C3%B3n%2Fue.png?alt=media&token=f4847a2d-150f-4bbe-a036-fb9e423c5443" alt="Logo Fondo Social Europeo Plus" width={200} height={50} className="object-contain"/>
                 </div>
 
                 <p><strong>Vestalar Servicios</strong> ha sido beneficiara de la cantidad de <strong>5940€</strong>, en concepto de subvención al establecimiento como trabajador autónomo. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus.</p>
@@ -178,3 +178,5 @@ export default function FseProgramPage() {
     </div>
   );
 }
+
+    
