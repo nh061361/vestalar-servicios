@@ -31,12 +31,6 @@
       "imageHint": "minimalist kitchen"
     },
     {
-      "id": "bathroom-renovation-new-1",
-      "description": "A sleek, modern bathroom with a walk-in shower and elegant tiling.",
-      "imageUrl": "https://images.unsplash.com/photo-1603794052293-61d2c1d6830c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2Rlcm4lMjBiYXRocm9vbSUyMHNob3dlcnxlbnwwfHx8fDE3NjY1MDcyODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern bathroom"
-    },
-    {
       "id": "bathroom-renovation-new-2",
       "description": "A luxurious bathroom with a freestanding tub and elegant fixtures.",
       "imageUrl": "https://images.unsplash.com/photo-1620626011761-996317b8d101?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsb3V4ZS1iYXRocm9vbXxlbnwwfHx8fDE3NjY1MDQ0MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -135,6 +129,12 @@
     {
       "id": "project-3",
       "description": "A living room with a fireplace.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
+      "imageHint": "living room fireplace"
+    },
+    {
+      "id": "bathroom-living-room",
+      "description": "A cozy living room with a fireplace.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
       "imageHint": "living room fireplace"
     }
