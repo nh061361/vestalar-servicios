@@ -33,7 +33,7 @@
     {
       "id": "bathroom-renovation-1",
       "description": "A stylish and clean bathroom.",
-      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fthumbnail%20(3).jpg?alt=media&token=f9e28c9a-24e8-42a0-9a9c-18effecf0bfd",
+      "imageUrl": "https://images.unsplash.com/photo-1540518614846-7eded433c457?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiZWRyb29tfGVufDB8fHx8MTc2NDYwMDc0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern bathroom"
     },
     {
@@ -44,9 +44,9 @@
     },
     {
       "id": "bathroom-renovation-3",
-      "description": "A small, modern bathroom with clever use of space.",
-      "imageUrl": "https://images.unsplash.com/photo-1734599505084-d10978f0b13d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c21hbGwlMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQzMzc2MzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "small bathroom"
+      "description": "A modern bathroom with shower and elegant tiles.",
+      "imageUrl": "https://images.unsplash.com/photo-1604709177595-ee9c2d80f3a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQ2OTk1OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern bathroom"
     },
     {
       "id": "full-renovation-1",
@@ -140,6 +140,12 @@
     },
     {
       "id": "project-3",
+      "description": "A living room with a fireplace.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
+      "imageHint": "living room fireplace"
+    },
+    {
+      "id": "bathroom-living-room",
       "description": "A living room with a fireplace.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/vestalarservicios.firebasestorage.app/o/Herramientas%2Fotros%2Fpeter-muniz-6nEHofhgaRg-unsplash.jpg?alt=media&token=784e8cd3-c644-4d6c-91ac-0c8710783d7a",
       "imageHint": "living room fireplace"
