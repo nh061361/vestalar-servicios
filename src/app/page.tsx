@@ -66,7 +66,7 @@ export default function HomePage() {
       title: 'Reformas de Baños',
       description: 'Transformamos tu baño en un oasis de relajación. Soluciones innovadoras para todos los espacios. Pide presupuesto para la reforma de tu baño.',
       icon: Bath,
-      imageIds: ['bathroom-renovation-1', 'bathroom-renovation-3'],
+      imageIds: ['bathroom-renovation-3'],
     },
     {
       title: 'Reformas Integrales',
@@ -260,8 +260,10 @@ export default function HomePage() {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious className="left-4" />
-                    <CarouselNext className="right-4" />
+                    {service.images.length > 1 && <>
+                      <CarouselPrevious className="left-4" />
+                      <CarouselNext className="right-4" />
+                    </>}
                   </Carousel>
                   <CardHeader>
                     <div className="flex items-center gap-4">
