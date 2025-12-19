@@ -15,7 +15,7 @@
     {
       "id": "kitchen-renovation-1",
       "description": "A modern and bright kitchen after renovation.",
-      "imageUrl": "https://images.unsplash.com/photo-1592506119503-c0b18879bd5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc2NDMwNjI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1616464916566-d0a7c43c242a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmlnaHQlMjBraXRjaGVufGVufDB8fHx8MTc2NjIwMDIyMHww&ixlib=rb-4.0.3&q=80&w=1080",
       "imageHint": "modern kitchen"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "bathroom-renovation-1",
       "description": "A stylish and clean bathroom.",
-      "imageUrl": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBiYXRocm9vbXxlbnwwfHx8fDE3NjQyODgyMzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80",
       "imageHint": "modern bathroom"
     },
     {
