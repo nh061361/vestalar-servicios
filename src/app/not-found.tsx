@@ -167,11 +167,12 @@ export default function NotFoundPage() {
              <span className="mx-2">|</span>
             <a href="/programa-fse-aragon" className="hover:underline">Programa FSE+ Aragón</a>
           </p>
+           <p className="mt-4 text-xs text-accent-foreground/60">
+            Diseñado y desarrollado por <a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Adevintia</a>
+          </p>
         </div>
       </footer>
       
     </div>
   );
 }
-
-    
