@@ -387,7 +387,7 @@ export default function HomePage() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <Phone className="w-6 h-6 text-primary" />
-                    <span className="text-lg">+34 976 07 69 82</span>
+                    <span className="text-lg">976 07 69 82</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <Mail className="w-6 h-6 text-primary" />
@@ -445,7 +445,7 @@ export default function HomePage() {
           <div>
             <h3 className="font-bold text-lg mb-4">Contacto</h3>
             <ul className="space-y-2">
-              <li className="flex items-center gap-2"><span>+34 976 07 69 82</span></li>
+              <li className="flex items-center gap-2"><span>976 07 69 82</span></li>
               <li className="flex items-center gap-2"><span>vestalar@vestalar.com</span></li>
             </ul>
           </div>
@@ -476,3 +476,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
