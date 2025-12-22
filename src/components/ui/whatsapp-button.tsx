@@ -6,36 +6,24 @@ import { MessageCircle, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function WhatsAppButton() {
-  const phoneNumber = '34976076982'; 
+  const phoneNumber = '976076982'; 
   const message = '¡Hola! Me gustaría obtener más información sobre vuestros servicios.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
   const [showHint, setShowHint] = useState(false);
-  const [isPulsing, setIsPulsing] = useState(false);
 
   useEffect(() => {
-    const triggerCycle = () => {
-      // 1. Start hint and pulse
+    const hintTimer = setTimeout(() => {
       setShowHint(true);
-      setIsPulsing(true);
+    }, 2500);
 
-      // 2. Stop hint and pulse after 5 seconds
-      setTimeout(() => {
+    const hideHintTimer = setTimeout(() => {
         setShowHint(false);
-        setIsPulsing(false);
-      }, 5000);
-    };
+    }, 7500); // 2.5s delay + 5s show time
 
-    // Initial trigger 2.5 seconds after page load
-    const initialTimeout = setTimeout(triggerCycle, 2500);
-
-    // Set up the interval to repeat every 30 seconds
-    const interval = setInterval(triggerCycle, 30000);
-
-    // Clean up timers when the component unmounts
     return () => {
-      clearTimeout(initialTimeout);
-      clearInterval(interval);
+      clearTimeout(hintTimer);
+      clearTimeout(hideHintTimer);
     };
   }, []);
 
@@ -52,7 +40,7 @@ export function WhatsAppButton() {
         rel="noopener noreferrer"
         className={cn(
           'flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_11px_rgba(0,0,0,0.5)] transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
-           isPulsing && 'animate-pulse-whatsapp'
+           'animate-pulse-whatsapp'
         )}
         aria-label="Contactar por WhatsApp"
       >
