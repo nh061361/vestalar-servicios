@@ -25,14 +25,9 @@ export default function FseProgramPage() {
 
   const grants = [
     {
-      amount: "5.940€",
+      amount: "5.400€",
       concept: "Subvención al establecimiento como trabajador autónomo.",
-      details: "La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus."
-    },
-    {
-      amount: "4.500€",
-      concept: "Subvención por la contratación de la primera persona trabajadora por cuenta ajena.",
-      details: "La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus."
+      details: "Jose Arrondo Tomas ha sido beneficiara de la cantidad de 5.400€, en concepto al establecimiento como trabajador autónomo. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus."
     }
   ];
 
@@ -212,5 +207,6 @@ export default function FseProgramPage() {
     </div>
   );
 }
+
 
     
