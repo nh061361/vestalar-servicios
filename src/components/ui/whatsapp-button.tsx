@@ -11,19 +11,43 @@ export function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
   const [showHint, setShowHint] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    const hintTimer = setTimeout(() => {
-      setShowHint(true);
-    }, 2500);
+    let hintTimer: NodeJS.Timeout;
+    let hideHintTimer: NodeJS.Timeout;
 
-    const hideHintTimer = setTimeout(() => {
+    const startAnimation = () => {
+      setIsAnimating(true);
+      hintTimer = setTimeout(() => {
+        setShowHint(true);
+      }, 2500);
+  
+      hideHintTimer = setTimeout(() => {
         setShowHint(false);
-    }, 7500); // 2.5s delay + 5s show time
+        setIsAnimating(false);
+      }, 7500); // 2.5s delay + 5s show time
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        startAnimation();
+      } else {
+        clearTimeout(hintTimer);
+        clearTimeout(hideHintTimer);
+        setShowHint(false);
+        setIsAnimating(false);
+      }
+    };
+    
+    startAnimation();
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       clearTimeout(hintTimer);
       clearTimeout(hideHintTimer);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
   }, []);
 
@@ -39,8 +63,8 @@ export function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          'flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_11px_rgba(0,0,0,0.5)] transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
-           'animate-pulse-whatsapp'
+          'flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_0_11px_rgba(0,0,0,0.5)] transition-transform hover:scale-110 focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0',
+           isAnimating && 'animate-pulse-whatsapp'
         )}
         aria-label="Contactar por WhatsApp"
       >
