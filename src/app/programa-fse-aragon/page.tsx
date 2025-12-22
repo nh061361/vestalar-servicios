@@ -27,7 +27,7 @@ export default function FseProgramPage() {
     {
       amount: "5.400€",
       concept: "Subvención al establecimiento como trabajador autónomo.",
-      details: "Jose Arrondo Tomas ha sido beneficiara de la cantidad de 5.400€, en concepto al establecimiento como trabajador autónomo. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus."
+      details: "Dña Jose Arrondo Tomas ha sido beneficiara de la cantidad de 5.400€, en concepto al establecimiento como trabajador autónomo. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus."
     }
   ];
 
@@ -131,7 +131,7 @@ export default function FseProgramPage() {
                           <p className="font-semibold text-foreground text-lg md:text-xl shrink-0">{grant.amount}</p>
                       </CardHeader>
                       <CardContent className="p-6 text-muted-foreground text-sm">
-                        <p>Dña Jose Arrondo Tomas ha sido beneficiara de la cantidad de 5.400€, en concepto al establecimiento como trabajador autónomo. La subvención otorgada se enmarca dentro del “Programa fomento de empleo autónomo” en el marco Programa FSE+ Aragón 2021-2027, siendo financiada la actuación en un 60% por fondos propios del Gobierno de Aragón y en un 40% por el Fondo Social Europeo Plus.</p>
+                        <p>{grant.details}</p>
                       </CardContent>
                     </Card>
                   ))}
@@ -202,7 +202,7 @@ export default function FseProgramPage() {
             <a href="/programa-fse-aragon" className="hover:underline">Programa FSE+ Aragón</a>
           </p>
            <p className="mt-4 text-xs text-accent-foreground/60">
-            Diseñado y desarrollado por <a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Adevintia</a>
+            Diseñado y desarrollado por Nicole marie Hernández andújar
           </p>
         </div>
       </footer>

@@ -266,7 +266,7 @@ export default function AboutUsPage() {
             <a href="/programa-fse-aragon" className="hover:underline">Programa FSE+ Aragón</a>
           </p>
            <p className="mt-4 text-xs text-accent-foreground/60">
-            Diseñado y desarrollado por <a href="#" target="_blank" rel="noopener noreferrer" className="hover:underline">Adevintia</a>
+            Diseñado y desarrollado por Nicole marie Hernández andújar
           </p>
         </div>
       </footer>
