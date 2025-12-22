@@ -4,20 +4,21 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = 'https://www.vestalar.es';
 
-  const staticRoutes = [
-    '',
-    '/proyectos',
-    '/quienes-somos',
-    '/aviso-legal',
-    '/politica-de-privacidad',
-    '/politica-de-cookies',
-    '/programa-fse-aragon',
+  // Prioritize commercial pages over legal ones
+  const routes: { url: string; priority: number }[] = [
+    { url: '', priority: 1.0 },
+    { url: '/proyectos', priority: 0.9 },
+    { url: '/quienes-somos', priority: 0.9 },
+    { url: '/aviso-legal', priority: 0.5 },
+    { url: '/politica-de-privacidad', priority: 0.5 },
+    { url: '/politica-de-cookies', priority: 0.5 },
+    { url: '/programa-fse-aragon', priority: 0.4 },
   ];
 
-  return staticRoutes.map((route) => ({
-    url: `${siteUrl}${route}`,
+  return routes.map((route) => ({
+    url: `${siteUrl}${route.url}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
-    priority: route === '' ? 1 : 0.8,
+    priority: route.priority,
   }));
 }
