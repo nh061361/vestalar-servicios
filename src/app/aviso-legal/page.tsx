@@ -219,7 +219,7 @@ export default function LegalNoticePage() {
             <a href="/programa-fse-aragon" className="hover:underline">Programa FSE+ Aragón</a>
           </p>
            <p className="mt-4 text-xs text-accent-foreground/60">
-            Diseñado y desarrollado por Nicole marie Hernández andújar
+            Diseñado y desarrollado por Nicole Marie Hernández Andújar
           </p>
         </div>
       </footer>
@@ -227,3 +227,5 @@ export default function LegalNoticePage() {
     </div>
   );
 }
+
+    
