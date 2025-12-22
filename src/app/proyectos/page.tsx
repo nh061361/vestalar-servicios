@@ -131,6 +131,18 @@ export default function ProjectsPage() {
 
       <footer className="bg-accent text-accent-foreground py-12">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4 md:px-6">
+          <div className="flex flex-col gap-4 items-start">
+             {footerLogoImage && <Image 
+              src={footerLogoImage.imageUrl} 
+              alt="Vestalar Logo Negativo - Empresa de reformas" 
+              width={100} 
+              height={33}
+              className="object-contain"
+            />}
+            <p className="text-sm">
+              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios para crear el hogar de tus sueños.
+            </p>
+          </div>
           <div>
             <h3 className="font-bold text-lg mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
@@ -159,18 +171,6 @@ export default function ProjectsPage() {
               <a href="#" aria-label="LinkedIn" className="hover:opacity-80"><Linkedin /></a>
             </div>
           </div>
-          <div className="flex flex-col gap-4 items-start md:items-end">
-             {footerLogoImage && <Image 
-              src={footerLogoImage.imageUrl} 
-              alt="Vestalar Logo Negativo - Empresa de reformas" 
-              width={100} 
-              height={33}
-              className="object-contain"
-            />}
-            <p className="text-sm md:text-right">
-              Tu empresa de reformas integrales con base en Zaragoza. Transformamos espacios para crear el hogar de tus sueños.
-            </p>
-          </div>
         </div>
         <div className="container mx-auto mt-8 pt-6 border-t border-accent-foreground/20 text-center text-sm">
           <p>© {new Date().getFullYear()} Vestalar Servicios. Todos los derechos reservados.</p>
@@ -189,3 +189,5 @@ export default function ProjectsPage() {
     </div>
   );
 }
+
+    
