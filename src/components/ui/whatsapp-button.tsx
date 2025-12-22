@@ -6,7 +6,7 @@ import { MessageCircle, Phone } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export function WhatsAppButton() {
-  const phoneNumber = '976076982'; 
+  const phoneNumber = '34976076982'; 
   const message = '¡Hola! Me gustaría obtener más información sobre vuestros servicios.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   
@@ -18,6 +18,10 @@ export function WhatsAppButton() {
     let hideHintTimer: NodeJS.Timeout;
 
     const startAnimation = () => {
+      // Clear any existing timers
+      clearTimeout(hintTimer);
+      clearTimeout(hideHintTimer);
+      
       setIsAnimating(true);
       hintTimer = setTimeout(() => {
         setShowHint(true);
