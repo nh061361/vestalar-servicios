@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
@@ -21,6 +22,18 @@ const nextConfig = {
               'Next-Action, Next-Router-State-Tree, Next-Router-Prefetch, RSC',
           },
         ],
+      },
+    ];
+  },
+   async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+      {
+        source: '/robots.txt',
+        destination: '/api/robots',
       },
     ];
   },
